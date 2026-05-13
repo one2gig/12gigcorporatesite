@@ -325,7 +325,7 @@ export default function Home() {
                             </div>
                             <div>
                                 <p className="font-bold">Ell</p>
-                                <p className="text-sm text-primary">12Gig Gigger, Cake Maker</p>
+                                <p className="text-sm text-primary">12Gig Gigger, Baker</p>
                             </div>
                         </div>
                     </motion.div>

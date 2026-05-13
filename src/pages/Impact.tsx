@@ -1,7 +1,6 @@
 import React from 'react';
 import { Badge } from '@/components/ui/badge';
-import { Card, CardContent } from '@/components/ui/card';
-import { Users, Briefcase, Globe } from 'lucide-react';
+import { Users, Briefcase, Globe, Quote } from 'lucide-react';
 import { motion } from 'motion/react';
 
 const fadeInUp = {
@@ -57,45 +56,48 @@ export default function Impact() {
         </div>
       </section>
 
-      {/* Stories */}
-      <section className="py-24 bg-muted/30">
+      {/* Stories — same community story as homepage */}
+      <section className="py-24 bg-foreground text-background overflow-hidden">
         <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold tracking-tight text-center mb-16">Stories of Transformation</h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <Card className="rounded-[3rem] overflow-hidden border-none shadow-xl">
-                    <CardContent className="p-0 flex flex-col md:flex-row">
-                        <div className="md:w-1/2 aspect-square">
-                            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=800" alt="Gigger" className="w-full h-full object-cover" />
-                        </div>
-                        <div className="md:w-1/2 p-10 space-y-6 flex flex-col justify-center">
-                            <Badge className="w-fit">Gigger Success</Badge>
-                            <h3 className="text-2xl font-bold">"12gig gave me the flexibility to support my family while I study."</h3>
-                            <p className="text-muted-foreground italic">"I started as a runner in Penampang, and now I handle digital logistics for three local cafes. 12gig isn't just work, it's a career path."</p>
-                            <div>
-                                <p className="font-bold">Aiman R.</p>
-                                <p className="text-sm text-primary">Logistics Specialist</p>
-                            </div>
-                        </div>
-                    </CardContent>
-                </Card>
-
-                <Card className="rounded-[3rem] overflow-hidden border-none shadow-xl">
-                    <CardContent className="p-0 flex flex-col md:flex-row-reverse">
-                        <div className="md:w-1/2 aspect-square">
-                            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800" alt="SME" className="w-full h-full object-cover" />
-                        </div>
-                        <div className="md:w-1/2 p-10 space-y-6 flex flex-col justify-center">
-                            <Badge className="w-fit">SME Growth</Badge>
-                            <h3 className="text-2xl font-bold">"Digitalization used to be scary. 12gig made it human."</h3>
-                            <p className="text-muted-foreground italic">"Integrating their booking system reduced our administrative errors by 80%. We can finally track our growth with real data."</p>
-                            <div>
-                                <p className="font-bold">Hafiz M.</p>
-                                <p className="text-sm text-primary">Retail Business Owner</p>
-                            </div>
-                        </div>
-                    </CardContent>
-                </Card>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-8 flex flex-col items-center text-center lg:items-start lg:text-left">
+              <Quote className="h-16 w-16 text-primary/40 rotate-180" />
+              <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+                Stories of <br />
+                <span className="text-primary italic">Transformation</span>
+              </h2>
+              <p className="text-lg text-muted-foreground/80 max-w-md">
+                12gig isn&apos;t just a platform; it&apos;s a movement to empower Malaysia&apos;s digital talent and small businesses.
+              </p>
             </div>
+
+            <div className="relative">
+              <motion.div
+                animate={{
+                  y: [0, -10, 0],
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: 'easeInOut',
+                }}
+                className="bg-white/5 backdrop-blur-xl border border-white/10 p-10 rounded-[2rem] space-y-6"
+              >
+                <p className="text-xl italic leading-relaxed text-muted-foreground">
+                  &quot;12gig made my home-based cake business a reality. Managing orders and arranging deliveries across KK is now effortless, allowing me to focus entirely on my passion for baking!&quot;
+                </p>
+                <div className="flex items-center gap-4">
+                  <div className="h-12 w-12 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+                    <Users className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <p className="font-bold">Ell</p>
+                    <p className="text-sm text-primary">12Gig Gigger, Baker</p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
         </div>
       </section>
 
