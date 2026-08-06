@@ -1,5 +1,4 @@
 import React, { useRef, useState } from 'react';
-import { Button } from '@/components/ui/button';
 import {
   ArrowRight,
   CheckCircle2,
@@ -10,15 +9,7 @@ import {
   Truck,
   Heart,
 } from 'lucide-react';
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from '@/components/ui/dialog';
-import { ContactForm } from '@/components/ContactForm';
+import { Button } from '@/components/ui/button';
 import { SiteLogo } from '@/components/SiteLogo';
 import {
   motion,
@@ -472,28 +463,13 @@ export default function Home() {
                 ))}
               </ul>
 
-              <Dialog>
-                <DialogTrigger asChild>
-                  <Button
-                    size="lg"
-                    className="h-14 rounded-full px-10 text-lg font-semibold shadow-lg shadow-primary/20"
-                  >
-                    Explore SME Solutions
-                  </Button>
-                </DialogTrigger>
-                <DialogContent className="max-w-[95vw] rounded-[1.5rem] p-6 sm:max-w-[500px] sm:rounded-[2.5rem] sm:p-8">
-                  <DialogHeader className="space-y-2 pb-2">
-                    <DialogTitle className="text-2xl font-bold tracking-tight sm:text-3xl">
-                      Transform Your Business
-                    </DialogTitle>
-                    <DialogDescription className="text-base sm:text-lg">
-                      Schedule a free 30-minute digital strategy session with our
-                      SME experts.
-                    </DialogDescription>
-                  </DialogHeader>
-                  <ContactForm />
-                </DialogContent>
-              </Dialog>
+              <Button
+                size="lg"
+                className="h-14 rounded-full px-10 text-lg font-semibold shadow-lg shadow-primary/20"
+                onClick={() => navigate('/contact')}
+              >
+                Explore SME Solutions
+              </Button>
             </motion.div>
 
             <motion.div
@@ -599,29 +575,14 @@ export default function Home() {
                   Become a Gigger
                 </a>
               </Button>
-              <Dialog>
-                <DialogTrigger asChild>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="h-14 rounded-full border-primary/40 px-10 text-lg font-bold text-primary transition-all hover:bg-primary hover:text-primary-foreground sm:h-16 sm:text-xl"
-                  >
-                    Discuss SME Solutions
-                  </Button>
-                </DialogTrigger>
-                <DialogContent className="max-w-[95vw] rounded-[1.5rem] p-6 sm:max-w-[500px] sm:rounded-[2.5rem] sm:p-8">
-                  <DialogHeader className="space-y-2 pb-2">
-                    <DialogTitle className="text-2xl font-bold tracking-tight sm:text-3xl">
-                      Transform Your Business
-                    </DialogTitle>
-                    <DialogDescription className="text-base sm:text-lg">
-                      Schedule a free 30-minute digital strategy session with our
-                      SME experts.
-                    </DialogDescription>
-                  </DialogHeader>
-                  <ContactForm />
-                </DialogContent>
-              </Dialog>
+              <Button
+                size="lg"
+                variant="outline"
+                className="h-14 rounded-full border-primary/40 px-10 text-lg font-bold text-primary transition-all hover:bg-primary hover:text-primary-foreground sm:h-16 sm:text-xl"
+                onClick={() => navigate('/contact')}
+              >
+                Discuss SME Solutions
+              </Button>
             </div>
             <p className="text-sm font-medium text-white/50">
               Marketplace access and SME partnerships—built for Malaysia.

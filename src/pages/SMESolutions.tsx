@@ -2,20 +2,9 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
-import { 
-  Dialog, 
-  DialogContent, 
-  DialogDescription, 
-  DialogHeader, 
-  DialogTitle, 
-  DialogTrigger 
-} from '@/components/ui/dialog';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Textarea } from '@/components/ui/textarea';
-import { ContactForm } from '@/components/ContactForm';
 import { CheckCircle2, Globe, Laptop, Rocket, Zap, MessageSquare, Briefcase } from 'lucide-react';
 import { motion } from 'motion/react';
+import { useNavigate } from 'react-router-dom';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -25,6 +14,7 @@ const fadeInUp = {
 };
 
 export default function SMESolutions() {
+  const navigate = useNavigate();
   return (
     <div className="pt-20">
       {/* Hero */}
@@ -36,22 +26,13 @@ export default function SMESolutions() {
             We help Malaysia's local businesses transform from manual workflows to efficient, automated, and human-centered digital systems.
           </p>
           <div className="pt-6">
-            <Dialog>
-              <DialogTrigger asChild>
-                <Button size="lg" className="rounded-full h-14 px-10 text-lg font-bold shadow-xl shadow-primary/20">
-                  Book a Free Consultation
-                </Button>
-              </DialogTrigger>
-              <DialogContent className="max-w-[95vw] sm:max-w-[500px] rounded-[1.5rem] sm:rounded-[2.5rem] p-6 sm:p-8">
-                <DialogHeader className="space-y-2 pb-2">
-                  <DialogTitle className="text-2xl sm:text-3xl font-bold tracking-tight">Transform Your Business</DialogTitle>
-                  <DialogDescription className="text-base sm:text-lg">
-                    Schedule a free 30-minute digital strategy session with our SME experts.
-                  </DialogDescription>
-                </DialogHeader>
-                <ContactForm />
-              </DialogContent>
-            </Dialog>
+            <Button
+              size="lg"
+              className="rounded-full h-14 px-10 text-lg font-bold shadow-xl shadow-primary/20"
+              onClick={() => navigate('/contact')}
+            >
+              Book a Free Consultation
+            </Button>
           </div>
         </div>
       </section>
@@ -193,22 +174,13 @@ export default function SMESolutions() {
             <h2 className="text-5xl font-bold tracking-tight">Ready to Digitize Your Business?</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">Join the digital revolution in Malaysia. Let's build something great together.</p>
             <div className="pt-4">
-                <Dialog>
-                    <DialogTrigger asChild>
-                        <Button size="lg" className="rounded-full h-16 px-12 text-xl font-bold bg-foreground text-background hover:bg-foreground/90 transition-all shadow-2xl">
-                            Get Started Now
-                        </Button>
-                    </DialogTrigger>
-                    <DialogContent className="max-w-[95vw] sm:max-w-[500px] rounded-[1.5rem] sm:rounded-[2.5rem] p-6 sm:p-8">
-                        <DialogHeader className="space-y-2 pb-2">
-                            <DialogTitle className="text-2xl sm:text-3xl font-bold tracking-tight">Transform Your Business</DialogTitle>
-                            <DialogDescription className="text-base sm:text-lg">
-                                Schedule a free 30-minute digital strategy session with our SME experts.
-                            </DialogDescription>
-                        </DialogHeader>
-                        <ContactForm />
-                    </DialogContent>
-                </Dialog>
+                <Button
+                  size="lg"
+                  className="rounded-full h-16 px-12 text-xl font-bold bg-foreground text-background hover:bg-foreground/90 transition-all shadow-2xl"
+                  onClick={() => navigate('/contact')}
+                >
+                  Get Started Now
+                </Button>
             </div>
         </div>
       </section>
