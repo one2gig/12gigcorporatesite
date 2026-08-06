@@ -17,6 +17,7 @@ export function ContactForm() {
 
     const data = new FormData(e.currentTarget);
     const body = {
+      type: 'sme' as const,
       name:    data.get('name')    as string,
       company: data.get('company') as string,
       email:   data.get('email')   as string,

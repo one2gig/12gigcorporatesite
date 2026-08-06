@@ -1,8 +1,26 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Facebook, Twitter, Instagram, Linkedin, Mail, MapPin } from 'lucide-react';
+import { Facebook, Instagram, Store } from 'lucide-react';
 import { SITE_LOGO_SHOW_WORDMARK } from '@/lib/branding';
 import { SiteLogo } from '@/components/SiteLogo';
+
+const SOCIAL_LINKS = [
+  {
+    label: 'Facebook',
+    href: 'https://www.facebook.com/profile.php?id=61576939958159',
+    icon: Facebook,
+  },
+  {
+    label: 'Instagram',
+    href: 'https://www.instagram.com/12gig_sabah/',
+    icon: Instagram,
+  },
+  {
+    label: 'Marketplace',
+    href: 'https://12gig.com/',
+    icon: Store,
+  },
+] as const;
 
 export function Footer() {
   return (
@@ -22,18 +40,18 @@ export function Footer() {
               Building Malaysia's digital gig & business ecosystem. Connecting communities with trusted local services.
             </p>
             <div className="flex items-center gap-4">
-              <a href="#" className="h-9 w-9 flex items-center justify-center rounded-lg bg-background border hover:border-primary hover:text-primary transition-all">
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a href="#" className="h-9 w-9 flex items-center justify-center rounded-lg bg-background border hover:border-primary hover:text-primary transition-all text-[#1DA1F2]">
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a href="#" className="h-9 w-9 flex items-center justify-center rounded-lg bg-background border hover:border-primary hover:text-primary transition-all">
-                <Instagram className="h-5 w-5" />
-              </a>
-              <a href="#" className="h-9 w-9 flex items-center justify-center rounded-lg bg-background border hover:border-primary hover:text-primary transition-all">
-                <Linkedin className="h-5 w-5" />
-              </a>
+              {SOCIAL_LINKS.map(({ label, href, icon: Icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="h-9 w-9 flex items-center justify-center rounded-lg bg-background border hover:border-primary hover:text-primary transition-all"
+                >
+                  <Icon className="h-5 w-5" />
+                </a>
+              ))}
             </div>
           </div>
 
@@ -59,15 +77,12 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-6">Contact Us</h4>
+            <h4 className="font-semibold mb-6">Connect with us</h4>
             <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <MapPin className="h-5 w-5 text-primary shrink-0" />
-                <span className="text-sm text-muted-foreground">Kota Kinabalu, Malaysia</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Mail className="h-5 w-5 text-primary shrink-0" />
-                <span className="text-sm text-muted-foreground">contact@12gig.com</span>
+              <li>
+                <NavLink to="/contact" className="text-sm text-muted-foreground hover:text-primary">
+                  Contact
+                </NavLink>
               </li>
             </ul>
           </div>

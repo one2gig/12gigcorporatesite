@@ -6,11 +6,29 @@ import {
   Menu,
   Home, Info, HelpCircle, 
   Briefcase, Building2, Globe, Handshake, 
-  Newspaper, Users, Mail, Instagram, Twitter, Facebook
+  Newspaper, Users, Mail, Instagram, Facebook, Store
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { SITE_LOGO_SHOW_WORDMARK } from '@/lib/branding';
 import { SiteLogo } from '@/components/SiteLogo';
+
+const socialLinks = [
+  {
+    label: 'Instagram',
+    href: 'https://www.instagram.com/12gig_sabah/',
+    icon: Instagram,
+  },
+  {
+    label: 'Facebook',
+    href: 'https://www.facebook.com/profile.php?id=61576939958159',
+    icon: Facebook,
+  },
+  {
+    label: 'Marketplace',
+    href: 'https://12gig.com/',
+    icon: Store,
+  },
+] as const;
 
 const navLinks = [
   { title: 'Home', href: '/', icon: Home },
@@ -25,6 +43,19 @@ const navLinks = [
   { title: 'FAQ', href: '/faq', icon: HelpCircle },
   { title: 'Contact', href: '/contact', icon: Mail },
 ];
+
+const desktopNavHrefs = [
+  '/about',
+  '/how-it-works',
+  '/giggers',
+  '/sme-solutions',
+  '/impact',
+  '/contact',
+] as const;
+
+const desktopNavLinks = desktopNavHrefs.map(
+  (href) => navLinks.find((link) => link.href === href)!
+);
 
 export function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -46,7 +77,7 @@ export function Navbar() {
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-6">
-            {navLinks.slice(1, 6).map((link) => (
+            {desktopNavLinks.map((link) => (
               <NavLink
                 key={link.href}
                 to={link.href}
@@ -122,8 +153,15 @@ export function Navbar() {
                   <div className="mt-8 px-4 pb-8 text-center">
                     <p className="text-xs text-muted-foreground mb-4">Follow our journey</p>
                     <div className="flex justify-center gap-6">
-                      {[Instagram, Twitter, Facebook].map((Icon, i) => (
-                        <a key={i} href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                      {socialLinks.map(({ label, href, icon: Icon }) => (
+                        <a
+                          key={label}
+                          href={href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={label}
+                          className="text-muted-foreground hover:text-primary transition-colors"
+                        >
                           <Icon className="h-5 w-5" />
                         </a>
                       ))}

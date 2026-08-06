@@ -7,7 +7,7 @@ import {
 } from '@/components/ui/accordion';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Mail, MessageCircle } from 'lucide-react';
+import { Mail } from 'lucide-react';
 
 const faqs = [
   {
@@ -83,14 +83,12 @@ export default function FAQ() {
                 We're here to help you get the most out of 12gig. Reach out to our team directly.
               </p>
             </div>
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button size="lg" className="rounded-full h-14 px-8 gap-2">
-                <Mail className="h-5 w-5" />
-                Contact Support
-              </Button>
-              <Button size="lg" variant="outline" className="rounded-full h-14 px-8 gap-2">
-                <MessageCircle className="h-5 w-5" />
-                Live Chat
+            <div className="flex justify-center">
+              <Button size="lg" className="rounded-full h-14 px-8 gap-2" asChild>
+                <a href="mailto:contact@12gig.com">
+                  <Mail className="h-5 w-5" />
+                  Contact Support
+                </a>
               </Button>
             </div>
           </div>
