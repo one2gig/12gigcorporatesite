@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { Facebook, Instagram, Store } from 'lucide-react';
 import { SITE_LOGO_SHOW_WORDMARK } from '@/lib/branding';
 import { SiteLogo } from '@/components/SiteLogo';
+import { useI18n } from '../i18n/I18nProvider';
 
 const SOCIAL_LINKS = [
   {
@@ -23,6 +24,7 @@ const SOCIAL_LINKS = [
 ] as const;
 
 export function Footer() {
+  const { t } = useI18n();
   return (
     <footer className="bg-muted/30 border-t pt-16 pb-8">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -37,7 +39,7 @@ export function Footer() {
               )}
             </NavLink>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
-              Building Malaysia's digital gig & business ecosystem. Connecting communities with trusted local services.
+              {t.footer.tagline}
             </p>
             <div className="flex items-center gap-4">
               {SOCIAL_LINKS.map(({ label, href, icon: Icon }) => (
@@ -56,32 +58,28 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold mb-6">Explore</h4>
+            <h4 className="font-semibold mb-6">{t.footer.explore}</h4>
             <ul className="space-y-4">
-              <li><NavLink to="/about" className="text-sm text-muted-foreground hover:text-primary">About Us</NavLink></li>
-              <li><NavLink to="/giggers" className="text-sm text-muted-foreground hover:text-primary">For Giggers</NavLink></li>
-              <li><NavLink to="/sme-solutions" className="text-sm text-muted-foreground hover:text-primary">SME Solutions</NavLink></li>
-              <li><NavLink to="/careers" className="text-sm text-muted-foreground hover:text-primary">Careers</NavLink></li>
+              <li><NavLink to="/about" className="text-sm text-muted-foreground hover:text-primary">{t.footer.aboutUs}</NavLink></li>
+              <li><NavLink to="/sme-solutions" className="text-sm text-muted-foreground hover:text-primary">{t.nav.smeSolutions}</NavLink></li>
+              <li><NavLink to="/how-it-works" className="text-sm text-muted-foreground hover:text-primary">{t.nav.howItWorks}</NavLink></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-6">Information</h4>
+            <h4 className="font-semibold mb-6">{t.footer.information}</h4>
             <ul className="space-y-4">
-              <li><NavLink to="/impact" className="text-sm text-muted-foreground hover:text-primary">Our Impact</NavLink></li>
-              <li><NavLink to="/partnerships" className="text-sm text-muted-foreground hover:text-primary">Partnerships</NavLink></li>
-              <li><NavLink to="/news" className="text-sm text-muted-foreground hover:text-primary">News & Media</NavLink></li>
-              <li><NavLink to="/faq" className="text-sm text-muted-foreground hover:text-primary">FAQ</NavLink></li>
-              <li><NavLink to="/terms" className="text-sm text-muted-foreground hover:text-primary">Terms of Service</NavLink></li>
+              <li><NavLink to="/impact" className="text-sm text-muted-foreground hover:text-primary">{t.footer.ourImpact}</NavLink></li>
+              <li><NavLink to="/faq" className="text-sm text-muted-foreground hover:text-primary">{t.nav.faq}</NavLink></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-6">Connect with us</h4>
+            <h4 className="font-semibold mb-6">{t.footer.connect}</h4>
             <ul className="space-y-4">
               <li>
                 <NavLink to="/contact" className="text-sm text-muted-foreground hover:text-primary">
-                  Contact
+                  {t.nav.contact}
                 </NavLink>
               </li>
             </ul>
@@ -90,13 +88,8 @@ export function Footer() {
 
         <div className="pt-8 border-t flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} 12gig Sdn Bhd. All rights reserved.
+            © {new Date().getFullYear()} 12gig Sdn Bhd. {t.footer.copyright}
           </p>
-          <div className="flex items-center gap-6">
-            <NavLink to="/privacy" className="text-xs text-muted-foreground hover:text-primary">Privacy Policy</NavLink>
-            <NavLink to="/terms" className="text-xs text-muted-foreground hover:text-primary">Terms of Service</NavLink>
-            <NavLink to="/cookies" className="text-xs text-muted-foreground hover:text-primary">Cookie Settings</NavLink>
-          </div>
         </div>
       </div>
     </footer>

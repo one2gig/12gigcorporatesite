@@ -5,12 +5,13 @@ import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from '@/co
 import { 
   Menu,
   Home, Info, HelpCircle, 
-  Briefcase, Building2, Globe, Handshake, 
-  Newspaper, Users, Mail, Instagram, Facebook, Store
+  Building2, Globe, Mail, Instagram, Facebook, Store
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { SITE_LOGO_SHOW_WORDMARK } from '@/lib/branding';
 import { SiteLogo } from '@/components/SiteLogo';
+import { LanguageSwitcher } from './LanguageSwitcher';
+import { useI18n } from '../i18n/I18nProvider';
 
 const socialLinks = [
   {
@@ -31,23 +32,18 @@ const socialLinks = [
 ] as const;
 
 const navLinks = [
-  { title: 'Home', href: '/', icon: Home },
-  { title: 'About', href: '/about', icon: Info },
-  { title: 'How it Works', href: '/how-it-works', icon: HelpCircle },
-  { title: 'For Giggers', href: '/giggers', icon: Briefcase },
-  { title: 'SME Solutions', href: '/sme-solutions', icon: Building2 },
-  { title: 'Impact', href: '/impact', icon: Globe },
-  { title: 'Partnerships', href: '/partnerships', icon: Handshake },
-  { title: 'News', href: '/news', icon: Newspaper },
-  { title: 'Careers', href: '/careers', icon: Users },
-  { title: 'FAQ', href: '/faq', icon: HelpCircle },
-  { title: 'Contact', href: '/contact', icon: Mail },
-];
+  { titleKey: 'home', href: '/', icon: Home },
+  { titleKey: 'about', href: '/about', icon: Info },
+  { titleKey: 'howItWorks', href: '/how-it-works', icon: HelpCircle },
+  { titleKey: 'smeSolutions', href: '/sme-solutions', icon: Building2 },
+  { titleKey: 'impact', href: '/impact', icon: Globe },
+  { titleKey: 'faq', href: '/faq', icon: HelpCircle },
+  { titleKey: 'contact', href: '/contact', icon: Mail },
+] as const;
 
 const desktopNavHrefs = [
   '/about',
   '/how-it-works',
-  '/giggers',
   '/sme-solutions',
   '/impact',
   '/contact',
@@ -59,6 +55,7 @@ const desktopNavLinks = desktopNavHrefs.map(
 
 export function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false);
+  const { t } = useI18n();
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -75,23 +72,26 @@ export function Navbar() {
             </NavLink>
           </div>
 
-          {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-6">
+          <div className="flex items-center gap-3 sm:gap-4">
+            {/* Desktop Nav */}
+            <nav className="hidden lg:flex items-center gap-4 xl:gap-6">
             {desktopNavLinks.map((link) => (
               <NavLink
                 key={link.href}
                 to={link.href}
                 className={({ isActive }) =>
                   cn(
-                    "text-sm font-medium transition-colors hover:text-primary",
+                    "whitespace-nowrap text-sm font-medium transition-colors hover:text-primary",
                     isActive ? "text-primary" : "text-muted-foreground"
                   )
                 }
               >
-                {link.title}
+                {t.nav[link.titleKey]}
               </NavLink>
             ))}
           </nav>
+
+          <LanguageSwitcher />
 
           {/* Mobile Nav Toggle */}
           <div className="lg:hidden">
@@ -100,7 +100,7 @@ export function Navbar() {
                 render={
                   <Button variant="ghost" size="icon" className="h-10 w-10">
                     <Menu className="h-6 w-6" />
-                    <span className="sr-only">Toggle menu</span>
+                    <span className="sr-only">{t.nav.toggleMenu}</span>
                   </Button>
                 }
               />
@@ -112,10 +112,10 @@ export function Navbar() {
                       {SITE_LOGO_SHOW_WORDMARK ? (
                         <>
                           <span className="text-xl font-bold tracking-tight">12gig</span>
-                          <span className="text-xs text-muted-foreground font-normal">Digital Gig Ecosystem</span>
+                          <span className="text-xs text-muted-foreground font-normal">{t.nav.ecosystemTagline}</span>
                         </>
                       ) : (
-                        <span className="text-xs text-muted-foreground font-normal">Digital Gig Ecosystem</span>
+                        <span className="text-xs text-muted-foreground font-normal">{t.nav.ecosystemTagline}</span>
                       )}
                     </div>
                   </SheetTitle>
@@ -143,7 +143,7 @@ export function Navbar() {
                               "h-5 w-5 transition-transform duration-300 group-hover:scale-110",
                               isActive ? "text-primary" : "text-muted-foreground"
                             )} />
-                            <span className="text-base">{link.title}</span>
+                            <span className="text-base">{t.nav[link.titleKey]}</span>
                           </>
                         )}
                       </NavLink>
@@ -151,7 +151,7 @@ export function Navbar() {
                   </div>
 
                   <div className="mt-8 px-4 pb-8 text-center">
-                    <p className="text-xs text-muted-foreground mb-4">Follow our journey</p>
+                    <p className="text-xs text-muted-foreground mb-4">{t.nav.followJourney}</p>
                     <div className="flex justify-center gap-6">
                       {socialLinks.map(({ label, href, icon: Icon }) => (
                         <a
@@ -166,10 +166,14 @@ export function Navbar() {
                         </a>
                       ))}
                     </div>
+                    <div className="mt-6 flex justify-center">
+                      <LanguageSwitcher />
+                    </div>
                   </div>
                 </nav>
               </SheetContent>
             </Sheet>
+            </div>
           </div>
         </div>
       </div>
