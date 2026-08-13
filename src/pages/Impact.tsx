@@ -1,115 +1,170 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Badge } from '@/components/ui/badge';
-import { Users, Briefcase, Globe, Quote } from 'lucide-react';
-import { motion } from 'motion/react';
+import { Button } from '@/components/ui/button';
+import { PageHero, SectionBlock } from '../components/PageChrome';
 import { useI18n } from '../i18n/I18nProvider';
-
-const fadeInUp = {
-  initial: { opacity: 0, y: 20 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true },
-  transition: { duration: 0.6 }
-};
-
-const AUDIENCE_ICONS = [Users, Briefcase, Globe] as const;
+import { GIGGER_AUTH_URL, MARKETPLACE_URL } from '../lib/site';
 
 export default function Impact() {
   const { t } = useI18n();
+  const p = t.impact;
 
   return (
     <div className="pt-20">
-      <section className="py-24 bg-foreground text-background">
-        <div className="container mx-auto px-4 max-w-4xl text-center space-y-8">
-          <Badge variant="outline" className="text-primary border-primary/20 bg-primary/10 rounded-full px-4 py-1">{t.impact.badge}</Badge>
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-tight">{t.impact.titleBefore} <br/><span className="text-primary italic">{t.impact.titleHighlight}</span></h1>
-          <p className="text-xl text-muted-foreground leading-relaxed">
-            {t.impact.intro}
-          </p>
-        </div>
-      </section>
+      <PageHero
+        crumbs={[{ label: p.badge }]}
+        eyebrow={p.badge}
+        title={p.title}
+        subtitle={
+          <>
+            <p>{p.intro1}</p>
+            <p>{p.intro2}</p>
+          </>
+        }
+        primary={{ href: '#pencapaian', label: p.heroCta }}
+        secondary={{ href: '#bidang-impak', label: p.heroSecondary }}
+      />
 
-      <section className="py-24 bg-background">
-        <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {t.impact.audiences.map((item, idx) => {
-                    const Icon = AUDIENCE_ICONS[idx];
-                    return (
-                    <div key={item.headline} className="text-center p-10 border rounded-3xl space-y-4">
-                        <div className="h-12 w-12 bg-primary/10 rounded-full flex items-center justify-center text-primary mx-auto">
-                            <Icon className="h-6 w-6" />
-                        </div>
-                        <p className="text-2xl md:text-3xl font-bold tracking-tight leading-snug">{item.headline}</p>
-                        <p className="text-muted-foreground font-medium text-sm leading-relaxed">{item.label}</p>
-                    </div>
-                    );
-                })}
-            </div>
-        </div>
-      </section>
-
-      <section className="py-24 bg-foreground text-background overflow-hidden">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8 flex flex-col items-center text-center lg:items-start lg:text-left">
-              <Quote className="h-16 w-16 text-primary/40 rotate-180" />
-              <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-                {t.impact.storiesTitleBefore} <br />
-                <span className="text-primary italic">{t.impact.storiesTitleHighlight}</span>
-              </h2>
-              <p className="text-lg text-muted-foreground/80 max-w-md">
-                {t.impact.storiesIntro}
-              </p>
-            </div>
-
-            <div className="relative">
-              <motion.div
-                animate={{
-                  y: [0, -10, 0],
-                }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: 'easeInOut',
-                }}
-                className="bg-white/5 backdrop-blur-xl border border-white/10 p-10 rounded-[2rem] space-y-6"
-              >
-                <p className="text-xl italic leading-relaxed text-muted-foreground">
-                  &quot;{t.impact.quote}&quot;
-                </p>
-                <div className="flex items-center gap-4">
-                  <div className="h-12 w-12 rounded-full bg-primary/20 flex items-center justify-center text-primary">
-                    <Users className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <p className="font-bold">{t.impact.quoteName}</p>
-                    <p className="text-sm text-primary">{t.impact.quoteRole}</p>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
+      <section id="pencapaian" className="scroll-mt-24 bg-muted/30 py-20 sm:py-24">
+        <div id="data-platform" className="container mx-auto max-w-4xl scroll-mt-24 space-y-8 px-4">
+          <Badge className="rounded-full px-4 py-1">{p.statsEyebrow}</Badge>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">{p.statsTitle}</h2>
+          <p className="text-lg text-muted-foreground">{p.statsIntro}</p>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {p.stats.map((stat) => (
+              <div key={stat.label} className="rounded-3xl border bg-background p-8">
+                <p className="text-4xl font-black tracking-tight text-primary">{stat.value}</p>
+                <p className="mt-2 font-bold">{stat.label}</p>
+                <p className="mt-2 text-sm text-muted-foreground">{stat.desc}</p>
+              </div>
+            ))}
           </div>
+          <p className="text-sm text-muted-foreground">{p.statsNote}</p>
         </div>
       </section>
 
-      <section className="py-24 bg-background">
-        <div className="container mx-auto px-4">
-            <div className="text-center mb-16 space-y-4">
-                <h2 className="text-3xl font-bold tracking-tight">{t.impact.progressTitle}</h2>
-                <p className="text-muted-foreground">{t.impact.progressIntro}</p>
+      <SectionBlock id="bidang-impak" eyebrow={p.areasEyebrow} title={p.areasTitle}>
+        <div className="space-y-4">
+          {p.areas.map((item) => (
+            <div key={item.title} className="rounded-3xl border p-6">
+              <h3 className="font-bold">{item.title}</h3>
+              <p className="mt-2 text-muted-foreground">{item.desc}</p>
             </div>
+          ))}
+        </div>
+        <Button className="rounded-full" asChild>
+          <Link to="/what-we-do">{p.areasCta}</Link>
+        </Button>
+      </SectionBlock>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-                {t.impact.goals.map((goal, i) => (
-                    <motion.div
-                        key={goal.title}
-                        {...fadeInUp}
-                        className={`space-y-6 py-4 text-center ${i > 0 ? 'border-l-4 border-primary pl-8' : ''}`}
-                    >
-                        <h3 className="text-2xl font-bold">{goal.title}</h3>
-                        <p className="text-muted-foreground leading-relaxed">{goal.desc}</p>
-                    </motion.div>
-                ))}
+      <SectionBlock id="gigger-first" muted eyebrow={p.gfEyebrow} title={p.gfTitle}>
+        <p className="text-lg text-muted-foreground">{p.gfP1}</p>
+        <p className="text-muted-foreground">{p.gfFocus}</p>
+        <ul className="list-disc space-y-1 pl-5 text-muted-foreground">
+          {p.gfItems.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+        <p className="text-muted-foreground">{p.gfP2}</p>
+        <div className="flex flex-col gap-3 sm:flex-row">
+          <Button className="rounded-full" asChild>
+            <Link to="/for-giggers#manfaat">{p.gfCta}</Link>
+          </Button>
+          <Button variant="outline" className="rounded-full" asChild>
+            <a href={GIGGER_AUTH_URL} target="_blank" rel="noopener noreferrer">
+              {p.gfSecondary}
+            </a>
+          </Button>
+        </div>
+      </SectionBlock>
+
+      <SectionBlock id="impak-pengguna" eyebrow={p.usersEyebrow} title={p.usersTitle}>
+        <p className="text-lg text-muted-foreground">{p.usersP1}</p>
+        <p className="text-muted-foreground">{p.usersP2}</p>
+        <ul className="list-disc space-y-1 pl-5 text-muted-foreground">
+          {p.usersItems.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+        <p className="text-muted-foreground">{p.usersP3}</p>
+        <Button className="rounded-full" asChild>
+          <a href={MARKETPLACE_URL} target="_blank" rel="noopener noreferrer">
+            {p.usersCta}
+          </a>
+        </Button>
+      </SectionBlock>
+
+      <SectionBlock id="impak-kerjasama" muted eyebrow={p.collabEyebrow} title={p.collabTitle}>
+        <p className="text-lg text-muted-foreground">{p.collabP1}</p>
+        <p className="text-muted-foreground">{p.collabP2}</p>
+        <ul className="list-disc space-y-1 pl-5 text-muted-foreground">
+          {p.collabItems.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+        <p className="text-muted-foreground">{p.collabP3}</p>
+        <div className="flex flex-col gap-3 sm:flex-row">
+          <Button className="rounded-full" asChild>
+            <Link to="/partnerships#bentuk-kerjasama">{p.collabCta}</Link>
+          </Button>
+          <Button variant="outline" className="rounded-full" asChild>
+            <Link to="/for-organisasi">{p.collabSecondary}</Link>
+          </Button>
+        </div>
+      </SectionBlock>
+
+      <SectionBlock id="kaedah-pengukuran" eyebrow={p.methodEyebrow} title={p.methodTitle}>
+        <p className="text-lg text-muted-foreground">{p.methodIntro}</p>
+        <div className="space-y-4">
+          {p.methodItems.map((item) => (
+            <div key={item.title} className="rounded-3xl border p-6">
+              <h3 className="font-bold">{item.title}</h3>
+              <p className="mt-2 text-muted-foreground">{item.desc}</p>
             </div>
+          ))}
+        </div>
+        <p className="text-muted-foreground">{p.methodP1}</p>
+        <Button className="rounded-full" asChild>
+          <Link to="/for-organisasi#ukuran-program">{p.methodCta}</Link>
+        </Button>
+      </SectionBlock>
+
+      <SectionBlock id="perkembangan" muted eyebrow={p.commitEyebrow} title={p.commitTitle}>
+        <p className="text-lg text-muted-foreground">{p.commitP1}</p>
+        <p className="text-muted-foreground">{p.commitP2}</p>
+        <ul className="list-disc space-y-1 pl-5 text-muted-foreground">
+          {p.commitItems.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+      </SectionBlock>
+
+      <section className="bg-foreground py-24 text-background">
+        <div className="container mx-auto flex max-w-3xl flex-col items-center gap-4 px-4 text-center sm:flex-row sm:justify-center">
+          <Button size="lg" className="rounded-full" asChild>
+            <a href={GIGGER_AUTH_URL} target="_blank" rel="noopener noreferrer">
+              {p.ctaGigger}
+            </a>
+          </Button>
+          <Button
+            size="lg"
+            variant="outline"
+            className="rounded-full border-white/25 bg-white/5 text-white hover:bg-white/15 hover:text-white"
+            asChild
+          >
+            <a href={MARKETPLACE_URL} target="_blank" rel="noopener noreferrer">
+              {p.ctaUser}
+            </a>
+          </Button>
+          <Button
+            size="lg"
+            variant="outline"
+            className="rounded-full border-white/25 bg-white/5 text-white hover:bg-white/15 hover:text-white"
+            asChild
+          >
+            <Link to="/contact?tujuan=kerjasama">{p.ctaOrg}</Link>
+          </Button>
         </div>
       </section>
     </div>

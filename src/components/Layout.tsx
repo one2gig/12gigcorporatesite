@@ -8,11 +8,27 @@ interface LayoutProps {
 }
 
 export function Layout({ children }: LayoutProps) {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
 
   React.useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    if (!hash) {
+      window.scrollTo(0, 0);
+      return;
+    }
+
+    const id = decodeURIComponent(hash.slice(1));
+    const scrollToHash = () => {
+      const el = document.getElementById(id);
+      if (!el) return false;
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      return true;
+    };
+
+    if (scrollToHash()) return;
+
+    const timeout = window.setTimeout(scrollToHash, 320);
+    return () => window.clearTimeout(timeout);
+  }, [pathname, hash]);
 
   return (
     <div className="flex min-h-screen flex-col selection:bg-primary/20">

@@ -4,14 +4,13 @@ import {
   Users,
   BarChart4,
   MapPin,
-  Quote,
   Truck,
   Heart,
-  Store,
+  UserRound,
   Building2,
-  GraduationCap,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 import { SiteLogo } from '@/components/SiteLogo';
 import {
   motion,
@@ -20,9 +19,12 @@ import {
   AnimatePresence,
   LayoutGroup,
 } from 'motion/react';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { useI18n } from '../i18n/I18nProvider';
+
+const GIGGER_AUTH_URL = 'https://12gig.com/auth';
+const MARKETPLACE_URL = 'https://12gig.com/';
 
 const CATEGORY_META = [
   {
@@ -57,22 +59,10 @@ const CATEGORY_META = [
   },
 ] as const;
 
-const PRODUCT_META = [
-  {
-    icon: Store,
-    href: 'https://12gig.com/',
-    external: true,
-  },
-  {
-    icon: Building2,
-    href: '/sme-solutions',
-    external: false,
-  },
-  {
-    icon: GraduationCap,
-    href: '/contact',
-    external: false,
-  },
+const AUDIENCE_META = [
+  { icon: UserRound, href: '/for-giggers' },
+  { icon: Users, href: '/for-users' },
+  { icon: Building2, href: '/for-organisasi' },
 ] as const;
 
 const fadeInUp = {
@@ -92,7 +82,6 @@ function MarketplaceStrip() {
 
   return (
     <LayoutGroup>
-      {/* Mobile: tap-to-expand accordion */}
       <div className="flex flex-col gap-3 md:hidden" role="list">
         {categories.map((cat, idx) => {
           const isActive = active === idx;
@@ -177,7 +166,7 @@ function MarketplaceStrip() {
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary"
                       >
-                        {t.home.browseOn12gig}
+                        {cat.explore}
                         <ArrowRight className="h-4 w-4" />
                       </a>
                     </div>
@@ -189,7 +178,6 @@ function MarketplaceStrip() {
         })}
       </div>
 
-      {/* Desktop: hover-expand strip */}
       <div
         className="hidden md:flex md:h-[320px] md:gap-3"
         onMouseLeave={() => setActive(0)}
@@ -290,7 +278,6 @@ function MarketplaceStrip() {
 }
 
 export default function Home() {
-  const navigate = useNavigate();
   const { t } = useI18n();
   const heroRef = useRef<HTMLElement>(null);
 
@@ -304,7 +291,6 @@ export default function Home() {
 
   return (
     <div className="flex flex-col">
-      {/* Hero */}
       <section
         ref={heroRef}
         className="relative flex min-h-[92vh] flex-col justify-center overflow-hidden bg-foreground pt-24 pb-20 text-background"
@@ -334,157 +320,164 @@ export default function Home() {
                 size="lg"
                 className="h-16 w-16 shadow-lg shadow-black/20 ring-1 ring-white/15 sm:h-20 sm:w-20"
               />
-              <p className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
-                12gig
-              </p>
+              <Badge
+                variant="outline"
+                className="rounded-full border-white/20 bg-white/10 px-4 py-1 text-white"
+              >
+                {t.home.heroEyebrow}
+              </Badge>
             </motion.div>
 
             <motion.h1
               initial={{ opacity: 0, y: 22 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
-              className="text-4xl font-bold tracking-tight leading-[1.1] sm:text-5xl md:text-6xl lg:text-7xl"
+              className="text-4xl font-bold tracking-tight leading-[1.1] sm:text-5xl md:text-6xl"
             >
               {t.home.heroTitleBefore}{' '}
               <span className="italic text-primary">{t.home.heroTitleHighlight}</span>{' '}
               {t.home.heroTitleAfter}
             </motion.h1>
 
-            <motion.p
+            <motion.div
               initial={{ opacity: 0, y: 22 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.16, ease: [0.22, 1, 0.36, 1] }}
-              className="max-w-xl text-lg leading-relaxed text-white/75 sm:text-xl"
+              className="max-w-xl space-y-3"
             >
-              {t.home.heroSubtitle}
-            </motion.p>
+              <p className="text-lg leading-relaxed text-white/75 sm:text-xl">
+                {t.home.heroSubtitle}
+              </p>
+              <p className="text-sm font-medium text-white/60 sm:text-base">
+                {t.home.heroOrigin}
+              </p>
+            </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 22 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.24, ease: [0.22, 1, 0.36, 1] }}
-              className="flex flex-col justify-center gap-3 pt-2 sm:flex-row sm:gap-4"
+              className="flex flex-col items-center gap-5 pt-2"
             >
-              <Button
-                size="lg"
-                className="h-14 rounded-full px-8 text-base font-semibold shadow-xl shadow-primary/25 group sm:text-lg"
-                asChild
-              >
-                <a
-                  href="https://12gig.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center whitespace-nowrap"
+              <div className="flex flex-col justify-center gap-3 sm:flex-row sm:gap-4">
+                <Button
+                  size="lg"
+                  className="h-14 rounded-full px-8 text-base font-semibold shadow-xl shadow-primary/25 group sm:text-lg"
+                  asChild
                 >
-                  {t.home.exploreMarketplace}
-                  <ArrowRight className="ml-2 h-5 w-5 shrink-0 transition-transform group-hover:translate-x-1" />
-                </a>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="h-14 rounded-full border-white/25 bg-white/5 px-8 text-base font-semibold text-white backdrop-blur-sm transition-all hover:bg-white/15 hover:text-white sm:text-lg"
-                asChild
-              >
-                <a
-                  href="https://12gig.com/auth"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center whitespace-nowrap"
+                  <a
+                    href={GIGGER_AUTH_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center whitespace-nowrap"
+                  >
+                    {t.home.becomeGigger}
+                    <ArrowRight className="ml-2 h-5 w-5 shrink-0 transition-transform group-hover:translate-x-1" />
+                  </a>
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="h-14 rounded-full border-white/25 bg-white/5 px-8 text-base font-semibold text-white backdrop-blur-sm transition-all hover:bg-white/15 hover:text-white sm:text-lg"
+                  asChild
                 >
-                  {t.home.becomeGigger}
-                </a>
-              </Button>
+                  <a
+                    href={MARKETPLACE_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center whitespace-nowrap"
+                  >
+                    {t.home.findServices}
+                  </a>
+                </Button>
+              </div>
+              <Link
+                to="/about"
+                className="text-sm font-semibold text-white/70 underline-offset-4 transition-colors hover:text-white hover:underline"
+              >
+                {t.home.learnAbout}
+              </Link>
+              <p className="text-sm font-medium tracking-wide text-white/50">
+                {t.home.brandStatement}
+              </p>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Marketplace categories */}
       <section className="bg-background py-20 sm:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            {...fadeInUp}
-            className="mx-auto mb-12 max-w-2xl space-y-3 text-center sm:mb-14"
-          >
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              {t.home.categoriesTitle}
+          <motion.div {...fadeInUp} className="mx-auto max-w-3xl space-y-6 text-center">
+            <Badge className="rounded-full px-4 py-1">{t.home.whyEyebrow}</Badge>
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+              {t.home.whyTitleBefore}{' '}
+              <span className="italic text-primary">{t.home.whyTitleHighlight}</span>{' '}
+              {t.home.whyTitleAfter}
             </h2>
-            <p className="text-lg text-muted-foreground">
-              {t.home.categoriesSubtitle}
-            </p>
-          </motion.div>
-
-          <motion.div {...fadeInUp} transition={{ ...fadeInUp.transition, delay: 0.1 }}>
-            <MarketplaceStrip />
+            <div className="space-y-4 text-lg leading-relaxed text-muted-foreground">
+              <p>{t.home.whyP1}</p>
+              <p>{t.home.whyP2}</p>
+              <p>{t.home.whyP3}</p>
+            </div>
+            <div className="flex flex-col items-center justify-center gap-3 pt-2 sm:flex-row sm:gap-4">
+              <Button size="lg" className="rounded-full" asChild>
+                <Link to="/about#kisah-penubuhan">
+                  {t.home.whyCta}
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+              <Link
+                to="/what-we-do"
+                className="text-sm font-semibold text-primary underline-offset-4 hover:underline"
+              >
+                {t.home.whyLink}
+              </Link>
+            </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Our Products */}
-      <section className="overflow-hidden bg-muted/40 py-20 sm:py-24">
+      <section className="bg-muted/40 py-20 sm:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             {...fadeInUp}
             className="mx-auto mb-12 max-w-2xl space-y-3 text-center sm:mb-14"
           >
+            <Badge className="rounded-full px-4 py-1">{t.home.audiencesEyebrow}</Badge>
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-              {t.home.productsTitle}
+              {t.home.audiencesTitle}
             </h2>
-            <p className="text-lg text-muted-foreground">
-              {t.home.productsSubtitle}
-            </p>
           </motion.div>
 
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-            {PRODUCT_META.map((meta, idx) => {
-              const product = t.home.products[idx];
-              if (!product) return null;
+            {AUDIENCE_META.map((meta, idx) => {
+              const audience = t.home.audiences[idx];
+              if (!audience) return null;
               const Icon = meta.icon;
-              const content = (
-                <>
-                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/15 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
-                    <Icon className="h-6 w-6" />
-                  </span>
-                  <h3 className="text-2xl font-bold tracking-tight">{product.title}</h3>
-                  <p className="flex-1 text-[15px] leading-relaxed text-muted-foreground">
-                    {product.desc}
-                  </p>
-                  <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary">
-                    {product.cta}
-                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                  </span>
-                </>
-              );
-
-              const className =
-                'group flex h-full w-full flex-col items-start gap-4 rounded-3xl border border-border/60 bg-background p-8 text-left shadow-sm transition-all hover:border-primary/30 hover:shadow-md';
 
               return (
                 <motion.div
-                  key={product.title}
+                  key={audience.title}
                   className="h-full"
                   {...fadeInUp}
                   transition={{ ...fadeInUp.transition, delay: idx * 0.08 }}
                 >
-                  {meta.external ? (
-                    <a
-                      href={meta.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={className}
-                    >
-                      {content}
-                    </a>
-                  ) : (
-                    <button
-                      type="button"
-                      onClick={() => navigate(meta.href)}
-                      className={className}
-                    >
-                      {content}
-                    </button>
-                  )}
+                  <Link
+                    to={meta.href}
+                    className="group flex h-full w-full flex-col items-start gap-4 rounded-3xl border border-border/60 bg-background p-8 text-left shadow-sm transition-all hover:border-primary/30 hover:shadow-md"
+                  >
+                    <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/15 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                      <Icon className="h-6 w-6" />
+                    </span>
+                    <h3 className="text-2xl font-bold tracking-tight">{audience.title}</h3>
+                    <p className="flex-1 text-[15px] leading-relaxed text-muted-foreground">
+                      {audience.desc}
+                    </p>
+                    <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary">
+                      {audience.cta}
+                      <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </span>
+                  </Link>
                 </motion.div>
               );
             })}
@@ -492,93 +485,218 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Community narrative */}
       <section className="bg-background py-20 sm:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-14">
-            <motion.div
-              {...fadeInUp}
-              className="relative overflow-hidden rounded-3xl lg:col-span-5"
-            >
-              <div className="aspect-[4/5] w-full">
-                <img
-                  src="/kota-kinabalu.jpg"
-                  alt="Kota Kinabalu street with Wisma Sabah mural"
-                  className="h-full w-full object-cover"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-transparent to-transparent" />
-              <p className="absolute bottom-6 left-6 right-6 text-sm font-medium text-white/90">
-                {t.home.communityCaption}
-              </p>
-            </motion.div>
+          <motion.div
+            {...fadeInUp}
+            className="mx-auto mb-12 max-w-2xl space-y-3 text-center sm:mb-14"
+          >
+            <Badge className="rounded-full px-4 py-1">{t.home.howEyebrow}</Badge>
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+              {t.home.howTitleBefore}{' '}
+              <span className="italic text-primary">{t.home.howTitleHighlight}</span>{' '}
+              {t.home.howTitleAfter}
+            </h2>
+          </motion.div>
 
-            <motion.div
-              {...fadeInUp}
-              transition={{ ...fadeInUp.transition, delay: 0.1 }}
-              className="flex flex-col justify-center space-y-6 lg:col-span-7"
-            >
-              <Quote className="h-10 w-10 text-primary/40" />
-              <blockquote className="text-2xl font-medium leading-snug tracking-tight text-foreground sm:text-3xl">
-                &ldquo;{t.home.communityQuote}&rdquo;
-              </blockquote>
-              <div>
-                <p className="font-semibold">{t.home.communityName}</p>
-                <p className="text-sm text-muted-foreground">
-                  {t.home.communityRole}
-                </p>
-              </div>
-              <p className="max-w-lg text-muted-foreground leading-relaxed">
-                {t.home.communityBody}
-              </p>
-              <Button
-                variant="outline"
-                className="w-fit rounded-full"
-                onClick={() => navigate('/impact')}
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {t.home.howSteps.map((step, idx) => (
+              <motion.div
+                key={step.title}
+                {...fadeInUp}
+                transition={{ ...fadeInUp.transition, delay: idx * 0.08 }}
+                className="rounded-3xl border border-border/60 bg-muted/30 p-8"
               >
-                {t.home.communityCta}
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </motion.div>
+                <p className="text-5xl font-black text-primary/20">{idx + 1}</p>
+                <h3 className="mt-4 text-xl font-bold">{step.title}</h3>
+                <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">
+                  {step.desc}
+                </p>
+              </motion.div>
+            ))}
           </div>
+
+          <motion.div
+            {...fadeInUp}
+            className="mt-12 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4"
+          >
+            <Button size="lg" className="rounded-full" asChild>
+              <Link to="/how-it-works#gigger">{t.home.howCtaGigger}</Link>
+            </Button>
+            <Button size="lg" variant="outline" className="rounded-full" asChild>
+              <Link to="/how-it-works#pengguna">{t.home.howCtaUser}</Link>
+            </Button>
+            <Link
+              to="/how-it-works#organisasi"
+              className="text-sm font-semibold text-primary underline-offset-4 hover:underline"
+            >
+              {t.home.howLinkOrg}
+            </Link>
+          </motion.div>
         </div>
       </section>
 
-      {/* Final CTA */}
+      <section className="bg-muted/40 py-20 sm:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            {...fadeInUp}
+            className="mx-auto mb-12 max-w-2xl space-y-3 text-center sm:mb-14"
+          >
+            <Badge className="rounded-full px-4 py-1">{t.home.categoriesEyebrow}</Badge>
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+              {t.home.categoriesTitle}
+            </h2>
+            <p className="text-lg text-muted-foreground">{t.home.categoriesSubtitle}</p>
+          </motion.div>
+
+          <motion.div {...fadeInUp} transition={{ ...fadeInUp.transition, delay: 0.1 }}>
+            <MarketplaceStrip />
+          </motion.div>
+
+          <motion.div {...fadeInUp} className="mt-10 flex justify-center">
+            <Button size="lg" className="rounded-full" asChild>
+              <a href={MARKETPLACE_URL} target="_blank" rel="noopener noreferrer">
+                {t.home.viewAllServices}
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </a>
+            </Button>
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="bg-background py-20 sm:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            {...fadeInUp}
+            className="mx-auto mb-12 max-w-2xl space-y-4 text-center sm:mb-14"
+          >
+            <Badge className="rounded-full px-4 py-1">{t.home.tractionEyebrow}</Badge>
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+              {t.home.tractionTitleBefore}{' '}
+              <span className="italic text-primary">{t.home.tractionTitleHighlight}</span>{' '}
+              {t.home.tractionTitleAfter}
+            </h2>
+            <p className="text-lg leading-relaxed text-muted-foreground">
+              {t.home.tractionBody}
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+            {t.home.stats.map((stat, idx) => (
+              <motion.div
+                key={stat.label}
+                {...fadeInUp}
+                transition={{ ...fadeInUp.transition, delay: idx * 0.08 }}
+                className="rounded-3xl border border-border/60 p-10 text-center"
+              >
+                <p className="text-5xl font-black tracking-tight text-primary">{stat.value}</p>
+                <p className="mt-3 font-medium text-muted-foreground">{stat.label}</p>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div {...fadeInUp} className="mx-auto mt-10 max-w-2xl space-y-6 text-center">
+            <p className="text-sm leading-relaxed text-muted-foreground">{t.home.tractionNote}</p>
+            <Button className="rounded-full" asChild>
+              <Link to="/impact#data-platform">
+                {t.home.tractionCta}
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="bg-muted/40 py-20 sm:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div {...fadeInUp} className="mx-auto max-w-3xl space-y-6 text-center">
+            <Badge className="rounded-full px-4 py-1">{t.home.giggerFirstEyebrow}</Badge>
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+              {t.home.giggerFirstTitle}
+            </h2>
+            <div className="space-y-4 text-lg leading-relaxed text-muted-foreground">
+              <p>{t.home.giggerFirstP1}</p>
+              <p>{t.home.giggerFirstP2}</p>
+            </div>
+            <div className="flex flex-col items-center justify-center gap-3 pt-2 sm:flex-row sm:gap-4">
+              <Button size="lg" className="rounded-full" asChild>
+                <Link to="/what-we-do#gigger-first">{t.home.giggerFirstCta}</Link>
+              </Button>
+              <Button size="lg" variant="outline" className="rounded-full" asChild>
+                <a href={GIGGER_AUTH_URL} target="_blank" rel="noopener noreferrer">
+                  {t.home.becomeGigger}
+                </a>
+              </Button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="bg-background py-20 sm:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div {...fadeInUp} className="mx-auto max-w-3xl space-y-6 text-center">
+            <Badge className="rounded-full px-4 py-1">{t.home.partnersEyebrow}</Badge>
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+              {t.home.partnersTitle}
+            </h2>
+            <div className="space-y-4 text-lg leading-relaxed text-muted-foreground">
+              <p>{t.home.partnersP1}</p>
+              <p>{t.home.partnersP2}</p>
+            </div>
+            <div className="flex flex-col items-center justify-center gap-3 pt-2 sm:flex-row sm:gap-4">
+              <Button size="lg" className="rounded-full" asChild>
+                <Link to="/partnerships#bentuk-kerjasama">{t.home.partnersCta}</Link>
+              </Button>
+              <Button size="lg" variant="outline" className="rounded-full" asChild>
+                <Link to="/contact?tujuan=kerjasama">{t.home.partnersCtaSecondary}</Link>
+              </Button>
+            </div>
+            <Link
+              to="/for-organisasi"
+              className="inline-block text-sm font-semibold text-primary underline-offset-4 hover:underline"
+            >
+              {t.home.partnersLink}
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
       <section className="relative overflow-hidden bg-foreground py-28 sm:py-32">
         <div className="container relative z-10 mx-auto px-4 text-center">
           <motion.div {...fadeInUp} className="mx-auto max-w-3xl space-y-8">
             <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
               {t.home.ctaTitle}
             </h2>
-            <div className="flex flex-col justify-center gap-3 sm:flex-row sm:gap-4">
+            <p className="text-lg text-white/70">{t.home.ctaBody}</p>
+            <div className="flex flex-col justify-center gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
               <Button
                 size="lg"
-                className="h-14 rounded-full px-10 text-lg font-bold shadow-2xl sm:h-16 sm:text-xl"
+                className="h-14 rounded-full px-8 text-lg font-bold shadow-2xl"
                 asChild
               >
-                <a
-                  href="https://12gig.com/auth"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="whitespace-nowrap"
-                >
-                  {t.home.becomeGigger}
+                <a href={GIGGER_AUTH_URL} target="_blank" rel="noopener noreferrer">
+                  {t.home.ctaGigger}
                 </a>
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="h-14 rounded-full border-primary/40 px-10 text-lg font-bold text-primary transition-all hover:bg-primary hover:text-primary-foreground sm:h-16 sm:text-xl"
-                onClick={() => navigate('/contact')}
+                className="h-14 rounded-full border-white/25 bg-white/5 px-8 text-lg font-bold text-white hover:bg-white/15 hover:text-white"
+                asChild
               >
-                {t.home.ctaSme}
+                <a href={MARKETPLACE_URL} target="_blank" rel="noopener noreferrer">
+                  {t.home.ctaUser}
+                </a>
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="h-14 rounded-full border-primary/40 px-8 text-lg font-bold text-primary hover:bg-primary hover:text-primary-foreground"
+                asChild
+              >
+                <Link to="/contact?tujuan=kerjasama">{t.home.ctaOrg}</Link>
               </Button>
             </div>
-            <p className="text-sm font-medium text-white/50">
-              {t.home.ctaNote}
-            </p>
           </motion.div>
         </div>
 
