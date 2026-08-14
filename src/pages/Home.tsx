@@ -397,9 +397,6 @@ export default function Home() {
               >
                 {t.home.learnAbout}
               </Link>
-              <p className="text-sm font-medium tracking-wide text-white/50">
-                {t.home.brandStatement}
-              </p>
             </motion.div>
           </div>
         </div>
