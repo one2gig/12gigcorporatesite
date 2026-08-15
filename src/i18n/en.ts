@@ -29,6 +29,8 @@ export const en = {
     toggleMenu: 'Toggle menu',
     ecosystemTagline: 'Local Gig Economy Platform',
     followJourney: 'Follow our journey',
+    announcementLabel: 'Latest',
+    announcementCta: 'Read the article',
   },
   footer: {
     tagline:

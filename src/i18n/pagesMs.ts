@@ -1002,6 +1002,57 @@ export const pagesMs = {
     latestEyebrow: 'Kemas Kini Rasmi',
     latestTitle: 'Berita dan Perkembangan 12Gig',
     empty: 'Tiada artikel yang diterbitkan lagi. Kami akan berkongsi berita rasmi di sini apabila ia disahkan.',
+    articles: [
+      {
+        id: 'closed-testing-august-2026',
+        date: '15 Ogos 2026',
+        location: 'Kota Kinabalu, Sabah',
+        categories: ['program', 'platform', 'korporat'],
+        title: 'Aplikasi Mudah Alih 12Gig Memasuki Fasa Ujian Tertutup 14 Hari',
+        excerpt:
+          '12Gig Sdn. Bhd. akan memulakan fasa ujian tertutup 14 hari bagi aplikasi mudah alih 12Gig mulai 17 Ogos 2026, sebagai sebahagian daripada proses yang diperlukan untuk pelancaran yang dirancang di Google Play.',
+        intro: [
+          '12Gig Sdn. Bhd. dengan sukacitanya mengumumkan bahawa aplikasi mudah alih 12Gig akan memulakan fasa ujian tertutup 14 hari mulai Isnin, 17 Ogos 2026, sebagai sebahagian daripada proses ujian yang diperlukan untuk pelancaran yang dirancang di Google Play.',
+          'Tempoh ujian ini akan berlangsung selama dua minggu dan melibatkan peserta terpilih yang menguji aplikasi dalam senario penggunaan sebenar dari kedua-dua belah pasaran 12Gig, termasuk Gigger yang menawarkan perkhidmatan dan Pengguna yang mencari serta melibatkan penyedia perkhidmatan.',
+          'Sepanjang tempoh ujian, peserta akan diminta menguji fungsi utama aplikasi, mengenal pasti isu teknikal, menilai pengalaman pengguna, dan memberikan maklum balas berstruktur kepada pasukan 12Gig.',
+        ],
+        goalsIntro: 'Ujian ini akan membantu 12Gig:',
+        goals: [
+          'Mengesahkan bahawa fungsi teras aplikasi beroperasi seperti yang dimaksudkan.',
+          'Mengenal pasti pepijat, isu kebolehgunaan dan bidang yang memerlukan penambahbaikan teknikal.',
+          'Menguji perjalanan penyenaraian perkhidmatan, penemuan dan transaksi antara Gigger dan Pengguna.',
+          'Mengumpul maklum balas daripada pengguna sebenar sebelum pelancaran awam yang lebih luas.',
+          'Menyokong kesediaan aplikasi untuk peringkat seterusnya dalam proses pelancaran Google Play.',
+        ],
+        sections: [
+          {
+            title: 'Membina 12Gig Bersama Pengguna Kami',
+            paras: [
+              'Fasa ujian ini menandakan satu lagi mercu tanda penting dalam pembangunan 12Gig.',
+              '12Gig dibangunkan sebagai pasaran perkhidmatan digital yang mengutamakan Gigger, memberi individu peluang untuk menawarkan kemahiran dan perkhidmatan mereka sambil membolehkan pelanggan mencari dan melibatkan penyedia perkhidmatan melalui platform digital yang tersusun.',
+              'Daripada menganggap langkah ini semata-mata sebagai keperluan teknikal, 12Gig akan menggunakan tempoh ujian dua minggu ini untuk belajar secara langsung daripada penggunanya dan menambah baik aplikasi sebelum pengenalan pasaran yang lebih luas.',
+              'Maklum balas yang dikumpul sepanjang tempoh ujian akan disemak oleh pasukan 12Gig, dengan isu dan penambahbaikan yang dikenal pasti diberi keutamaan sewajarnya.',
+            ],
+          },
+          {
+            title: 'Apa yang Menyusul?',
+            paras: [
+              'Selepas tempoh ujian 14 hari selesai, pasukan 12Gig akan menyemak keputusan ujian, menangani isu yang dikenal pasti jika perlu, dan meneruskan langkah seterusnya ke arah menjadikan aplikasi tersedia kepada khalayak yang lebih luas.',
+              'Kami mengucapkan terima kasih kepada semua penguji terpilih, Gigger, Pengguna, rakan kongsi dan penyokong yang terus menyumbang kepada pembangunan 12Gig.',
+            ],
+          },
+        ],
+        facts: [
+          { label: 'Tempoh Ujian', value: '17–30 Ogos 2026' },
+          { label: 'Platform', value: 'Aplikasi Mudah Alih 12Gig' },
+          { label: 'Peringkat Ujian', value: 'Ujian Tertutup' },
+          { label: 'Tempoh', value: '14 Hari' },
+        ],
+        signoff: '12Gig',
+        tagline: "The People's Economy.",
+        testerCta: 'Peserta terpilih: buka jemputan',
+      },
+    ],
     catsEyebrow: 'Terokai mengikut Topik',
     catsTitle: 'Pilih Perkembangan Berkaitan',
     categories: [
@@ -1183,5 +1234,86 @@ export const pagesMs = {
     essentialBody: 'Diperlukan untuk fungsi asas seperti keutamaan bahasa dan keselamatan. Kuki ini tidak boleh dimatikan.',
     note: 'Anda juga boleh mengurus kuki melalui pelayar anda. Menyekat sesetengah kuki mungkin menjejaskan cara laman berfungsi.',
     privacyCta: 'Baca Notis Privasi',
+  },
+  beta: {
+    badge: 'Closed Beta · Batch 1',
+    title: 'Jemputan Rasmi Peserta 12Gig Closed Beta Testing',
+    intro:
+      'Anda dijemput menyertai 12Gig Closed Beta Testing Programme (Batch 1) — program 14 hari untuk peserta terpilih sebelum pelancaran awam.',
+    heroCta: 'Sertai Kumpulan WhatsApp',
+    heroSecondary: 'Baca Jemputan',
+    inviteEyebrow: 'Jemputan Rasmi Peserta',
+    inviteTitle: 'Hi, apa khabar?',
+    inviteParas: [
+      'Kami harap semuanya berada dalam keadaan baik. Kami ingin menjemput anda menyertai 12Gig Closed Beta Testing Programme (Batch 1).',
+      '12Gig merupakan sebuah platform digital yang dibangunkan di Sabah dengan misi membantu lebih ramai rakyat Malaysia menjana pendapatan melalui kemahiran dan perkhidmatan yang mereka miliki, di samping memudahkan orang ramai mendapatkan penyedia perkhidmatan yang dipercayai.',
+      'Selepas melalui proses pembangunan selama beberapa tahun, aplikasi 12Gig kini berada di peringkat akhir sebelum dilancarkan kepada orang ramai.',
+      'Sebelum pelancaran rasmi dibuat, kami ingin memastikan aplikasi ini benar-benar stabil, mudah digunakan dan memenuhi keperluan pengguna sebenar.',
+      'Bagi tujuan tersebut, kami sedang membentuk kumpulan pertama 12Gig Closed Beta Testers Batch 1 yang terdiri daripada sekumpulan pengguna terpilih untuk menguji aplikasi ini selama 14 hari.',
+      'Anda merupakan antara individu yang kami percaya boleh membantu kami memberikan maklum balas yang jujur dan membina sepanjang tempoh tersebut.',
+      'Program ini tidak memerlukan sebarang pengetahuan teknikal. Kami hanya memerlukan pengalaman sebenar daripada pengguna biasa kerana aplikasi ini akhirnya dibangunkan untuk masyarakat.',
+      'Sepanjang program berlangsung, anda hanya perlu menggunakan aplikasi mengikut tugasan yang akan diberikan. Setiap sesi testing mengambil masa sekitar 10 hingga 15 minit sahaja dan tugasan akan diberikan secara bergilir supaya tidak mengganggu rutin harian.',
+      'Kami tidak mengharapkan pujian. Kami lebih menghargai pandangan yang jujur. Sekiranya terdapat perkara yang mengelirukan, tidak berfungsi dengan baik, lambat atau boleh diperbaiki, maklum balas tersebut akan terus digunakan oleh pasukan pembangunan untuk menambah baik aplikasi.',
+      'Program ini juga merupakan sebahagian daripada proses Closed Beta Testing yang diperlukan sebelum permohonan penerbitan rasmi aplikasi kepada Google Play Store.',
+    ],
+    recognitionIntro: 'Sebagai penghargaan, semua peserta yang melengkapkan program ini akan diiktiraf sebagai:',
+    recognition: [
+      '12Gig Closed Beta Tester Batch 1',
+      'Founding Member 12Gig, iaitu kumpulan pengguna terawal yang membantu membentuk platform ini sebelum pelancaran rasmi.',
+    ],
+    whatsappNote:
+      'Sekiranya anda bersetuju menyertai program ini, sila masuk ke kumpulan WhatsApp rasmi 12Gig Closed Beta Testing Programme (Batch 1).',
+    thanks: [
+      'Terima kasih kerana meluangkan masa membaca jemputan ini.',
+      'Saya berharap anda dapat bersama-sama kami dalam membina platform yang diharapkan mampu memberi manfaat kepada lebih ramai rakyat Malaysia.',
+      'Terima kasih.',
+    ],
+    joinCta: 'Sertai Kumpulan WhatsApp',
+    faqEyebrow: 'Soalan Lazim',
+    faqTitle: 'Soalan Lazim (FAQ)',
+    faqs: [
+      {
+        q: 'Apa yang saya perlu buat?',
+        a: 'Anda hanya perlu menggunakan aplikasi seperti pengguna biasa mengikut tugasan yang diberikan sepanjang tempoh program. Antara tugasan yang mungkin diberikan ialah: daftar akaun, lengkapkan profil, cari sesuatu perkhidmatan, menawarkan perkhidmatan (bagi peserta Gigger), membuat tempahan, berkomunikasi melalui aplikasi, dan memberikan maklum balas terhadap pengalaman penggunaan.',
+        items: [
+          'Daftar akaun',
+          'Lengkapkan profil',
+          'Cari sesuatu perkhidmatan',
+          'Menawarkan perkhidmatan (bagi peserta Gigger)',
+          'Membuat tempahan',
+          'Berkomunikasi melalui aplikasi',
+          'Memberikan maklum balas terhadap pengalaman penggunaan',
+        ],
+      },
+      {
+        q: 'Berapa lama masa diperlukan?',
+        a: 'Sekitar 10 hingga 15 minit bagi setiap sesi testing. Tugasan tidak diberikan kepada semua peserta setiap hari kerana ia dijalankan secara bergilir mengikut jadual.',
+      },
+      {
+        q: 'Adakah saya perlu mahir IT?',
+        a: 'Tidak. Program ini memerlukan pandangan daripada pengguna biasa. Semakin semula jadi pengalaman penggunaan, semakin bernilai maklum balas yang akan diterima oleh pihak kami.',
+      },
+      {
+        q: 'Adakah program ini berbayar?',
+        a: 'Program ini dijalankan secara sukarela dan tiada bayaran disediakan. Walau bagaimanapun, semua peserta yang berjaya melengkapkan program akan menerima pengiktirafan sebagai 12Gig Closed Beta Tester Batch 1, pengiktirafan sebagai Founding Member 12Gig, dan Sijil Digital Penghargaan daripada pihak 12Gig.',
+        items: [
+          'Pengiktirafan sebagai 12Gig Closed Beta Tester Batch 1',
+          'Pengiktirafan sebagai Founding Member 12Gig',
+          'Sijil Digital Penghargaan daripada pihak 12Gig',
+        ],
+      },
+      {
+        q: 'Kenapa saya dipilih?',
+        a: 'Kami memilih kumpulan yang kecil supaya setiap pandangan yang diberikan dapat diberi perhatian dan digunakan secara terus dalam proses penambahbaikan aplikasi.',
+      },
+    ],
+    closeEyebrow: 'Penutup',
+    closeTitle: 'Bina 12Gig Bersama Kami',
+    closeParas: [
+      'Bagi kami, program ini bukan sekadar memenuhi keperluan sebelum pelancaran aplikasi.',
+      'Ia merupakan peluang untuk membina sebuah platform yang benar-benar memenuhi keperluan pengguna melalui pengalaman dan maklum balas daripada masyarakat sendiri.',
+      'Terima kasih kerana menjadi sebahagian daripada perjalanan awal 12Gig.',
+      'Kami mengalu-alukan penyertaan anda sebagai 12Gig Closed Beta Tester Batch 1 dan Founding Member 12Gig.',
+    ],
   },
 };

@@ -109,7 +109,7 @@ export function SectionBlock({
   muted?: boolean;
 }) {
   return (
-    <section id={id} className={`scroll-mt-24 py-20 sm:py-24 ${muted ? 'bg-muted/30' : 'bg-background'}`}>
+    <section id={id} className={`scroll-mt-36 py-20 sm:py-24 ${muted ? 'bg-muted/30' : 'bg-background'}`}>
       <div className="container mx-auto max-w-4xl space-y-8 px-4">
         {eyebrow && <Badge className="rounded-full px-4 py-1">{eyebrow}</Badge>}
         {title && <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">{title}</h2>}

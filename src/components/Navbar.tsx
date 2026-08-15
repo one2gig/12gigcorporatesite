@@ -25,6 +25,7 @@ import { cn } from '@/lib/utils';
 import { SITE_LOGO_SHOW_WORDMARK } from '@/lib/branding';
 import { SiteLogo } from '@/components/SiteLogo';
 import { LanguageSwitcher } from './LanguageSwitcher';
+import { AnnouncementBar } from './AnnouncementBar';
 import { useI18n } from '../i18n/I18nProvider';
 import { MARKETPLACE_URL, SOCIAL } from '../lib/site';
 
@@ -257,6 +258,7 @@ export function Navbar() {
           </div>
         </div>
       </div>
+      <AnnouncementBar />
     </header>
   );
 }

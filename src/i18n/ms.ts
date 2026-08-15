@@ -31,6 +31,8 @@ export const ms: Dictionary = {
     toggleMenu: 'Buka menu',
     ecosystemTagline: 'Platform Ekonomi Gig Tempatan',
     followJourney: 'Ikuti perjalanan kami',
+    announcementLabel: 'Terkini',
+    announcementCta: 'Baca artikel',
   },
   footer: {
     tagline:

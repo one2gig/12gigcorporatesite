@@ -1002,6 +1002,57 @@ export const pagesEn = {
     latestEyebrow: 'Official Updates',
     latestTitle: '12Gig News and Developments',
     empty: 'No articles have been published yet. We will share official news here when it is confirmed.',
+    articles: [
+      {
+        id: 'closed-testing-august-2026',
+        date: '15 August 2026',
+        location: 'Kota Kinabalu, Sabah',
+        categories: ['program', 'platform', 'korporat'],
+        title: '12Gig Mobile App Enters 14-Day Closed Testing Phase',
+        excerpt:
+          '12Gig Sdn. Bhd. will begin a 14-day closed testing phase of the 12Gig mobile application from 17 August 2026, as part of the process required for its planned release on Google Play.',
+        intro: [
+          '12Gig Sdn. Bhd. is pleased to announce that the 12Gig mobile application will commence a 14-day closed testing phase from Monday, 17 August 2026, as part of the testing process required for its planned release on Google Play.',
+          'The testing period will run for two weeks and involve selected participants testing the application in real-use scenarios from both sides of the 12Gig marketplace, including Giggers offering services and Users seeking and engaging service providers.',
+          'Throughout the testing period, participants will be asked to test key functions of the application, identify technical issues, assess the user experience, and provide structured feedback to the 12Gig team.',
+        ],
+        goalsIntro: 'The exercise will help 12Gig:',
+        goals: [
+          'Verify that the application’s core functions operate as intended.',
+          'Identify bugs, usability issues and areas requiring technical improvement.',
+          'Test the service listing, discovery and transaction journey between Giggers and Users.',
+          'Gather feedback from actual users before wider public release.',
+          'Support the application’s readiness for the next stage of the Google Play release process.',
+        ],
+        sections: [
+          {
+            title: 'Building 12Gig With Our Users',
+            paras: [
+              'This testing phase marks another important milestone in 12Gig’s development.',
+              '12Gig is being developed as a Gigger-first digital services marketplace, giving individuals the opportunity to offer their skills and services while allowing customers to find and engage service providers through a structured digital platform.',
+              'Rather than treating this exercise purely as a technical requirement, 12Gig will use the two-week testing period to learn directly from its users and improve the application before wider market introduction.',
+              'Feedback collected during the testing period will be reviewed by the 12Gig team, with identified issues and improvements prioritised accordingly.',
+            ],
+          },
+          {
+            title: 'What Comes Next?',
+            paras: [
+              'Following completion of the 14-day testing period, the 12Gig team will review the testing results, address identified issues where necessary, and proceed with the subsequent steps towards making the application available to a wider audience.',
+              'We thank all selected testers, Giggers, Users, partners and supporters who continue to contribute to the development of 12Gig.',
+            ],
+          },
+        ],
+        facts: [
+          { label: 'Testing Period', value: '17–30 August 2026' },
+          { label: 'Platform', value: '12Gig Mobile Application' },
+          { label: 'Testing Stage', value: 'Closed Testing' },
+          { label: 'Duration', value: '14 Days' },
+        ],
+        signoff: '12Gig',
+        tagline: "The People's Economy.",
+        testerCta: 'Selected testers: open the invitation',
+      },
+    ],
     catsEyebrow: 'Explore by Topic',
     catsTitle: 'Choose Related Developments',
     categories: [
@@ -1183,5 +1234,86 @@ export const pagesEn = {
     essentialBody: 'Needed for basic functions such as language preference and security. These cannot be switched off.',
     note: 'You can also manage cookies through your browser. Blocking some cookies may affect how the site works.',
     privacyCta: 'Read the Privacy Notice',
+  },
+  beta: {
+    badge: 'Closed Beta · Batch 1',
+    title: 'Official Invitation to Join 12Gig Closed Beta Testing',
+    intro:
+      'You are invited to join the 12Gig Closed Beta Testing Programme (Batch 1) — a 14-day programme for selected participants before public launch.',
+    heroCta: 'Join the WhatsApp Group',
+    heroSecondary: 'Read the Invitation',
+    inviteEyebrow: 'Official Invitation',
+    inviteTitle: 'Hi, how are you?',
+    inviteParas: [
+      'We hope you are well. We would like to invite you to join the 12Gig Closed Beta Testing Programme (Batch 1).',
+      '12Gig is a digital platform built in Sabah with a mission to help more Malaysians earn through the skills and services they already have, while making it easier for people to find trusted service providers.',
+      'After several years of development, the 12Gig application is now in its final stage before public launch.',
+      'Before the official launch, we want to make sure the application is truly stable, easy to use, and meets the needs of real users.',
+      'For that purpose, we are forming the first group of 12Gig Closed Beta Testers Batch 1 — selected users who will test the application for 14 days.',
+      'You are among the people we believe can give us honest and constructive feedback throughout that period.',
+      'This programme does not require any technical knowledge. We only need real experience from ordinary users, because the application is ultimately built for the community.',
+      'During the programme, you only need to use the application according to the tasks given. Each testing session takes about 10 to 15 minutes, and tasks will be given in rotation so they do not disrupt your daily routine.',
+      'We are not looking for praise. We value honest views more. If something is confusing, does not work well, is slow, or can be improved, that feedback will be used directly by the development team to improve the application.',
+      'This programme is also part of the Closed Beta Testing process required before the official application is submitted to the Google Play Store.',
+    ],
+    recognitionIntro: 'As a token of appreciation, every participant who completes the programme will be recognised as:',
+    recognition: [
+      '12Gig Closed Beta Tester Batch 1',
+      'Founding Member 12Gig — the earliest group of users who helped shape the platform before official launch.',
+    ],
+    whatsappNote:
+      'If you agree to join this programme, you can enter the official WhatsApp group for the 12Gig Closed Beta Testing Programme (Batch 1).',
+    thanks: [
+      'Thank you for taking the time to read this invitation.',
+      'We hope you will join us in building a platform that can benefit more Malaysians.',
+      'Thank you.',
+    ],
+    joinCta: 'Join the WhatsApp Group',
+    faqEyebrow: 'FAQ',
+    faqTitle: 'Frequently Asked Questions',
+    faqs: [
+      {
+        q: 'What do I need to do?',
+        a: 'You only need to use the application like an ordinary user, according to the tasks given throughout the programme. Tasks may include: register an account, complete a profile, search for a service, offer a service (for Gigger participants), make a booking, communicate through the application, and give feedback on the experience.',
+        items: [
+          'Register an account',
+          'Complete a profile',
+          'Search for a service',
+          'Offer a service (for Gigger participants)',
+          'Make a booking',
+          'Communicate through the application',
+          'Give feedback on the user experience',
+        ],
+      },
+      {
+        q: 'How much time is needed?',
+        a: 'About 10 to 15 minutes for each testing session. Tasks are not given to every participant every day, because they are rotated according to a schedule.',
+      },
+      {
+        q: 'Do I need to be IT-savvy?',
+        a: 'No. This programme needs views from ordinary users. The more natural the experience, the more valuable the feedback we receive.',
+      },
+      {
+        q: 'Is this programme paid?',
+        a: 'The programme is voluntary and no payment is provided. However, every participant who successfully completes the programme will receive recognition as a 12Gig Closed Beta Tester Batch 1, recognition as a Founding Member 12Gig, and a Digital Certificate of Appreciation from 12Gig.',
+        items: [
+          'Recognition as 12Gig Closed Beta Tester Batch 1',
+          'Recognition as Founding Member 12Gig',
+          'A Digital Certificate of Appreciation from 12Gig',
+        ],
+      },
+      {
+        q: 'Why was I selected?',
+        a: 'We are keeping the group small so that every view given can receive attention and be used directly in improving the application.',
+      },
+    ],
+    closeEyebrow: 'Closing',
+    closeTitle: 'Build 12Gig With Us',
+    closeParas: [
+      'For us, this programme is not only about meeting a requirement before launch.',
+      'It is an opportunity to build a platform that truly meets user needs through experience and feedback from the community itself.',
+      'Thank you for being part of 12Gig’s early journey.',
+      'We welcome your participation as a 12Gig Closed Beta Tester Batch 1 and Founding Member 12Gig.',
+    ],
   },
 };

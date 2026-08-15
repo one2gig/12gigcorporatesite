@@ -101,3 +101,23 @@
     @apply font-sans;
     }
 }
+
+@keyframes announcement-slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.announcement-slide {
+  padding-left: 100%;
+  animation: announcement-slide 18s linear infinite;
+  will-change: transform;
+}
+
+.announcement-track:hover .announcement-slide,
+.announcement-track:focus-visible .announcement-slide {
+  animation-play-state: paused;
+}
