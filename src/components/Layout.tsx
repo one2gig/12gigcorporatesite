@@ -7,27 +7,50 @@ interface LayoutProps {
   children: React.ReactNode;
 }
 
+function headerOffset() {
+  const header = document.querySelector('header');
+  if (!(header instanceof HTMLElement)) return 112;
+  return header.getBoundingClientRect().height + 8;
+}
+
+function scrollToHashTarget(id: string) {
+  const el = document.getElementById(id);
+  if (!el) return false;
+  const top = Math.max(0, window.scrollY + el.getBoundingClientRect().top - headerOffset());
+  window.scrollTo({ top, left: 0, behavior: 'auto' });
+  return true;
+}
+
 export function Layout({ children }: LayoutProps) {
   const { pathname, hash } = useLocation();
 
   React.useEffect(() => {
-    if (!hash) {
-      window.scrollTo(0, 0);
-      return;
-    }
+    if (!('scrollRestoration' in window.history)) return;
+    window.history.scrollRestoration = 'manual';
+  }, []);
+
+  React.useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    if (!hash) return;
 
     const id = decodeURIComponent(hash.slice(1));
-    const scrollToHash = () => {
-      const el = document.getElementById(id);
-      if (!el) return false;
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      return true;
+    let cancelled = false;
+    let attempts = 0;
+    const timers: number[] = [];
+
+    const tryScroll = () => {
+      if (cancelled) return;
+      if (scrollToHashTarget(id) || attempts >= 24) return;
+      attempts += 1;
+      timers.push(window.setTimeout(tryScroll, 50));
     };
 
-    if (scrollToHash()) return;
+    timers.push(window.setTimeout(tryScroll, 280));
 
-    const timeout = window.setTimeout(scrollToHash, 320);
-    return () => window.clearTimeout(timeout);
+    return () => {
+      cancelled = true;
+      timers.forEach((timer) => window.clearTimeout(timer));
+    };
   }, [pathname, hash]);
 
   return (
