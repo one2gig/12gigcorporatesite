@@ -161,14 +161,7 @@ export const en = {
     tractionTitleAfter: 'Through Trust',
     tractionBody:
       '12Gig is building a services market that connects local skills with real demand.',
-    stats: [
-      { value: '210', label: 'Registered giggers' },
-      { value: '412', label: 'Registered users' },
-      { value: '5', label: 'Service ecosystems' },
-    ],
-    tractionNote:
-      'Data as of August 2026. Official figures, transaction values, and measurement methods are explained on the Impact & Performance page.',
-    tractionCta: 'See Data and Performance',
+    tractionCta: 'See Impact & Performance',
     giggerFirstEyebrow: 'Gigger First',
     giggerFirstTitle: 'Giggers Come First in the 12Gig Ecosystem',
     giggerFirstP1:

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { PageHero, SectionBlock } from '../components/PageChrome';
 import { useI18n } from '../i18n/I18nProvider';
@@ -22,27 +21,9 @@ export default function Impact() {
             <p>{p.intro2}</p>
           </>
         }
-        primary={{ href: '#pencapaian', label: p.heroCta }}
-        secondary={{ href: '#bidang-impak', label: p.heroSecondary }}
+        primary={{ href: '#bidang-impak', label: p.heroCta }}
+        secondary={{ href: '#kaedah-pengukuran', label: p.heroSecondary }}
       />
-
-      <section id="pencapaian" className="scroll-mt-24 bg-muted/30 py-20 sm:py-24">
-        <div id="data-platform" className="container mx-auto max-w-4xl scroll-mt-24 space-y-8 px-4">
-          <Badge className="rounded-full px-4 py-1">{p.statsEyebrow}</Badge>
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">{p.statsTitle}</h2>
-          <p className="text-lg text-muted-foreground">{p.statsIntro}</p>
-          <div className="grid gap-4 sm:grid-cols-2">
-            {p.stats.map((stat) => (
-              <div key={stat.label} className="rounded-3xl border bg-background p-8">
-                <p className="text-4xl font-black tracking-tight text-primary">{stat.value}</p>
-                <p className="mt-2 font-bold">{stat.label}</p>
-                <p className="mt-2 text-sm text-muted-foreground">{stat.desc}</p>
-              </div>
-            ))}
-          </div>
-          <p className="text-sm text-muted-foreground">{p.statsNote}</p>
-        </div>
-      </section>
 
       <SectionBlock id="bidang-impak" eyebrow={p.areasEyebrow} title={p.areasTitle}>
         <div className="space-y-4">

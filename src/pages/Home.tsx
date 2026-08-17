@@ -578,24 +578,9 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-            {t.home.stats.map((stat, idx) => (
-              <motion.div
-                key={stat.label}
-                {...fadeInUp}
-                transition={{ ...fadeInUp.transition, delay: idx * 0.08 }}
-                className="rounded-3xl border border-border/60 p-10 text-center"
-              >
-                <p className="text-5xl font-black tracking-tight text-primary">{stat.value}</p>
-                <p className="mt-3 font-medium text-muted-foreground">{stat.label}</p>
-              </motion.div>
-            ))}
-          </div>
-
-          <motion.div {...fadeInUp} className="mx-auto mt-10 max-w-2xl space-y-6 text-center">
-            <p className="text-sm leading-relaxed text-muted-foreground">{t.home.tractionNote}</p>
+          <motion.div {...fadeInUp} className="mx-auto mt-10 flex justify-center">
             <Button className="rounded-full" asChild>
-              <Link to="/impact#data-platform">
+              <Link to="/impact">
                 {t.home.tractionCta}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>

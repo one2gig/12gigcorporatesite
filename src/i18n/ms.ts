@@ -163,14 +163,7 @@ export const ms: Dictionary = {
     tractionTitleAfter: 'Melalui Kepercayaan',
     tractionBody:
       '12Gig sedang membina pasaran perkhidmatan yang menghubungkan kemahiran tempatan dengan permintaan sebenar.',
-    stats: [
-      { value: '210', label: 'Gigger berdaftar' },
-      { value: '412', label: 'Pengguna berdaftar' },
-      { value: '5', label: 'Ekosistem perkhidmatan' },
-    ],
-    tractionNote:
-      'Data setakat Ogos 2026. Angka rasmi, nilai transaksi dan kaedah pengukuran diterangkan dalam halaman Impak & Prestasi.',
-    tractionCta: 'Lihat Data dan Prestasi',
+    tractionCta: 'Lihat Impak & Prestasi',
     giggerFirstEyebrow: 'Gigger First',
     giggerFirstTitle: 'Gigger Menjadi Keutamaan dalam Ekosistem 12Gig',
     giggerFirstP1:
