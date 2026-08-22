@@ -10,6 +10,23 @@
   </head>
   <body>
     <div id="root"></div>
+    <!--
+      Static duplicate of the Contact form so Netlify's build-time bot can
+      detect it (it scans the built HTML, not the React-rendered DOM).
+      The real form in src/pages/Contact.tsx posts here at runtime.
+    -->
+    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="contact" />
+      <input name="enquiry-type" />
+      <input name="name" />
+      <input name="email" />
+      <input name="phone" />
+      <input name="org" />
+      <input name="ref" />
+      <input name="subject" />
+      <textarea name="message"></textarea>
+      <input name="bot-field" />
+    </form>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

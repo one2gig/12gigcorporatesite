@@ -33,6 +33,7 @@ export default function Contact() {
   const [subject, setSubject] = React.useState('');
   const [message, setMessage] = React.useState('');
   const [consent, setConsent] = React.useState(false);
+  const [status, setStatus] = React.useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
 
   const setIntent = (id: string) => {
     const next = new URLSearchParams(searchParams);
@@ -40,21 +41,49 @@ export default function Contact() {
     setSearchParams(next, { replace: true });
   };
 
-  const onSubmit = (event: React.FormEvent) => {
+  const resetFields = () => {
+    setName('');
+    setEmail('');
+    setPhone('');
+    setOrg('');
+    setRef('');
+    setSubject('');
+    setMessage('');
+    setConsent(false);
+  };
+
+  const encodeFormData = (data: Record<string, string>) =>
+    Object.keys(data)
+      .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+      .join('&');
+
+  const onSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
-    if (!consent) return;
-    const lines = [
-      `Enquiry type: ${selected.title}`,
-      `Name: ${name}`,
-      `Email: ${email}`,
-      `Phone: ${phone || '-'}`,
-      `Organisation: ${org || '-'}`,
-      `Reference: ${ref || '-'}`,
-      '',
-      message,
-    ];
-    const mailto = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(`[${selected.title}] ${subject}`)}&body=${encodeURIComponent(lines.join('\n'))}`;
-    window.location.href = mailto;
+    if (!consent || status === 'submitting') return;
+    setStatus('submitting');
+    try {
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encodeFormData({
+          'form-name': 'contact',
+          'enquiry-type': selected.title,
+          name,
+          email,
+          phone,
+          org,
+          ref,
+          subject,
+          message,
+        }),
+      });
+      if (!response.ok) throw new Error(`Netlify Forms responded with ${response.status}`);
+      setStatus('success');
+      resetFields();
+    } catch (error) {
+      console.error('Contact form submission failed', error);
+      setStatus('error');
+    }
   };
 
   return (
@@ -99,81 +128,99 @@ export default function Contact() {
           </div>
         )}
 
-        <form className="space-y-6" onSubmit={onSubmit}>
-          <div className="space-y-2">
-            <Label htmlFor="enquiry-type">{p.formType}</Label>
-            <select
-              id="enquiry-type"
-              className="h-11 w-full rounded-lg border border-input bg-transparent px-2.5 text-sm"
-              value={intent}
-              onChange={(event) => setIntent(event.target.value)}
+        {status === 'success' ? (
+          <div className="rounded-3xl border border-primary/20 bg-primary/5 p-8 text-center">
+            <h3 className="text-xl font-bold">{p.formSuccessTitle}</h3>
+            <p className="mt-2 text-muted-foreground">{p.formSuccessBody}</p>
+            <Button
+              type="button"
+              variant="outline"
+              className="mt-6 rounded-full"
+              onClick={() => setStatus('idle')}
             >
-              {p.types.map((item) => (
-                <option key={item.id} value={item.id}>
-                  {item.title}
-                </option>
-              ))}
-            </select>
-          </div>
-          <div className="grid gap-6 sm:grid-cols-2">
-            <div className="space-y-2">
-              <Label htmlFor="name">{p.formName}</Label>
-              <Input id="name" className="h-11" required value={name} onChange={(e) => setName(e.target.value)} />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="email">{p.formEmail}</Label>
-              <Input
-                id="email"
-                type="email"
-                className="h-11"
-                required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-            </div>
-          </div>
-          <div className="grid gap-6 sm:grid-cols-2">
-            <div className="space-y-2">
-              <Label htmlFor="phone">{p.formPhone}</Label>
-              <Input id="phone" className="h-11" value={phone} onChange={(e) => setPhone(e.target.value)} />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="org">{p.formOrg}</Label>
-              <Input id="org" className="h-11" value={org} onChange={(e) => setOrg(e.target.value)} />
-            </div>
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="ref">{p.formRef}</Label>
-            <Input id="ref" className="h-11" value={ref} onChange={(e) => setRef(e.target.value)} />
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="subject">{p.formSubject}</Label>
-            <Input id="subject" className="h-11" required value={subject} onChange={(e) => setSubject(e.target.value)} />
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="message">{p.formMessage}</Label>
-            <Textarea id="message" className="min-h-40" required value={message} onChange={(e) => setMessage(e.target.value)} />
-          </div>
-          <p className="text-sm text-muted-foreground">{p.formAttachNote}</p>
-          <label className="flex items-start gap-3 text-sm leading-relaxed">
-            <input
-              type="checkbox"
-              className="mt-1 h-4 w-4 shrink-0"
-              checked={consent}
-              onChange={(e) => setConsent(e.target.checked)}
-              required
-            />
-            <span>{p.formConsent}</span>
-          </label>
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-            <Button type="submit" className="rounded-full" disabled={!consent}>
-              {p.formSubmit}
+              {p.formSuccessReset}
             </Button>
-            <Link to="/privacy" className="font-semibold text-primary">
-              {p.formPrivacy}
-            </Link>
           </div>
-        </form>
+        ) : (
+          <form className="space-y-6" onSubmit={onSubmit}>
+            <div className="space-y-2">
+              <Label htmlFor="enquiry-type">{p.formType}</Label>
+              <select
+                id="enquiry-type"
+                className="h-11 w-full rounded-lg border border-input bg-transparent px-2.5 text-sm"
+                value={intent}
+                onChange={(event) => setIntent(event.target.value)}
+              >
+                {p.types.map((item) => (
+                  <option key={item.id} value={item.id}>
+                    {item.title}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <div className="grid gap-6 sm:grid-cols-2">
+              <div className="space-y-2">
+                <Label htmlFor="name">{p.formName}</Label>
+                <Input id="name" className="h-11" required value={name} onChange={(e) => setName(e.target.value)} />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="email">{p.formEmail}</Label>
+                <Input
+                  id="email"
+                  type="email"
+                  className="h-11"
+                  required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </div>
+            </div>
+            <div className="grid gap-6 sm:grid-cols-2">
+              <div className="space-y-2">
+                <Label htmlFor="phone">{p.formPhone}</Label>
+                <Input id="phone" className="h-11" value={phone} onChange={(e) => setPhone(e.target.value)} />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="org">{p.formOrg}</Label>
+                <Input id="org" className="h-11" value={org} onChange={(e) => setOrg(e.target.value)} />
+              </div>
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="ref">{p.formRef}</Label>
+              <Input id="ref" className="h-11" value={ref} onChange={(e) => setRef(e.target.value)} />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="subject">{p.formSubject}</Label>
+              <Input id="subject" className="h-11" required value={subject} onChange={(e) => setSubject(e.target.value)} />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="message">{p.formMessage}</Label>
+              <Textarea id="message" className="min-h-40" required value={message} onChange={(e) => setMessage(e.target.value)} />
+            </div>
+            <p className="text-sm text-muted-foreground">{p.formAttachNote}</p>
+            <label className="flex items-start gap-3 text-sm leading-relaxed">
+              <input
+                type="checkbox"
+                className="mt-1 h-4 w-4 shrink-0"
+                checked={consent}
+                onChange={(e) => setConsent(e.target.checked)}
+                required
+              />
+              <span>{p.formConsent}</span>
+            </label>
+            {status === 'error' && (
+              <p className="text-sm font-medium text-destructive">{p.formErrorBody}</p>
+            )}
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+              <Button type="submit" className="rounded-full" disabled={!consent || status === 'submitting'}>
+                {status === 'submitting' ? p.formSending : p.formSubmit}
+              </Button>
+              <Link to="/privacy" className="font-semibold text-primary">
+                {p.formPrivacy}
+              </Link>
+            </div>
+          </form>
+        )}
 
         <div className="grid gap-4 sm:grid-cols-2">
           <a
