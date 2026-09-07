@@ -1,0 +1,119 @@
+/* Standalone stylesheet for unlisted profile pages under /profile/.
+   Deliberately independent of the React/Tailwind build so these pages
+   render correctly even outside the SPA bundle. */
+
+:root {
+  --accent: #1a9e6c;
+  --ink: #14181a;
+  --muted: #5b6468;
+  --border: #e6e9ea;
+  --bg: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.65;
+}
+
+.wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 6rem;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.9rem;
+}
+
+h1 {
+  font-size: 2.1rem;
+  line-height: 1.2;
+  margin: 0 0 0.4rem;
+  font-weight: 800;
+}
+
+.role {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--muted);
+  margin: 0 0 0.2rem;
+}
+
+.org {
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin: 0 0 1.6rem;
+}
+
+.tagline {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--ink);
+  border-left: 3px solid var(--accent);
+  padding-left: 1rem;
+  margin: 1.6rem 0 2.4rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 2.6rem 0 0.9rem;
+  padding-top: 1.6rem;
+  border-top: 1px solid var(--border);
+}
+
+h2:first-of-type {
+  padding-top: 0;
+  border-top: none;
+}
+
+p {
+  font-size: 1rem;
+  color: #2b3234;
+  margin: 0 0 1rem;
+}
+
+ul {
+  margin: 0 0 1rem;
+  padding-left: 1.3rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  color: #2b3234;
+}
+
+footer {
+  margin-top: 3.5rem;
+  padding-top: 1.6rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}

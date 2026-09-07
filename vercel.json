@@ -2,6 +2,8 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "rewrites": [
+    { "source": "/profile/redzuan-hiew", "destination": "/profile/redzuan-hiew.html" },
+    { "source": "/profile/syed-abdullah-mohamad", "destination": "/profile/syed-abdullah-mohamad.html" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }

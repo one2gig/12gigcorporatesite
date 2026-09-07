@@ -2,6 +2,18 @@
   command = "npm run build"
   publish = "dist"
 
+# Unlisted static profile pages (not linked from site nav) - served as-is
+# so crawlers get the raw HTML instead of the SPA shell.
+[[redirects]]
+  from = "/profile/redzuan-hiew"
+  to = "/profile/redzuan-hiew.html"
+  status = 200
+
+[[redirects]]
+  from = "/profile/syed-abdullah-mohamad"
+  to = "/profile/syed-abdullah-mohamad.html"
+  status = 200
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
