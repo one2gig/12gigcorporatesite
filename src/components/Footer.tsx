@@ -5,6 +5,7 @@ import { SITE_LOGO_SHOW_WORDMARK } from '@/lib/branding';
 import { SiteLogo } from '@/components/SiteLogo';
 import { useI18n } from '../i18n/I18nProvider';
 import { CONTACT_EMAIL, MARKETPLACE_URL, SOCIAL, WHATSAPP_DISPLAY } from '../lib/site';
+import { companyProfilePath } from '../lib/companyProfile';
 
 const SOCIAL_LINKS = [
   { label: 'Facebook', href: SOCIAL.facebook, icon: Facebook },
@@ -15,7 +16,7 @@ const SOCIAL_LINKS = [
 const linkClass = 'text-sm text-muted-foreground hover:text-primary';
 
 export function Footer() {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   return (
     <footer className="border-t bg-muted/30 pt-16 pb-8">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -51,6 +52,11 @@ export function Footer() {
             <h4 className="mb-6 font-semibold">{t.footer.corporate}</h4>
             <ul className="space-y-4">
               <li><NavLink to="/about" className={linkClass}>{t.nav.about}</NavLink></li>
+              <li>
+                <NavLink to={companyProfilePath(locale)} className={linkClass}>
+                  {t.nav.companyProfile}
+                </NavLink>
+              </li>
               <li><NavLink to="/what-we-do" className={linkClass}>{t.nav.whatWeDo}</NavLink></li>
               <li><NavLink to="/impact" className={linkClass}>{t.nav.impact}</NavLink></li>
               <li><NavLink to="/partnerships" className={linkClass}>{t.nav.partnerships}</NavLink></li>

@@ -1310,4 +1310,168 @@ export const pagesEn = {
       'We welcome your participation as a 12Gig Closed Beta Tester Batch 1 and Founding Member 12Gig.',
     ],
   },
+  companyProfile: {
+    badge: 'Company Profile',
+    title: '12Gig Sdn. Bhd.',
+    tagline: 'Building Malaysia’s People’s Economy',
+    intro:
+      '12Gig is a Gigger-centred services marketplace that connects independent service providers with individuals, families, businesses, and institutions that need their work.',
+    intro2:
+      'Based in Sabah and built for the Malaysian market, 12Gig helps Giggers create a profile, showcase skills, set service offerings and prices, receive bookings, and build reputation through transactions and customer reviews.',
+    exploreCta: 'Explore the 12Gig Platform',
+    partnerCta: 'Propose a Partnership',
+    downloadPdf: 'Download Company Profile',
+    downloading: 'Preparing PDF…',
+    downloadError: 'The PDF could not be prepared. Please try again.',
+    whoEyebrow: 'Who We Are',
+    whoTitle: 'A more organised digital channel for local skills',
+    whoParas: [
+      '12Gig Sdn. Bhd. was established to close a clear gap in the gig economy. Many independent workers and service providers have skills that can generate income, yet they still rely on personal networks, social media, and unstructured arrangements to find customers.',
+      '12Gig builds a more organised digital marketplace. Through the platform, Giggers can introduce themselves, describe their scope of work, offer prices, and build a service record. Users can search, compare, and choose providers based on their needs.',
+      'Our approach begins in Sabah, with the aspiration to grow as a services platform that remains relevant to communities across Malaysia.',
+    ],
+    problemEyebrow: 'The Problem We Address',
+    problemTitle: 'Skills exist. A structured channel is still missing.',
+    problemParas: [
+      'A large share of gig-economy opportunity in Malaysia is still concentrated in e-hailing and food delivery. Outside those sectors, many skilled people still do not have a dedicated digital channel to offer their services in an organised way.',
+      'At the same time, households, small businesses, and institutions often struggle to find suitable local providers whose scope of work is clear and who can be assessed from previous customer experience.',
+      '12Gig was created to close the gap between skills available in the community and real demand for services.',
+    ],
+    howEyebrow: 'How 12Gig Works',
+    howTitle: 'One platform for Giggers, users, and partners',
+    howItems: [
+      {
+        title: 'For Giggers',
+        desc: 'Giggers can build a profile, publish services, set prices, receive enquiries or bookings, manage assignments, and build reputation through customer reviews.',
+      },
+      {
+        title: 'For Users',
+        desc: 'Users can describe their needs, find services, compare providers, make bookings, and keep a record of the engagement through the platform.',
+      },
+      {
+        title: 'For Institutions and Strategic Partners',
+        desc: '12Gig can collaborate on participant recruitment, digital profile development, service publishing, market-matching activities, participation monitoring, and programme outcome review.',
+      },
+    ],
+    clustersEyebrow: 'Service Clusters',
+    clustersTitle: 'Services close to daily life and business operations',
+    clustersIntro:
+      'Offerings on 12Gig cover services close to everyday community needs and business operations, including:',
+    clusters: [
+      'Home and maintenance services',
+      'Cleaning and household support',
+      'Beauty, personal care, and wellness',
+      'Events and function support',
+      'Digital and creative services',
+      'Business support services',
+      'Community and rural services',
+    ],
+    clustersNote:
+      'Availability of a service depends on location and the Giggers who are active at the time.',
+    valuesEyebrow: 'The Value 12Gig Brings',
+    valuesTitle: 'Market access, choice, and organised records',
+    values: [
+      {
+        title: 'Market access for local skills',
+        desc: 'Helping people turn practical and professional skills into service offerings that customers can find.',
+      },
+      {
+        title: 'Provider choice in the user’s hands',
+        desc: 'Users can review profiles, service scope, prices, and feedback before making a choice.',
+      },
+      {
+        title: 'A more organised record of work',
+        desc: 'Enquiries, bookings, assignment progress, payments, and reviews can be handled through the platform ecosystem, subject to available features.',
+      },
+      {
+        title: 'Support for economic development programmes',
+        desc: 'The 12Gig model suits collaboration with education institutions, TVET, development agencies, associations, communities, and organisations that want to help participants enter the services market.',
+      },
+    ],
+    audienceEyebrow: 'Who We Serve',
+    audienceTitle: '12Gig is built for',
+    audience: [
+      'Individuals looking for a service provider',
+      'Giggers, freelancers, and independent service providers',
+      'Households and communities',
+      'Microenterprises, SMEs, and offices',
+      'Property managers and organisations',
+      'Education institutions and TVET',
+      'Government agencies, development bodies, and community organisations',
+    ],
+    partnersEyebrow: 'Partnership Opportunities',
+    partnersTitle: 'Income opportunities based on skills',
+    partnersIntro:
+      '12Gig welcomes discussions with organisations that want to develop skill-based income opportunities. Forms of collaboration may include:',
+    partners: [
+      'Recruiting and preparing participants as Giggers',
+      'Training in digital profiles, service design, pricing, and customer ethics',
+      'Pilot programmes by community, institution, or area',
+      'Activating user groups to create early demand',
+      'Cross-promotion, community activities, and market matching',
+      'Participation monitoring and outcome reporting based on an agreed scope',
+    ],
+    partnersNote:
+      'Each proposal is assessed by objective, target group, location, delivery capacity, and the results to be achieved.',
+    leadershipEyebrow: 'Leadership',
+    leadershipTitle: 'The people building 12Gig',
+    leaders: [
+      {
+        name: 'Syed Abdullah Mohamad',
+        role: 'Founder and Head of Business Development',
+        bio: 'Leads 12Gig’s business direction, marketplace model, institutional relationships, and the formation of strategic partnerships.',
+        href: '/profile/syed-abdullah-mohamad',
+      },
+      {
+        name: 'Mohd Redzuan Hiew bin Mohd Daud',
+        role: 'Co-Founder, Technical',
+        bio: 'Involved from the idea stage in 2024 and responsible for the platform’s development and technical direction. He is a Cybersecurity graduate of the University Malaysia of Computer Science and Engineering (UNIMY).',
+        href: '/profile/redzuan-hiew',
+      },
+      {
+        name: 'Elaina Sukaimi',
+        role: 'Co-Founder and Head of Operations',
+        bio: 'Involved from the idea stage and oversees operations development, programme coordination, and delivery of activities with communities and institutions. She is a graduate of Universiti Malaya.',
+        href: '/profile/elaina-sukaimi',
+      },
+    ],
+    profileLink: 'View profile',
+    journeyEyebrow: 'The 12Gig Journey',
+    journeyTitle: 'From idea to company and market activation',
+    journey: [
+      {
+        year: '2024',
+        desc: 'The idea and early development of the 12Gig model began.',
+      },
+      {
+        year: '2026',
+        desc: '12Gig Sdn. Bhd. was registered and the platform moved through development, user testing, and market activation.',
+      },
+      {
+        year: 'Current focus',
+        desc: 'Strengthening service offerings, user experience, partnership networks, and transaction evidence before wider expansion.',
+      },
+    ],
+    corpEyebrow: 'Corporate Information',
+    corpTitle: 'Company particulars',
+    corpColItem: 'Item',
+    corpColInfo: 'Information',
+    corpRows: [
+      { label: 'Company name', value: '12Gig Sdn. Bhd.' },
+      { label: 'SSM registration no.', value: '1687679-A' },
+      { label: 'Year of incorporation', value: '2026' },
+      { label: 'Corporate website', value: 'https://12gig.my' },
+      { label: 'Platform', value: 'https://12gig.com' },
+      { label: 'Official email', value: 'contact@12gig.com' },
+      { label: 'Telephone', value: '012 – 397 7896' },
+    ],
+    closeEyebrow: 'Next Step',
+    closeTitle: 'Build skill-based income opportunities with 12Gig',
+    closeBody:
+      'We are open to discussions with education institutions, development agencies, associations, communities, and business organisations that want to run programmes or collaborations on the gig economy and the services market.',
+    contactTeam: 'Contact the 12Gig Team',
+    updated: 'Information updated in September 2026',
+    pdfFooterUrl: '12gig.my/en/company-profile',
+    pdfPageLabel: 'Page',
+  },
 };

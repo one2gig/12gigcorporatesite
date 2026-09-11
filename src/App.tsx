@@ -23,7 +23,9 @@ import Beta from './pages/Beta';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 import CookieSettings from './pages/CookieSettings';
+import CompanyProfile from './pages/CompanyProfile';
 import { I18nProvider, useI18n } from './i18n/I18nProvider';
+import type { Locale } from './i18n/I18nProvider';
 
 function NotFoundPage() {
   const { t } = useI18n();
@@ -33,6 +35,18 @@ function NotFoundPage() {
       <p className="text-muted-foreground">{t.notFound.description}</p>
     </div>
   );
+}
+
+function CompanyProfileRoute({ locale }: { locale: Locale }) {
+  const { locale: current, setLocale } = useI18n();
+
+  React.useEffect(() => {
+    if (current !== locale) {
+      setLocale(locale);
+    }
+  }, [current, locale, setLocale]);
+
+  return <CompanyProfile />;
 }
 
 function AppRoutes() {
@@ -49,6 +63,9 @@ function AppRoutes() {
         <Routes location={location}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/profil-syarikat" element={<CompanyProfileRoute locale="ms" />} />
+          <Route path="/en/company-profile" element={<CompanyProfileRoute locale="en" />} />
+          <Route path="/company-profile" element={<Navigate to="/en/company-profile" replace />} />
           <Route path="/what-we-do" element={<WhatWeDo />} />
           <Route path="/how-it-works" element={<HowItWorks />} />
           <Route path="/for-giggers" element={<ForGiggers />} />

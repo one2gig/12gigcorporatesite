@@ -4,6 +4,7 @@
   "rewrites": [
     { "source": "/profile/redzuan-hiew", "destination": "/profile/redzuan-hiew.html" },
     { "source": "/profile/syed-abdullah-mohamad", "destination": "/profile/syed-abdullah-mohamad.html" },
+    { "source": "/profile/elaina-sukaimi", "destination": "/profile/elaina-sukaimi.html" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }

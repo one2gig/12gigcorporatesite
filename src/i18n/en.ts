@@ -9,6 +9,7 @@ export const en = {
   nav: {
     home: 'Home',
     about: 'About Us',
+    companyProfile: 'Company Profile',
     howItWorks: 'How 12Gig Works',
     smeSolutions: 'SME Solutions',
     impact: 'Impact & Performance',

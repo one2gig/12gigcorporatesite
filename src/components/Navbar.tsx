@@ -13,6 +13,7 @@ import {
   Newspaper,
   Shield,
   FileText,
+  IdCard,
   UserRound,
   Users,
   Building2,
@@ -28,6 +29,7 @@ import { LanguageSwitcher } from './LanguageSwitcher';
 import { AnnouncementBar } from './AnnouncementBar';
 import { useI18n } from '../i18n/I18nProvider';
 import { MARKETPLACE_URL, SOCIAL } from '../lib/site';
+import { companyProfilePath, isCompanyProfilePath } from '../lib/companyProfile';
 
 const socialLinks = [
   { label: 'Instagram', href: SOCIAL.instagram, icon: Instagram },
@@ -43,7 +45,7 @@ const whatWeDoLinks = [
   { titleKey: 'forOrganisasi' as const, href: '/for-organisasi' },
 ];
 
-const mobileLinks = [
+const mobileLinksBase = [
   { titleKey: 'home' as const, href: '/', icon: Home },
   { titleKey: 'about' as const, href: '/about', icon: Info },
   { titleKey: 'whatWeDo' as const, href: '/what-we-do', icon: HelpCircle },
@@ -63,9 +65,22 @@ const mobileLinks = [
 export function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false);
   const [whatOpen, setWhatOpen] = React.useState(false);
-  const { t } = useI18n();
+  const [aboutOpen, setAboutOpen] = React.useState(false);
+  const { t, locale } = useI18n();
   const location = useLocation();
   const whatActive = whatWeDoLinks.some((link) => location.pathname === link.href);
+  const profileHref = companyProfilePath(locale);
+  const aboutLinks = [
+    { titleKey: 'about' as const, href: '/about' },
+    { titleKey: 'companyProfile' as const, href: profileHref },
+  ];
+  const aboutActive = location.pathname === '/about' || isCompanyProfilePath(location.pathname);
+  const mobileLinks = [
+    mobileLinksBase[0],
+    mobileLinksBase[1],
+    { titleKey: 'companyProfile' as const, href: profileHref, icon: IdCard },
+    ...mobileLinksBase.slice(2),
+  ];
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -82,17 +97,43 @@ export function Navbar() {
 
           <div className="flex items-center gap-3 sm:gap-4">
             <nav className="hidden items-center gap-5 xl:gap-6 lg:flex">
-              <NavLink
-                to="/about"
-                className={({ isActive }) =>
-                  cn(
-                    'whitespace-nowrap text-sm font-medium transition-colors hover:text-primary',
-                    isActive ? 'text-primary' : 'text-muted-foreground'
-                  )
-                }
+              <div
+                className="relative"
+                onMouseEnter={() => setAboutOpen(true)}
+                onMouseLeave={() => setAboutOpen(false)}
               >
-                {t.nav.about}
-              </NavLink>
+                <button
+                  type="button"
+                  className={cn(
+                    'inline-flex items-center gap-1 whitespace-nowrap text-sm font-medium transition-colors hover:text-primary',
+                    aboutActive || aboutOpen ? 'text-primary' : 'text-muted-foreground'
+                  )}
+                  aria-expanded={aboutOpen}
+                >
+                  {t.nav.about}
+                  <ChevronDown className={cn('h-3.5 w-3.5 transition-transform', aboutOpen && 'rotate-180')} />
+                </button>
+                {aboutOpen && (
+                  <div className="absolute top-full left-0 z-50 pt-2">
+                    <div className="min-w-[240px] rounded-xl border bg-popover p-2 shadow-lg">
+                      {aboutLinks.map((link) => (
+                        <Link
+                          key={link.href}
+                          to={link.href}
+                          className={cn(
+                            'block rounded-lg px-3 py-2 text-sm transition-colors hover:bg-muted',
+                            location.pathname === link.href
+                              ? 'font-semibold text-primary'
+                              : 'text-muted-foreground'
+                          )}
+                        >
+                          {t.nav[link.titleKey]}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
 
               <div
                 className="relative"

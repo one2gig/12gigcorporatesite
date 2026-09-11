@@ -1310,4 +1310,168 @@ export const pagesMs = {
       'Kami mengalu-alukan penyertaan anda sebagai 12Gig Closed Beta Tester Batch 1 dan Founding Member 12Gig.',
     ],
   },
+  companyProfile: {
+    badge: 'Profil Syarikat',
+    title: '12Gig Sdn. Bhd.',
+    tagline: 'Membina Ekonomi Rakyat Malaysia',
+    intro:
+      '12Gig ialah platform pasaran perkhidmatan berteraskan Gigger yang menghubungkan penyedia perkhidmatan bebas dengan individu, keluarga, perniagaan dan institusi yang memerlukan khidmat mereka.',
+    intro2:
+      'Berpangkalan di Sabah dan dibangunkan untuk pasaran Malaysia, 12Gig membantu Gigger membina profil, mempamerkan kemahiran, menetapkan penawaran perkhidmatan dan harga, menerima tempahan serta membina reputasi melalui transaksi dan penilaian pelanggan.',
+    exploreCta: 'Terokai Platform 12Gig',
+    partnerCta: 'Cadangkan Kerjasama',
+    downloadPdf: 'Muat Turun Profil Syarikat',
+    downloading: 'Sedang menyediakan PDF…',
+    downloadError: 'PDF tidak dapat disediakan. Sila cuba lagi.',
+    whoEyebrow: 'Siapa Kami',
+    whoTitle: 'Saluran digital yang lebih tersusun untuk kemahiran tempatan',
+    whoParas: [
+      '12Gig Sdn. Bhd. ditubuhkan untuk menangani satu jurang nyata dalam ekonomi gig. Ramai pekerja bebas dan penyedia perkhidmatan mempunyai kemahiran yang boleh menjana pendapatan, tetapi mereka masih bergantung pada rangkaian peribadi, media sosial dan urusan tidak berstruktur untuk mendapatkan pelanggan.',
+      '12Gig membina saluran pasaran digital yang lebih tersusun. Melalui platform ini, Gigger boleh memperkenalkan diri, menerangkan skop kerja, menawarkan harga dan membina rekod perkhidmatan. Pengguna pula boleh mencari, membandingkan dan memilih penyedia berdasarkan keperluan mereka.',
+      'Pendekatan kami bermula dari Sabah, dengan aspirasi untuk berkembang sebagai platform perkhidmatan yang relevan kepada masyarakat di seluruh Malaysia.',
+    ],
+    problemEyebrow: 'Masalah yang Kami Tangani',
+    problemTitle: 'Kemahiran ada. Saluran yang tersusun masih kurang.',
+    problemParas: [
+      'Sebahagian besar peluang ekonomi gig di Malaysia masih tertumpu pada e-hailing dan penghantaran makanan. Di luar sektor tersebut, ramai individu berkemahiran belum mempunyai saluran digital khusus untuk menawarkan perkhidmatan mereka secara tersusun.',
+      'Pada masa yang sama, isi rumah, perniagaan kecil dan institusi sering menghadapi kesukaran untuk mencari penyedia perkhidmatan tempatan yang sesuai, jelas dari segi skop kerja dan boleh dinilai berdasarkan pengalaman pelanggan terdahulu.',
+      '12Gig diwujudkan untuk merapatkan jurang antara kemahiran yang tersedia dalam komuniti dengan permintaan sebenar terhadap perkhidmatan.',
+    ],
+    howEyebrow: 'Cara 12Gig Berfungsi',
+    howTitle: 'Satu platform untuk Gigger, pengguna dan rakan strategik',
+    howItems: [
+      {
+        title: 'Untuk Gigger',
+        desc: 'Gigger boleh membina profil, menerbitkan perkhidmatan, menetapkan harga, menerima pertanyaan atau tempahan, mengurus tugasan dan membina reputasi melalui penilaian pelanggan.',
+      },
+      {
+        title: 'Untuk Pengguna',
+        desc: 'Pengguna boleh menerangkan keperluan, mencari perkhidmatan, menilai pilihan penyedia, membuat tempahan dan merekodkan urusan melalui platform.',
+      },
+      {
+        title: 'Untuk Institusi dan Rakan Strategik',
+        desc: '12Gig boleh bekerjasama dalam pengambilan peserta, pembangunan profil digital, penerbitan perkhidmatan, aktiviti padanan pasaran, pemantauan penyertaan dan penilaian hasil program.',
+      },
+    ],
+    clustersEyebrow: 'Kluster Perkhidmatan',
+    clustersTitle: 'Perkhidmatan yang dekat dengan keperluan harian',
+    clustersIntro:
+      'Penawaran di 12Gig merangkumi perkhidmatan yang dekat dengan keperluan harian masyarakat dan operasi perniagaan, termasuk:',
+    clusters: [
+      'Perkhidmatan rumah dan penyelenggaraan',
+      'Pembersihan dan bantuan isi rumah',
+      'Kecantikan, penjagaan diri dan kesejahteraan',
+      'Acara dan sokongan majlis',
+      'Perkhidmatan digital dan kreatif',
+      'Khidmat sokongan perniagaan',
+      'Perkhidmatan komuniti dan luar bandar',
+    ],
+    clustersNote:
+      'Ketersediaan sesuatu perkhidmatan bergantung pada lokasi dan Gigger yang aktif pada masa tersebut.',
+    valuesEyebrow: 'Nilai yang Dibawa oleh 12Gig',
+    valuesTitle: 'Akses pasaran, pilihan dan rekod yang lebih tersusun',
+    values: [
+      {
+        title: 'Akses pasaran untuk kemahiran tempatan',
+        desc: 'Membantu individu menukar kemahiran praktikal dan profesional kepada penawaran perkhidmatan yang boleh ditemui pelanggan.',
+      },
+      {
+        title: 'Pilihan penyedia di tangan pengguna',
+        desc: 'Pengguna boleh menilai profil, skop perkhidmatan, harga dan maklum balas sebelum membuat pilihan.',
+      },
+      {
+        title: 'Rekod urusan yang lebih tersusun',
+        desc: 'Pertanyaan, tempahan, kemajuan tugasan, pembayaran dan penilaian boleh dikendalikan melalui ekosistem platform tertakluk pada fungsi yang tersedia.',
+      },
+      {
+        title: 'Sokongan kepada program pembangunan ekonomi',
+        desc: 'Model 12Gig sesuai untuk kerjasama bersama institusi pendidikan, TVET, agensi pembangunan, persatuan, komuniti dan organisasi yang mahu membantu peserta memasuki pasaran perkhidmatan.',
+      },
+    ],
+    audienceEyebrow: 'Siapa yang Kami Layani',
+    audienceTitle: '12Gig dibangunkan untuk',
+    audience: [
+      'Individu yang mencari penyedia perkhidmatan',
+      'Gigger, freelancer dan penyedia perkhidmatan bebas',
+      'Isi rumah dan komuniti',
+      'Perusahaan mikro, PKS dan pejabat',
+      'Pengurus hartanah dan organisasi',
+      'Institusi pendidikan dan TVET',
+      'Agensi kerajaan, badan pembangunan dan pertubuhan masyarakat',
+    ],
+    partnersEyebrow: 'Peluang Kerjasama',
+    partnersTitle: 'Peluang pendapatan berasaskan kemahiran',
+    partnersIntro:
+      '12Gig mengalu-alukan perbincangan dengan organisasi yang mahu membangunkan peluang pendapatan berasaskan kemahiran. Bentuk kerjasama boleh merangkumi:',
+    partners: [
+      'Pengambilan dan penyediaan peserta sebagai Gigger',
+      'Latihan profil digital, penetapan perkhidmatan, harga dan etika pelanggan',
+      'Program rintis mengikut komuniti, institusi atau kawasan',
+      'Pengaktifan kumpulan pengguna untuk mewujudkan permintaan awal',
+      'Promosi silang, aktiviti komuniti dan padanan pasaran',
+      'Pemantauan penyertaan serta pelaporan hasil berdasarkan skop yang dipersetujui',
+    ],
+    partnersNote:
+      'Setiap cadangan dinilai mengikut objektif, kumpulan sasaran, lokasi, kapasiti pelaksanaan dan hasil yang mahu dicapai.',
+    leadershipEyebrow: 'Kepimpinan',
+    leadershipTitle: 'Pasukan yang membina 12Gig',
+    leaders: [
+      {
+        name: 'Syed Abdullah Mohamad',
+        role: 'Pengasas dan Ketua Pembangunan Perniagaan',
+        bio: 'Memimpin hala tuju perniagaan, pembangunan model pasaran, hubungan institusi dan pembentukan kerjasama strategik 12Gig.',
+        href: '/profile/syed-abdullah-mohamad',
+      },
+      {
+        name: 'Mohd Redzuan Hiew bin Mohd Daud',
+        role: 'Pengasas Bersama, Teknikal',
+        bio: 'Terlibat sejak peringkat idea pada tahun 2024 dan bertanggungjawab terhadap pembangunan serta hala tuju teknikal platform. Beliau ialah graduan Cybersecurity dari University Malaysia of Computer Science and Engineering (UNIMY).',
+        href: '/profile/redzuan-hiew',
+      },
+      {
+        name: 'Elaina Sukaimi',
+        role: 'Pengasas Bersama dan Ketua Operasi',
+        bio: 'Terlibat sejak peringkat idea dan menyelia pembangunan operasi, penyelarasan program serta pelaksanaan aktiviti bersama komuniti dan institusi. Beliau ialah graduan Universiti Malaya.',
+        href: '/profile/elaina-sukaimi',
+      },
+    ],
+    profileLink: 'Lihat profil',
+    journeyEyebrow: 'Perjalanan 12Gig',
+    journeyTitle: 'Dari idea kepada syarikat dan pengaktifan pasaran',
+    journey: [
+      {
+        year: '2024',
+        desc: 'Idea dan pembangunan awal model 12Gig bermula.',
+      },
+      {
+        year: '2026',
+        desc: '12Gig Sdn. Bhd. didaftarkan dan platform melalui fasa pembangunan, pengujian pengguna serta pengaktifan pasaran.',
+      },
+      {
+        year: 'Fokus semasa',
+        desc: 'Memperkukuh penawaran perkhidmatan, pengalaman pengguna, jaringan kerjasama dan bukti transaksi sebelum pengembangan yang lebih luas.',
+      },
+    ],
+    corpEyebrow: 'Maklumat Korporat',
+    corpTitle: 'Butiran syarikat',
+    corpColItem: 'Perkara',
+    corpColInfo: 'Maklumat',
+    corpRows: [
+      { label: 'Nama syarikat', value: '12Gig Sdn. Bhd.' },
+      { label: 'No. pendaftaran SSM', value: '1687679-A' },
+      { label: 'Tahun diperbadankan', value: '2026' },
+      { label: 'Laman korporat', value: 'https://12gig.my' },
+      { label: 'Platform', value: 'https://12gig.com' },
+      { label: 'E-mel rasmi', value: 'contact@12gig.com' },
+      { label: 'Telefon', value: '012 – 397 7896' },
+    ],
+    closeEyebrow: 'Langkah Seterusnya',
+    closeTitle: 'Bina peluang pendapatan berasaskan kemahiran bersama 12Gig',
+    closeBody:
+      'Kami terbuka untuk berbincang dengan institusi pendidikan, agensi pembangunan, persatuan, komuniti dan organisasi perniagaan yang mahu menjalankan program atau kerjasama berkaitan ekonomi gig dan pasaran perkhidmatan.',
+    contactTeam: 'Hubungi Pasukan 12Gig',
+    updated: 'Maklumat dikemas kini pada September 2026',
+    pdfFooterUrl: '12gig.my/profil-syarikat',
+    pdfPageLabel: 'Halaman',
+  },
 };

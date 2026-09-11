@@ -11,6 +11,7 @@ export const ms: Dictionary = {
   nav: {
     home: 'Laman Utama',
     about: 'Mengenai Kami',
+    companyProfile: 'Profil Syarikat',
     howItWorks: 'Cara 12Gig Berfungsi',
     smeSolutions: 'Penyelesaian PKS',
     impact: 'Impak & Prestasi',
