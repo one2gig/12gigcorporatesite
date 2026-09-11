@@ -11,23 +11,27 @@ const HOW_ICONS = [Store, Users, Handshake] as const;
 
 const LEADER_PHOTOS: Record<
   string,
-  { src: string; position: string; zoom?: number; shiftX?: number; shiftY?: number }
+  { src: string; position: string; zoom?: number; shiftX?: number; shiftY?: number; bg: string }
 > = {
   '/profile/syed-abdullah-mohamad': {
     src: '/team/syed-abdullah-mohamad.jpeg',
     position: 'center 18%',
     zoom: 1.65,
-    shiftY: 10,
+    shiftY: 16,
+    bg: '#9eb0bc',
   },
   '/profile/redzuan-hiew': {
     src: '/team/redzuan-hiew.png',
     position: 'center 16%',
     zoom: 1.15,
+    bg: '#6b6b6b',
   },
   '/profile/elaina-sukaimi': {
     src: '/team/elaina-sukaimi.jpeg',
     position: 'center 12%',
-    zoom: 2.15,
+    zoom: 2.4,
+    shiftY: 8,
+    bg: '#d4d4d0',
   },
 };
 
@@ -160,7 +164,10 @@ export default function CompanyProfile() {
             return (
               <article key={leader.name} className="flex flex-col rounded-3xl border p-6">
                 {photo ? (
-                  <div className="mx-auto mb-4 h-14 w-14 overflow-hidden rounded-full">
+                  <div
+                    className="mx-auto mb-4 h-14 w-14 shrink-0 overflow-hidden rounded-full"
+                    style={{ backgroundColor: photo.bg }}
+                  >
                     <img
                       src={photo.src}
                       alt={leader.name}
