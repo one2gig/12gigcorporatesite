@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Handshake, Store, Users } from 'lucide-react';
+import { Handshake, Store, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { DownloadCompanyProfileButton } from '../components/DownloadCompanyProfileButton';
 import { PageHero, SectionBlock } from '../components/PageChrome';
@@ -146,14 +146,6 @@ export default function CompanyProfile() {
               <h3 className="font-bold">{leader.name}</h3>
               <p className="mt-1 text-sm font-medium text-primary">{leader.role}</p>
               <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{leader.bio}</p>
-              {leader.href ? (
-                <a
-                  href={leader.href}
-                  className="mt-4 inline-flex items-center text-sm font-semibold text-primary"
-                >
-                  {c.profileLink} <ArrowRight className="ml-2 h-4 w-4" />
-                </a>
-              ) : null}
             </article>
           ))}
         </div>
