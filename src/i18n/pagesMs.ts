@@ -1424,7 +1424,7 @@ export const pagesMs = {
       },
       {
         name: 'Mohd Redzuan Hiew bin Mohd Daud',
-        role: 'Pengasas Bersama, Teknikal',
+        role: 'Pengasas Bersama dan Ketua Teknologi',
         bio: 'Terlibat sejak peringkat idea pada tahun 2024 dan bertanggungjawab terhadap pembangunan serta hala tuju teknikal platform. Beliau ialah graduan Cybersecurity dari University Malaysia of Computer Science and Engineering (UNIMY).',
         href: '/profile/redzuan-hiew',
       },

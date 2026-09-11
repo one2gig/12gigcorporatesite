@@ -59,7 +59,17 @@ h1 {
 .org {
   font-size: 0.95rem;
   color: var(--muted);
-  margin: 0 0 1.6rem;
+  margin: 0 0 1.4rem;
+}
+
+.portrait {
+  display: block;
+  width: min(100%, 280px);
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center 14%;
+  border-radius: 1.25rem;
+  margin: 0 0 1.8rem;
 }
 
 .tagline {

@@ -9,6 +9,28 @@ import { CONTACT_EMAIL, MARKETPLACE_URL } from '../lib/site';
 
 const HOW_ICONS = [Store, Users, Handshake] as const;
 
+const LEADER_PHOTOS: Record<
+  string,
+  { src: string; position: string; zoom?: number; shiftX?: number; shiftY?: number }
+> = {
+  '/profile/syed-abdullah-mohamad': {
+    src: '/team/syed-abdullah-mohamad.jpeg',
+    position: 'center 18%',
+    zoom: 1.65,
+    shiftY: 10,
+  },
+  '/profile/redzuan-hiew': {
+    src: '/team/redzuan-hiew.png',
+    position: 'center 16%',
+    zoom: 1.15,
+  },
+  '/profile/elaina-sukaimi': {
+    src: '/team/elaina-sukaimi.jpeg',
+    position: 'center 12%',
+    zoom: 2.15,
+  },
+};
+
 const CLUSTER_IMAGES = [
   'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80&w=900',
   'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&q=80&w=900',
@@ -133,21 +155,39 @@ export default function CompanyProfile() {
 
       <SectionBlock id="kepimpinan" eyebrow={c.leadershipEyebrow} title={c.leadershipTitle}>
         <div className="grid gap-4 md:grid-cols-3">
-          {c.leaders.map((leader) => (
-            <article key={leader.name} className="flex flex-col rounded-3xl border p-6">
-              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-lg font-bold text-primary">
-                {leader.name
-                  .split(' ')
-                  .filter(Boolean)
-                  .slice(0, 2)
-                  .map((part) => part[0])
-                  .join('')}
-              </div>
-              <h3 className="font-bold">{leader.name}</h3>
-              <p className="mt-1 text-sm font-medium text-primary">{leader.role}</p>
-              <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{leader.bio}</p>
-            </article>
-          ))}
+          {c.leaders.map((leader) => {
+            const photo = LEADER_PHOTOS[leader.href];
+            return (
+              <article key={leader.name} className="flex flex-col rounded-3xl border p-6">
+                {photo ? (
+                  <div className="mx-auto mb-4 h-14 w-14 overflow-hidden rounded-full">
+                    <img
+                      src={photo.src}
+                      alt={leader.name}
+                      className="h-full w-full object-cover"
+                      style={{
+                        objectPosition: photo.position,
+                        transform: `scale(${photo.zoom ?? 1}) translate(${photo.shiftX ?? 0}%, ${photo.shiftY ?? 0}%)`,
+                        transformOrigin: photo.position,
+                      }}
+                    />
+                  </div>
+                ) : (
+                  <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-lg font-bold text-primary">
+                    {leader.name
+                      .split(' ')
+                      .filter(Boolean)
+                      .slice(0, 2)
+                      .map((part) => part[0])
+                      .join('')}
+                  </div>
+                )}
+                <h3 className="font-bold">{leader.name}</h3>
+                <p className="mt-1 text-sm font-medium text-primary">{leader.role}</p>
+                <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{leader.bio}</p>
+              </article>
+            );
+          })}
         </div>
       </SectionBlock>
 

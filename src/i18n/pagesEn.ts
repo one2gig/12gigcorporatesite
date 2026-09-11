@@ -1424,7 +1424,7 @@ export const pagesEn = {
       },
       {
         name: 'Mohd Redzuan Hiew bin Mohd Daud',
-        role: 'Co-Founder, Technical',
+        role: 'Co-Founder and Head of Technology',
         bio: 'Involved from the idea stage in 2024 and responsible for the platform’s development and technical direction. He is a Cybersecurity graduate of the University Malaysia of Computer Science and Engineering (UNIMY).',
         href: '/profile/redzuan-hiew',
       },
