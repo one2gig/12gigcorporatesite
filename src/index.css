@@ -33,6 +33,7 @@
     --color-secondary: var(--secondary);
     --color-primary-foreground: var(--primary-foreground);
     --color-primary: var(--primary);
+    --color-brand: var(--brand);
     --color-popover-foreground: var(--popover-foreground);
     --color-popover: var(--popover);
     --color-card-foreground: var(--card-foreground);
@@ -55,6 +56,7 @@
     --card-foreground: oklch(0.12 0.02 180);
     --popover: oklch(1 0 0);
     --popover-foreground: oklch(0.12 0.02 180);
+    --brand: #013e21; /* sampled from logo background */
     --primary: oklch(0.55 0.16 160); /* 12gig tech green */
     --primary-foreground: oklch(0.985 0 0);
     --secondary: oklch(0.96 0.01 160);
@@ -77,6 +79,7 @@
     --card-foreground: oklch(0.98 0 0);
     --popover: oklch(0.15 0.02 180);
     --popover-foreground: oklch(0.98 0 0);
+    --brand: #3d8f5f;
     --primary: oklch(0.65 0.18 160);
     --primary-foreground: oklch(0.12 0.02 180);
     --secondary: oklch(0.2 0.02 180);

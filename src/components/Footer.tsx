@@ -25,9 +25,7 @@ export function Footer() {
             <NavLink to="/" className="flex items-center gap-2">
               <SiteLogo />
               {SITE_LOGO_SHOW_WORDMARK && (
-                <span className="text-2xl font-bold tracking-tight">
-                  12<span className="text-primary">gig</span>
-                </span>
+                <span className="text-2xl font-bold tracking-tight text-brand">12gig</span>
               )}
             </NavLink>
             <p className="max-w-xs text-sm leading-relaxed text-muted-foreground">{t.footer.tagline}</p>

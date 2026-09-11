@@ -89,9 +89,7 @@ export function Navbar() {
           <NavLink to="/" className="flex items-center gap-2">
             <SiteLogo />
             {SITE_LOGO_SHOW_WORDMARK && (
-              <span className="text-2xl font-bold tracking-tight text-foreground">
-                12<span className="text-primary">gig</span>
-              </span>
+              <span className="text-2xl font-bold tracking-tight text-brand">12gig</span>
             )}
           </NavLink>
 
@@ -227,7 +225,7 @@ export function Navbar() {
                       <div className="flex flex-col text-left">
                         {SITE_LOGO_SHOW_WORDMARK ? (
                           <>
-                            <span className="text-xl font-bold tracking-tight">12gig</span>
+                            <span className="text-xl font-bold tracking-tight text-brand">12gig</span>
                             <span className="text-xs font-normal text-muted-foreground">
                               {t.nav.ecosystemTagline}
                             </span>
