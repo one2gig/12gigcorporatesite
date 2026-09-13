@@ -1434,6 +1434,12 @@ export const pagesEn = {
         bio: 'Involved from the idea stage and oversees operations development, programme coordination, and delivery of activities with communities and institutions. She is a graduate of Universiti Malaya.',
         href: '/profile/elaina-sukaimi',
       },
+      {
+        name: 'Prof. Desmint Edward',
+        role: 'Founding Strategic Adviser and Shareholder',
+        bio: 'Advises the founding team on strategic planning, institutional collaboration and long-term development, supporting 12Gig’s mission to expand sustainable income opportunities through the gig economy.',
+        href: '/profile/desmint-edward',
+      },
     ],
     profileLink: 'View profile',
     journeyEyebrow: 'The 12Gig Journey',

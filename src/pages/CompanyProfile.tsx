@@ -33,6 +33,14 @@ const LEADER_PHOTOS: Record<
     shiftY: 8,
     bg: '#d4d4d0',
   },
+  '/profile/desmint-edward': {
+    src: '/team/desmint-edward.png',
+    position: '42% 18%',
+    zoom: 0.9,
+    shiftX: 5,
+    shiftY: 14,
+    bg: '#0d4a28',
+  },
 };
 
 const CLUSTER_IMAGES = [
@@ -158,7 +166,7 @@ export default function CompanyProfile() {
       </SectionBlock>
 
       <SectionBlock id="kepimpinan" eyebrow={c.leadershipEyebrow} title={c.leadershipTitle}>
-        <div className="grid gap-4 md:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {c.leaders.map((leader) => {
             const photo = LEADER_PHOTOS[leader.href];
             return (

@@ -145,6 +145,65 @@ class Brochure {
     }
   }
 
+  together(height: number) {
+    this.ensure(height);
+  }
+
+  headingH(text: string, size = 14) {
+    return wrapText(text, this.bold, size, CONTENT_W).length * (size + 4) + 6;
+  }
+
+  eyebrowH() {
+    return 16;
+  }
+
+  paraH(text: string, size = 10) {
+    return wrapText(text, this.regular, size, CONTENT_W).length * (size + 3) + 4;
+  }
+
+  cardsH(items: { title: string; desc: string }[], columns: number, maxRows?: number) {
+    const gap = 8;
+    const cardW = (CONTENT_W - gap * (columns - 1)) / columns;
+    const padding = 8;
+    const innerW = cardW - padding * 2;
+    const rows = Math.ceil(items.length / columns);
+    const limit = maxRows ?? rows;
+    let h = 0;
+    for (let row = 0; row < Math.min(rows, limit); row += 1) {
+      const slice = items.slice(row * columns, row * columns + columns);
+      const rowH = Math.max(
+        ...slice.map((item) => {
+          const titleLines = wrapText(item.title, this.bold, 9, innerW);
+          const bodyLines = wrapText(item.desc, this.regular, 8, innerW);
+          return padding * 2 + titleLines.length * 12 + bodyLines.length * 11 + 4;
+        }),
+      );
+      h += rowH + 8;
+    }
+    return h;
+  }
+
+  tableH(rowCount: number) {
+    return 18 * (rowCount + 1) + 8;
+  }
+
+  closeBoxH(title: string, body: string, links: string[]) {
+    const titleLines = wrapText(title, this.bold, 12, CONTENT_W - 24);
+    const bodyLines = wrapText(body, this.regular, 9, CONTENT_W - 24);
+    return 28 + titleLines.length * 16 + bodyLines.length * 12 + links.length * 12 + 8;
+  }
+
+  sectionH(title: string, contentH: number) {
+    return 6 + this.eyebrowH() + this.headingH(title) + contentH;
+  }
+
+  bulletsH(items: string[]) {
+    return items.reduce((sum, item) => {
+      const lines = wrapText(item, this.regular, 10, CONTENT_W - 14);
+      return sum + lines.length * 13 + 2;
+    }, 0);
+  }
+
   gap(size = 10) {
     this.y -= size;
   }
@@ -264,14 +323,13 @@ class Brochure {
   }
 
   bullets(items: string[]) {
+    this.ensure(this.bulletsH(items));
     for (const item of items) {
       const lines = wrapText(item, this.regular, 10, CONTENT_W - 14);
-      this.ensure(lines.length * 13 + 4);
-      this.page.drawText(toWinAnsi('•'), {
-        x: MARGIN,
-        y: this.y,
-        size: 10,
-        font: this.regular,
+      this.page.drawCircle({
+        x: MARGIN + 2.5,
+        y: this.y + 2.5,
+        size: 2,
         color: green,
       });
       for (const line of lines) {
@@ -377,11 +435,14 @@ export async function buildCompanyProfilePdf(
   pdf.heading(copy.problemTitle);
   copy.problemParas.forEach((p) => pdf.para(p));
 
+  const howCards = copy.howItems;
+  pdf.together(pdf.sectionH(copy.howTitle, pdf.cardsH(howCards, 3)));
   pdf.gap(6);
   pdf.eyebrow(copy.howEyebrow);
   pdf.heading(copy.howTitle);
-  pdf.cards(copy.howItems, 3);
+  pdf.cards(howCards, 3);
 
+  pdf.together(pdf.sectionH(copy.clustersTitle, pdf.paraH(copy.clustersIntro) + 28));
   pdf.gap(6);
   pdf.eyebrow(copy.clustersEyebrow);
   pdf.heading(copy.clustersTitle);
@@ -389,16 +450,25 @@ export async function buildCompanyProfilePdf(
   pdf.chips(copy.clusters);
   pdf.para(copy.clustersNote, 8);
 
+  const valueCards = copy.values;
+  pdf.together(pdf.sectionH(copy.valuesTitle, pdf.cardsH(valueCards, 1, 1)));
   pdf.gap(6);
   pdf.eyebrow(copy.valuesEyebrow);
   pdf.heading(copy.valuesTitle);
-  pdf.cards(copy.values, 1);
+  pdf.cards(valueCards, 1);
 
+  pdf.together(pdf.sectionH(copy.audienceTitle, pdf.bulletsH(copy.audience)));
   pdf.gap(6);
   pdf.eyebrow(copy.audienceEyebrow);
   pdf.heading(copy.audienceTitle);
   pdf.bullets(copy.audience);
 
+  pdf.together(
+    pdf.sectionH(
+      copy.partnersTitle,
+      pdf.paraH(copy.partnersIntro) + pdf.bulletsH(copy.partners) + pdf.paraH(copy.partnersNote, 8),
+    ),
+  );
   pdf.gap(6);
   pdf.eyebrow(copy.partnersEyebrow);
   pdf.heading(copy.partnersTitle);
@@ -406,14 +476,17 @@ export async function buildCompanyProfilePdf(
   pdf.bullets(copy.partners);
   pdf.para(copy.partnersNote, 8);
 
+  const leaderCards = copy.leaders.map((leader) => ({
+    title: `${leader.name} — ${leader.role}`,
+    desc: leader.bio,
+  }));
+  pdf.together(pdf.sectionH(copy.leadershipTitle, pdf.cardsH(leaderCards, 1, 1)));
   pdf.gap(6);
   pdf.eyebrow(copy.leadershipEyebrow);
   pdf.heading(copy.leadershipTitle);
-  pdf.cards(
-    copy.leaders.map((leader) => ({ title: `${leader.name} — ${leader.role}`, desc: leader.bio })),
-    1,
-  );
+  pdf.cards(leaderCards, 1);
 
+  pdf.together(pdf.sectionH(copy.journeyTitle, pdf.headingH(copy.journey[0]?.year ?? '', 11) + 24));
   pdf.gap(6);
   pdf.eyebrow(copy.journeyEyebrow);
   pdf.heading(copy.journeyTitle);
@@ -422,15 +495,19 @@ export async function buildCompanyProfilePdf(
     pdf.para(item.desc);
   });
 
+  const closeLinks = [
+    `${copy.exploreCta}: https://12gig.com`,
+    `${copy.partnerCta}: contact@12gig.com`,
+  ];
+  pdf.together(
+    pdf.sectionH(copy.corpTitle, pdf.tableH(copy.corpRows.length) + pdf.closeBoxH(copy.closeTitle, copy.closeBody, closeLinks)),
+  );
   pdf.gap(4);
   pdf.eyebrow(copy.corpEyebrow);
   pdf.heading(copy.corpTitle);
   pdf.table(copy.corpRows, copy.corpColItem, copy.corpColInfo);
 
-  pdf.closeBox(copy.closeTitle, copy.closeBody, [
-    `${copy.exploreCta}: https://12gig.com`,
-    `${copy.partnerCta}: contact@12gig.com`,
-  ]);
+  pdf.closeBox(copy.closeTitle, copy.closeBody, closeLinks);
 
   pdf.finish();
   return doc.save();

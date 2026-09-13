@@ -1434,6 +1434,12 @@ export const pagesMs = {
         bio: 'Terlibat sejak peringkat idea dan menyelia pembangunan operasi, penyelarasan program serta pelaksanaan aktiviti bersama komuniti dan institusi. Beliau ialah graduan Universiti Malaya.',
         href: '/profile/elaina-sukaimi',
       },
+      {
+        name: 'Prof. Desmint Edward',
+        role: 'Penasihat Strategik Pengasas dan Pemegang Saham',
+        bio: 'Menasihati pasukan pengasas mengenai perancangan strategik, kerjasama institusi dan pembangunan jangka panjang, bagi menyokong misi 12Gig mengembangkan peluang pendapatan yang mampan melalui ekonomi gig.',
+        href: '/profile/desmint-edward',
+      },
     ],
     profileLink: 'Lihat profil',
     journeyEyebrow: 'Perjalanan 12Gig',
