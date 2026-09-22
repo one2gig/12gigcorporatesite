@@ -998,6 +998,138 @@ export const pagesEn = {
     empty: 'No articles have been published yet. We will share official news here when it is confirmed.',
     articles: [
       {
+        id: 'aim-kota-kinabalu-september-2026',
+        date: '22 September 2026',
+        location: 'Kota Kinabalu, Sabah',
+        categories: ['program', 'kerjasama', 'komuniti'],
+        title: '12Gig Introduces Gig Economy Opportunities to Sahabat AIM Kota Kinabalu',
+        excerpt:
+          'Despite heavy rain and flash floods, 12Gig continued its second AIM introduction programme at the Kota Kinabalu Branch Office, with seven Sahabat AIM registering and listing services on the platform.',
+        image: '/news/kk.jpeg',
+        imageAlt: '12Gig session with Sahabat AIM at the AIM Kota Kinabalu Branch Office, Alam Mesra',
+        gallery: ['/news/kk2.jpeg', '/news/ll3.jpeg'],
+        galleryAlts: [
+          'Sahabat AIM Kota Kinabalu discussing 12Gig during the introduction programme',
+          'Participants registering and listing services on 12Gig at AIM Kota Kinabalu',
+        ],
+        intro: [
+          'KOTA KINABALU, 22 September 2026 – 12Gig continued its effort to introduce income opportunities through a digital services platform to Sahabat Amanah Ikhtiar Malaysia (AIM) through its second programme at the AIM Kota Kinabalu Branch Office, Alam Mesra, on Tuesday, 22 September 2026, at 10.00 a.m.',
+          'The programme followed the first session with Sahabat AIM Tuaran Branch, held the day before.',
+          'Heavy rain from early morning and flash floods in several areas around Kota Kinabalu affected participants’ travel. As a result, many Sahabat AIM who were scheduled to join the programme were unable to attend.',
+          'The programme still went ahead with seven Sahabat AIM who managed to reach the venue. The smaller group allowed the session to take place in a close, open, and focused way.',
+        ],
+        sections: [
+          {
+            title: 'Participants’ Questions Reflected Serious Interest',
+            paras: [
+              'Throughout the session, participants did more than listen to the briefing. They also asked several important questions about how the platform operates and what it means to become a Gigger.',
+              'Among the most frequently asked questions were whether 12Gig is already fully operational and whether real transactions have taken place through the platform. Participants also wanted to know how to get their first users after a service is listed, and what support 12Gig can provide if a dispute arises with a customer.',
+              'Those questions showed that participants were not only interested in opening an account. They were also considering market demand, transaction safety, and protection after receiving a booking.',
+              'The discussion also touched on the platform fee borne by Giggers, the number of services one Gigger can offer, and the existence of the Sabah Gig Workers Economic Association.',
+              '12Gig explained that, based on the current fee model, Giggers are not charged a platform fee on each transaction. That fee is charged to users separately and transparently from the price set by the Gigger. Any other deductions would only involve statutory requirements or certain costs if they become mandatory or necessary in the future.',
+              'Participants were also briefed on the booking journey through the platform, first steps to get their first users, and 12Gig’s role in helping to manage complaints or disputes involving transactions in the system.',
+            ],
+          },
+          {
+            title: 'Services Based on Local Skills',
+            paras: [
+              'Several services that participants could potentially offer were identified in the discussion, including private driving services, traditional food preparation, traditional clothing tailoring, and mobile vehicle washing.',
+              'Those suggestions showed that gig-economy opportunities are not limited to digital services or delivery. Everyday skills and community-based services can also be offered to users as a source of income.',
+            ],
+          },
+          {
+            title: 'Participants Registered and Offered Services on the Spot',
+            paras: [
+              'Participants’ commitment was clear when they went on to open 12Gig accounts and began offering their services during the registration session.',
+              'That action gave an early sign that participants were not only interested in the concept that was explained, but also ready to try the process of becoming a Gigger on the platform themselves.',
+              'The live registration session also helped the 12Gig team identify information and guidance that still need to be made clearer. Participant feedback will be used to refine the explanation and the registration process so that they are easier for new users to understand.',
+            ],
+          },
+          {
+            title: 'Ready for a Follow-up Session',
+            paras: [
+              '12Gig is ready to hold a follow-up session if agreed with AIM Kota Kinabalu Branch, especially to give an opportunity to Sahabat AIM who were unable to attend because of the weather.',
+              '12Gig records its highest appreciation to the management of AIM Kota Kinabalu Branch for the trust and cooperation given. Appreciation is also extended to the seven Sahabat AIM who still attended, asked questions actively, and tried the process of registering and offering services through 12Gig themselves.',
+              'The programme in Kota Kinabalu is the second session in 12Gig’s introduction series with Sahabat AIM, and it strengthens the company’s effort to approach the micro-entrepreneur community in Sabah.',
+              'Thank you, AIM Kota Kinabalu, for the trust given to 12Gig.',
+            ],
+          },
+        ],
+        facts: [
+          { label: 'Date', value: '22 September 2026' },
+          { label: 'Time', value: '10.00 a.m.' },
+          { label: 'Venue', value: 'AIM Kota Kinabalu Branch Office, Alam Mesra' },
+          { label: 'Partner', value: 'AIM Kota Kinabalu Branch' },
+        ],
+        signoff: '12Gig',
+        tagline: "The People's Economy.",
+      },
+      {
+        id: 'aim-tuaran-september-2026',
+        date: '21 September 2026',
+        location: 'Tuaran, Sabah',
+        categories: ['program', 'kerjasama', 'komuniti'],
+        title: '12Gig Holds First Introduction Programme with AIM Tuaran',
+        excerpt:
+          '12Gig introduced its platform to Sahabat AIM at the Tuaran Branch Office, opening a conversation on digital market access and service-based gig income.',
+        image: '/news/tuaran.jpeg',
+        imageAlt: '12Gig team with Sahabat AIM at the AIM Tuaran Branch Office',
+        gallery: ['/news/tuaran2.jpeg', '/news/tuaran3.jpeg'],
+        galleryAlts: [
+          'Introduction session between 12Gig and Sahabat AIM Tuaran',
+          'Participants following the 12Gig briefing at AIM Tuaran',
+        ],
+        intro: [
+          'TUARAN, 21 September 2026 – 12Gig held its first introduction programme with Sahabat Amanah Ikhtiar Malaysia (AIM) Tuaran Branch on Monday, 21 September 2026, at 10.00 a.m., at the AIM Tuaran Branch Office.',
+          'The programme introduced 12Gig as a digital platform that enables individuals to offer their skills and services to users. Through the platform, Sahabat AIM have the opportunity to expand their market, reach new customers, and build income from skills they already have.',
+        ],
+        sections: [
+          {
+            title: 'An Opening That Reflects AIM’s Identity',
+            paras: [
+              'Before the briefing began, the 12Gig team had the opportunity to witness AIM’s meeting opening practice, marked by order and a spirit of togetherness.',
+              'The session began with the recitation of Ummul Kitab, followed by the Sahabat AIM pledge, started by Sahabat AIM and then joined by the officers overseeing the programme. The practice gave a clear picture of the discipline, unity, and culture of mutual support that have been built within the AIM community.',
+              'It was a first experience that meant a great deal to the 12Gig team.',
+            ],
+          },
+          {
+            title: 'Participants’ Digital Literacy Exceeded Expectations',
+            paras: [
+              'The high level of digital literacy among Sahabat AIM was one of the most positive findings throughout the programme.',
+              'During the briefing and two-way discussion, participants followed the explanation of 12Gig’s functions well. They also asked questions actively, shared their experiences, and discussed the potential of offering their own services through the platform.',
+              'That response showed that AIM micro-entrepreneurs are ready to use a digital platform to expand their market and add income channels. What they need is exposure, practical guidance, and the right support so they can take the next step with greater confidence.',
+              'For 12Gig, the experience also showed that technology should not be built on assumptions about a community’s ability. Technology must be built so that it is easy to use, close to real needs, and able to open economic opportunity to more people.',
+            ],
+          },
+          {
+            title: 'An Open and Welcoming Reception',
+            paras: [
+              'The openness, warmth, and attention given by officers and Sahabat AIM made the session more lively and meaningful.',
+              'The friendly atmosphere allowed discussion to take place openly. The 12Gig team was not only able to introduce the platform, but also to hear participants’ views on the challenges, needs, and opportunities they see in offering services digitally.',
+              'Field feedback like this is important to 12Gig as it works to improve the platform so that it truly fits the needs of the micro-entrepreneur community.',
+            ],
+          },
+          {
+            title: 'Appreciation to AIM Tuaran',
+            paras: [
+              '12Gig records its highest appreciation to the Director of AIM Tuaran Branch and all officers involved in planning and delivering this programme.',
+              'Special appreciation is also extended to the Deputy Director of Operations, AIM Sabah, Tuan Suharno, for his dedication and commitment in helping to realise this introduction programme.',
+              'Alongside discussions on technology, services, and income opportunity, the session was also brightened by a light conversation about “karipap angin”. That story brought cheer and became one of the most heartwarming memories the 12Gig team took home.',
+              'The programme in Tuaran is a first step in 12Gig’s effort to approach local communities and introduce income opportunities through a service-based gig economy.',
+              'Thank you, AIM Tuaran. As long as livelihood is carried in the body, opportunity will continue to be pursued.',
+            ],
+          },
+        ],
+        facts: [
+          { label: 'Date', value: '21 September 2026' },
+          { label: 'Time', value: '10.00 a.m.' },
+          { label: 'Venue', value: 'AIM Tuaran Branch Office' },
+          { label: 'Partner', value: 'AIM Tuaran Branch' },
+        ],
+        signoff: '12Gig',
+        tagline: "The People's Economy.",
+      },
+      {
         id: 'closed-testing-august-2026',
         date: '15 August 2026',
         location: 'Kota Kinabalu, Sabah',

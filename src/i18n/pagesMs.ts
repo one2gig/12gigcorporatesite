@@ -998,6 +998,138 @@ export const pagesMs = {
     empty: 'Tiada artikel yang diterbitkan lagi. Kami akan berkongsi berita rasmi di sini apabila ia disahkan.',
     articles: [
       {
+        id: 'aim-kota-kinabalu-september-2026',
+        date: '22 September 2026',
+        location: 'Kota Kinabalu, Sabah',
+        categories: ['program', 'kerjasama', 'komuniti'],
+        title: '12Gig Perkenalkan Peluang Ekonomi Gig kepada Sahabat AIM Kota Kinabalu',
+        excerpt:
+          'Walaupun hujan lebat dan banjir kilat, 12Gig meneruskan program pengenalan AIM keduanya di Pejabat Cawangan Kota Kinabalu, dengan tujuh Sahabat AIM mendaftar dan menawarkan perkhidmatan di platform.',
+        image: '/news/kk.jpeg',
+        imageAlt: 'Sesi 12Gig bersama Sahabat AIM di Pejabat AIM Cawangan Kota Kinabalu, Alam Mesra',
+        gallery: ['/news/kk2.jpeg', '/news/ll3.jpeg'],
+        galleryAlts: [
+          'Sahabat AIM Kota Kinabalu berbincang tentang 12Gig semasa program pengenalan',
+          'Peserta mendaftar dan menawarkan perkhidmatan di 12Gig di AIM Kota Kinabalu',
+        ],
+        intro: [
+          'KOTA KINABALU, 22 September 2026 – 12Gig meneruskan usaha memperkenalkan peluang pendapatan melalui platform perkhidmatan digital kepada Sahabat Amanah Ikhtiar Malaysia (AIM) menerusi program keduanya di Pejabat AIM Cawangan Kota Kinabalu, Alam Mesra, pada Selasa, 22 September 2026, jam 10.00 pagi.',
+          'Program tersebut menyusuli sesi pertama bersama Sahabat AIM Cawangan Tuaran yang dilaksanakan sehari sebelumnya.',
+          'Hujan lebat sejak awal pagi serta kejadian banjir kilat di beberapa kawasan sekitar Kota Kinabalu telah menjejaskan perjalanan peserta. Keadaan tersebut menyebabkan ramai Sahabat AIM yang dijadualkan menyertai program tidak dapat hadir.',
+          'Program tetap diteruskan bersama tujuh orang Sahabat AIM yang berjaya sampai ke lokasi. Kumpulan yang lebih kecil membolehkan sesi berlangsung secara dekat, terbuka dan tertumpu.',
+        ],
+        sections: [
+          {
+            title: 'Soalan peserta mencerminkan minat yang serius',
+            paras: [
+              'Sepanjang sesi, peserta bukan sekadar mendengar penerangan, malah mengemukakan beberapa soalan penting tentang operasi platform dan realiti menjadi Gigger.',
+              'Antara soalan yang paling banyak ditanya ialah sama ada 12Gig telah beroperasi sepenuhnya dan sama ada transaksi sebenar telah berlaku melalui platform. Peserta turut ingin mengetahui cara mendapatkan pengguna pertama selepas sesuatu perkhidmatan disenaraikan serta bentuk bantuan yang boleh diberikan oleh 12Gig sekiranya berlaku pertikaian dengan pelanggan.',
+              'Soalan-soalan tersebut menunjukkan bahawa peserta tidak hanya berminat untuk membuka akaun. Mereka turut mempertimbangkan aspek permintaan pasaran, keselamatan transaksi dan perlindungan selepas menerima tempahan.',
+              'Perbincangan turut menyentuh kadar fi platform yang perlu ditanggung oleh Gigger, bilangan perkhidmatan yang boleh ditawarkan oleh seorang Gigger serta kewujudan Persatuan Ekonomi Pekerja Gig Sabah.',
+              'Pihak 12Gig menjelaskan bahawa berdasarkan model fi semasa, Gigger tidak dikenakan fi platform bagi setiap transaksi. Fi tersebut dikenakan kepada pengguna secara berasingan dan telus daripada harga yang ditetapkan oleh Gigger. Sebarang potongan lain hanya melibatkan keperluan berkanun atau kos tertentu sekiranya diwajibkan atau diperlukan pada masa hadapan.',
+              'Peserta turut diberikan penerangan tentang perjalanan tempahan melalui platform, langkah awal mendapatkan pengguna pertama dan peranan 12Gig dalam membantu menguruskan aduan atau pertikaian yang melibatkan transaksi di dalam sistem.',
+            ],
+          },
+          {
+            title: 'Perkhidmatan berasaskan kemahiran setempat',
+            paras: [
+              'Beberapa perkhidmatan yang berpotensi ditawarkan oleh peserta telah dikenal pasti dalam perbincangan, termasuk khidmat pemandu peribadi, penyediaan makanan tradisional, jahitan pakaian tradisional dan perkhidmatan mencuci kenderaan secara bergerak.',
+              'Cadangan tersebut menunjukkan bahawa peluang ekonomi gig tidak terbatas kepada perkhidmatan digital atau penghantaran. Kemahiran harian dan perkhidmatan berasaskan komuniti juga boleh ditawarkan kepada pengguna sebagai sumber pendapatan.',
+            ],
+          },
+          {
+            title: 'Peserta terus mendaftar dan menawarkan perkhidmatan',
+            paras: [
+              'Kesungguhan peserta dapat dilihat apabila mereka terus membuka akaun 12Gig dan mula menawarkan perkhidmatan masing-masing semasa sesi pendaftaran berlangsung.',
+              'Tindakan tersebut memberikan petunjuk awal bahawa peserta bukan sahaja berminat dengan konsep yang diterangkan, malah bersedia mencuba sendiri proses menjadi Gigger dalam platform.',
+              'Sesi pendaftaran secara langsung turut membantu pasukan 12Gig mengenal pasti bahagian maklumat dan panduan yang masih perlu diperjelas. Maklum balas peserta akan digunakan untuk memperkemas penerangan serta proses pendaftaran supaya lebih mudah difahami oleh pengguna baharu.',
+            ],
+          },
+          {
+            title: 'Bersedia untuk sesi susulan',
+            paras: [
+              '12Gig bersedia mengadakan sesi susulan sekiranya dipersetujui bersama pihak AIM Cawangan Kota Kinabalu, khususnya bagi memberi peluang kepada Sahabat AIM yang terhalang hadir akibat keadaan cuaca.',
+              '12Gig merakamkan setinggi-tinggi penghargaan kepada pihak pengurusan AIM Cawangan Kota Kinabalu atas kepercayaan dan kerjasama yang diberikan. Penghargaan turut ditujukan kepada tujuh orang Sahabat AIM yang tetap hadir, aktif mengemukakan soalan serta mencuba sendiri proses pendaftaran dan penawaran perkhidmatan melalui 12Gig.',
+              'Program di Kota Kinabalu menjadi sesi kedua dalam siri pengenalan 12Gig bersama Sahabat AIM dan mengukuhkan usaha syarikat mendekati komuniti usahawan mikro di Sabah.',
+              'Terima kasih, AIM Kota Kinabalu, atas kepercayaan yang diberikan kepada 12Gig.',
+            ],
+          },
+        ],
+        facts: [
+          { label: 'Tarikh', value: '22 September 2026' },
+          { label: 'Masa', value: '10.00 pagi' },
+          { label: 'Tempat', value: 'Pejabat AIM Cawangan Kota Kinabalu, Alam Mesra' },
+          { label: 'Rakan Kongsi', value: 'AIM Cawangan Kota Kinabalu' },
+        ],
+        signoff: '12Gig',
+        tagline: "The People's Economy.",
+      },
+      {
+        id: 'aim-tuaran-september-2026',
+        date: '21 September 2026',
+        location: 'Tuaran, Sabah',
+        categories: ['program', 'kerjasama', 'komuniti'],
+        title: '12Gig Laksana Program Pengenalan Pertama bersama AIM Tuaran',
+        excerpt:
+          '12Gig memperkenalkan platformnya kepada Sahabat AIM di Pejabat Cawangan Tuaran, membuka perbincangan tentang akses pasaran digital dan pendapatan gig berasaskan perkhidmatan.',
+        image: '/news/tuaran.jpeg',
+        imageAlt: 'Pasukan 12Gig bersama Sahabat AIM di Pejabat AIM Cawangan Tuaran',
+        gallery: ['/news/tuaran2.jpeg', '/news/tuaran3.jpeg'],
+        galleryAlts: [
+          'Sesi pengenalan antara 12Gig dan Sahabat AIM Tuaran',
+          'Peserta mengikuti sesi pembentangan 12Gig di AIM Tuaran',
+        ],
+        intro: [
+          'TUARAN, 21 September 2026 – 12Gig telah melaksanakan program pengenalan pertamanya bersama Sahabat Amanah Ikhtiar Malaysia (AIM) Cawangan Tuaran pada Isnin, 21 September 2026, jam 10.00 pagi, bertempat di Pejabat AIM Cawangan Tuaran.',
+          'Program ini bertujuan memperkenalkan 12Gig sebagai sebuah platform digital yang membolehkan individu menawarkan kemahiran dan perkhidmatan kepada pengguna. Melalui platform ini, Sahabat AIM berpeluang memperluas pasaran, mendapatkan pelanggan baharu dan membina sumber pendapatan berdasarkan kemahiran yang telah dimiliki.',
+        ],
+        sections: [
+          {
+            title: 'Pembukaan yang Mencerminkan Identiti AIM',
+            paras: [
+              'Sebelum sesi pembentangan bermula, pasukan 12Gig berpeluang menyaksikan amalan pembukaan mesyuarat AIM yang penuh tertib dan semangat kebersamaan.',
+              'Sesi dimulakan dengan bacaan Ummul Kitab, disusuli lafaz Ikrar Sahabat AIM yang dimulakan oleh Sahabat AIM sebelum disambut oleh para pegawai yang menyelia program. Amalan tersebut memberi gambaran jelas tentang disiplin, kesatuan dan budaya saling menyokong yang telah dibina dalam komuniti AIM.',
+              'Ia menjadi pengalaman pertama yang cukup bermakna kepada pasukan 12Gig.',
+            ],
+          },
+          {
+            title: 'Literasi Digital Peserta Melebihi Jangkaan',
+            paras: [
+              'Tahap literasi digital yang tinggi dalam kalangan Sahabat AIM menjadi antara penemuan paling positif sepanjang program tersebut.',
+              'Dalam sesi pembentangan dan komunikasi dua hala, para peserta dapat mengikuti penerangan tentang fungsi 12Gig dengan baik. Mereka turut aktif mengemukakan soalan, berkongsi pengalaman dan membincangkan potensi perkhidmatan masing-masing untuk ditawarkan melalui platform.',
+              'Respons tersebut menunjukkan bahawa usahawan mikro AIM mempunyai kesediaan untuk menggunakan platform digital bagi memperluas pasaran dan menambah saluran pendapatan. Apa yang diperlukan ialah pendedahan, bimbingan praktikal dan sokongan yang sesuai supaya mereka lebih yakin mengambil langkah seterusnya.',
+              'Bagi 12Gig, pengalaman ini turut membuktikan bahawa teknologi tidak seharusnya dibangunkan berdasarkan andaian tentang kemampuan masyarakat. Teknologi mesti dibina agar mudah digunakan, dekat dengan keperluan sebenar dan mampu membuka peluang ekonomi kepada lebih ramai orang.',
+            ],
+          },
+          {
+            title: 'Sambutan yang Terbuka dan Mesra',
+            paras: [
+              'Keterbukaan, keramahan dan perhatian yang diberikan oleh para pegawai serta Sahabat AIM menjadikan sesi tersebut lebih hidup dan bermakna.',
+              'Suasana mesra membolehkan perbincangan berlangsung secara terbuka. Pasukan 12Gig bukan sahaja berpeluang memperkenalkan platform, malah dapat mendengar pandangan peserta tentang cabaran, keperluan dan peluang yang mereka lihat dalam menawarkan perkhidmatan secara digital.',
+              'Maklum balas daripada lapangan seperti ini amat penting kepada 12Gig dalam usaha menambah baik platform agar benar-benar sesuai dengan keperluan komuniti usahawan mikro.',
+            ],
+          },
+          {
+            title: 'Penghargaan kepada AIM Tuaran',
+            paras: [
+              '12Gig merakamkan setinggi-tinggi penghargaan kepada Pengarah AIM Cawangan Tuaran serta semua pegawai yang terlibat dalam merancang dan menjayakan program ini.',
+              'Penghargaan khas turut diberikan kepada Timbalan Pengarah Operasi AIM Sabah, Tuan Suharno, atas kesungguhan dan komitmen beliau dalam membantu merealisasikan program pengenalan tersebut.',
+              'Di sebalik perbincangan tentang teknologi, perkhidmatan dan peluang pendapatan, sesi ini turut diserikan dengan perbualan santai mengenai “karipap angin”. Kisah tersebut mencetuskan suasana ceria dan menjadi antara kenangan paling mencuit hati yang dibawa pulang oleh pasukan 12Gig.',
+              'Program di Tuaran ini menjadi langkah permulaan kepada usaha 12Gig untuk mendekati komuniti setempat serta memperkenalkan peluang pendapatan melalui ekonomi gig berasaskan perkhidmatan.',
+              'Terima kasih, AIM Tuaran. Selagi Rezeki dikandung badan, selagi itu peluang akan terus diusahakan.',
+            ],
+          },
+        ],
+        facts: [
+          { label: 'Tarikh', value: '21 September 2026' },
+          { label: 'Masa', value: '10.00 pagi' },
+          { label: 'Tempat', value: 'Pejabat AIM Cawangan Tuaran' },
+          { label: 'Rakan Kongsi', value: 'AIM Cawangan Tuaran' },
+        ],
+        signoff: '12Gig',
+        tagline: "The People's Economy.",
+      },
+      {
         id: 'closed-testing-august-2026',
         date: '15 Ogos 2026',
         location: 'Kota Kinabalu, Sabah',

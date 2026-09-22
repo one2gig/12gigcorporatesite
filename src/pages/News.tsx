@@ -69,20 +69,32 @@ export default function News() {
                   <h3 className="text-2xl font-bold tracking-tight sm:text-3xl">{article.title}</h3>
                 </div>
 
+                {article.image ? (
+                  <figure className="overflow-hidden rounded-2xl border bg-muted/20">
+                    <img
+                      src={article.image}
+                      alt={article.imageAlt ?? article.title}
+                      className="h-auto w-full object-cover"
+                    />
+                  </figure>
+                ) : null}
+
                 <div className="space-y-4 text-lg leading-relaxed text-muted-foreground">
                   {article.intro.map((para) => (
                     <p key={para}>{para}</p>
                   ))}
                 </div>
 
-                <div className="space-y-4">
-                  <p className="font-semibold">{article.goalsIntro}</p>
-                  <ol className="list-decimal space-y-2 pl-5 text-muted-foreground">
-                    {article.goals.map((goal) => (
-                      <li key={goal}>{goal}</li>
-                    ))}
-                  </ol>
-                </div>
+                {article.goalsIntro && article.goals && article.goals.length > 0 ? (
+                  <div className="space-y-4">
+                    <p className="font-semibold">{article.goalsIntro}</p>
+                    <ol className="list-decimal space-y-2 pl-5 text-muted-foreground">
+                      {article.goals.map((goal) => (
+                        <li key={goal}>{goal}</li>
+                      ))}
+                    </ol>
+                  </div>
+                ) : null}
 
                 {article.sections.map((section) => (
                   <div key={section.title} className="space-y-4">
@@ -95,14 +107,30 @@ export default function News() {
                   </div>
                 ))}
 
-                <dl className="grid gap-4 sm:grid-cols-2">
-                  {article.facts.map((fact) => (
-                    <div key={fact.label} className="rounded-2xl border bg-muted/30 p-5">
-                      <dt className="text-sm text-muted-foreground">{fact.label}</dt>
-                      <dd className="mt-1 font-bold">{fact.value}</dd>
-                    </div>
-                  ))}
-                </dl>
+                {article.gallery && article.gallery.length > 0 ? (
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    {article.gallery.map((src, index) => (
+                      <figure key={src} className="overflow-hidden rounded-2xl border bg-muted/20">
+                        <img
+                          src={src}
+                          alt={article.galleryAlts?.[index] ?? article.title}
+                          className="h-64 w-full object-cover"
+                        />
+                      </figure>
+                    ))}
+                  </div>
+                ) : null}
+
+                {article.facts && article.facts.length > 0 ? (
+                  <dl className="grid gap-4 sm:grid-cols-2">
+                    {article.facts.map((fact) => (
+                      <div key={fact.label} className="rounded-2xl border bg-muted/30 p-5">
+                        <dt className="text-sm text-muted-foreground">{fact.label}</dt>
+                        <dd className="mt-1 font-bold">{fact.value}</dd>
+                      </div>
+                    ))}
+                  </dl>
+                ) : null}
 
                 <div className="space-y-1 pt-2">
                   <p className="font-bold">{article.signoff}</p>
@@ -142,13 +170,22 @@ export default function News() {
               <a
                 key={article.id}
                 href={`#${article.id}`}
-                className="block rounded-3xl border p-6 transition-colors hover:bg-muted/40"
+                className="block overflow-hidden rounded-3xl border transition-colors hover:bg-muted/40"
               >
-                <p className="text-sm font-medium text-muted-foreground">
-                  {article.date} | {article.location}
-                </p>
-                <h3 className="mt-2 font-bold">{article.title}</h3>
-                <p className="mt-2 text-muted-foreground">{article.excerpt}</p>
+                {article.image ? (
+                  <img
+                    src={article.image}
+                    alt={article.imageAlt ?? article.title}
+                    className="h-48 w-full object-cover"
+                  />
+                ) : null}
+                <div className="p-6">
+                  <p className="text-sm font-medium text-muted-foreground">
+                    {article.date} | {article.location}
+                  </p>
+                  <h3 className="mt-2 font-bold">{article.title}</h3>
+                  <p className="mt-2 text-muted-foreground">{article.excerpt}</p>
+                </div>
               </a>
             ))}
           </div>
