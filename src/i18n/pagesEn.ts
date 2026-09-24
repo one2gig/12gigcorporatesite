@@ -1287,8 +1287,8 @@ export const pagesEn = {
     portraitCaption: 'Tuan Suharno Ali',
     portraitRole: 'Deputy Director of Operations, AIM Sabah',
     portraitAlt: 'Portrait of Tuan Suharno Ali',
-    teamCaption: 'Tuan Suharno Ali with AIM Papar officers, the 12Gig team, and several Sahabat AIM Papar after the programme in Papar.',
-    teamAlt: 'Tuan Suharno Ali with AIM Papar officers, the 12Gig team, and several Sahabat AIM Papar',
+    teamCaption: 'Tuan Suharno Ali with the AIM Papar Branch Manager, the 12Gig team, and several Sahabat AIM Papar after the programme in Papar.',
+    teamAlt: 'Tuan Suharno Ali with the AIM Papar Branch Manager, the 12Gig team, and several Sahabat AIM Papar',
     sessionCaption: 'During the 12Gig introduction programme with Sahabat AIM in Tuaran.',
     sessionAlt: 'Participants and officers during the 12Gig introduction programme with Sahabat AIM Tuaran',
     opening: [

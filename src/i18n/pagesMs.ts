@@ -1287,8 +1287,8 @@ export const pagesMs = {
     portraitCaption: 'Tuan Suharno Ali',
     portraitRole: 'Timbalan Pengarah Operasi AIM Sabah',
     portraitAlt: 'Potret Tuan Suharno Ali',
-    teamCaption: 'Tuan Suharno Ali bersama pegawai AIM Papar, pasukan 12Gig dan beberapa Sahabat AIM Papar selepas program di Papar.',
-    teamAlt: 'Tuan Suharno Ali bersama pegawai AIM Papar, pasukan 12Gig dan beberapa Sahabat AIM Papar',
+    teamCaption: 'Tuan Suharno Ali bersama Pengurus Cawangan AIM Papar, pasukan 12Gig dan beberapa Sahabat AIM Papar selepas program di Papar.',
+    teamAlt: 'Tuan Suharno Ali bersama Pengurus Cawangan AIM Papar, pasukan 12Gig dan beberapa Sahabat AIM Papar',
     sessionCaption: 'Semasa program pengenalan 12Gig bersama Sahabat AIM di Tuaran.',
     sessionAlt: 'Peserta dan pegawai semasa program pengenalan 12Gig bersama Sahabat AIM Tuaran',
     opening: [
