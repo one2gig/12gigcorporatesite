@@ -998,6 +998,79 @@ export const pagesEn = {
     empty: 'No articles have been published yet. We will share official news here when it is confirmed.',
     articles: [
       {
+        id: 'aim-papar-september-2026',
+        date: '23 September 2026',
+        location: 'Papar, Sabah',
+        categories: ['program', 'kerjasama', 'komuniti'],
+        title: '10 Sahabat AIM Papar Successfully Activate Services on 12Gig',
+        excerpt:
+          'In the third AIM introduction programme, 12 of 15 Sahabat AIM Papar opened 12Gig accounts and 10 activated services, the highest attendance and activation figures recorded across Tuaran, Kota Kinabalu, and Papar.',
+        image: '/news/papar.jpeg',
+        imageAlt: 'Sahabat AIM, AIM officers, and the 12Gig team after the introduction programme at AIM Papar Branch',
+        gallery: ['/news/papar1.jpeg', '/news/papar2.jpeg'],
+        galleryAlts: [
+          'Participants, AIM officers, and the 12Gig team during the group photo at AIM Papar',
+          'Sahabat AIM Papar registering and activating services on 12Gig',
+        ],
+        intro: [
+          'PAPAR, 23 September 2026 – Ten of 15 Sahabat Amanah Ikhtiar Malaysia (AIM) Papar Branch successfully activated services on the 12Gig platform in an introduction programme held on Wednesday, 23 September 2026.',
+          'The programme began at 10.00 a.m. and ended at 12.15 p.m. as scheduled. The session in Papar was the third programme in 12Gig’s introduction series with Sahabat AIM, after sessions in Tuaran and Kota Kinabalu.',
+        ],
+        sections: [
+          {
+            title: '12 Participants Opened Accounts',
+            paras: [
+              'Of the 15 participants who attended, 12 people, or 80%, successfully opened a 12Gig account. Ten participants then continued the process until they successfully activated the services they wanted to offer through the platform.',
+              'That figure represents 66.7% of all participants who attended. It also means that 10 of the 12 participants who opened an account went on to complete the process until their services were activated.',
+              'Based on records from programmes at the three branches, Papar recorded the highest attendance and the highest number of service activations.',
+              'These early results show that a majority of participants were able to follow the registration and service-offering process directly during the programme. Activation is the first step before participants can move to the next stage: getting users and their first bookings through the platform.',
+            ],
+          },
+          {
+            title: 'Participants’ Readiness to Use a Digital Platform',
+            paras: [
+              'On average, Sahabat AIM Papar were able to follow the briefing and complete the digital tasks given to them well.',
+              'Participants stayed attentive throughout the session, completed their registration details, and worked to activate their own services. The order and diligence shown reflected the spirit contained in the Ikrar Sahabat AIM.',
+              'Participants’ ability to complete the tasks within the set time also helped the programme run in an organised way and achieve encouraging results.',
+            ],
+          },
+          {
+            title: 'AIM Management Involved Directly',
+            paras: [
+              'The smooth running of the programme was supported by the direct involvement of AIM Papar Branch Manager Encik Ramli Selig and the officers on duty.',
+              'They helped organise participants, provided assistance during registration, and guided Sahabat AIM who needed support throughout the process of opening accounts and activating services.',
+              'The presence of AIM Sabah Deputy Director of Operations Encik Suharno, who witnessed the programme and its results first-hand, also encouraged the participants, AIM officers, and the 12Gig team.',
+            ],
+          },
+          {
+            title: '“Free saiz” Lightened the Photo Session',
+            paras: [
+              'The programme was also brightened by a relaxed atmosphere during the group photo. When inviting everyone involved to take a “free style” photograph, the AIM Papar Branch Manager spontaneously said “free saiz”.',
+              'The remark drew laughter among the participants, AIM officers, and the 12Gig team, and became one of the most memorable, light-hearted moments of the programme.',
+            ],
+          },
+          {
+            title: 'Completing the Programme Series at Three Branches',
+            paras: [
+              'The programme in Papar completed 12Gig’s introduction series with Sahabat AIM in Tuaran, Kota Kinabalu, and Papar. Each location gave the 12Gig team a different field experience and a different set of feedback.',
+              'Tuaran showed a warm reception and a spirit of togetherness among Sahabat AIM. Kota Kinabalu saw the programme continue in a small group after attendance was affected by heavy rain and flash floods. Papar completed the series with the highest attendance and the highest number of service activations.',
+              '12Gig records its highest appreciation to the management of AIM Sabah, the AIM Papar Branch Manager, the officers on duty, and all Sahabat AIM who cooperated throughout the programme.',
+              'Thank you, AIM Papar, for the trust, cooperation, and commitment given to 12Gig.',
+            ],
+          },
+        ],
+        facts: [
+          { label: 'Date', value: '23 September 2026' },
+          { label: 'Time', value: '10.00 a.m. – 12.15 p.m.' },
+          { label: 'Attendance', value: '15 Sahabat AIM' },
+          { label: 'Accounts opened', value: '12 (80%)' },
+          { label: 'Services activated', value: '10 (66.7%)' },
+          { label: 'Partner', value: 'AIM Papar Branch' },
+        ],
+        signoff: '12Gig',
+        tagline: "The People's Economy.",
+      },
+      {
         id: 'aim-kota-kinabalu-september-2026',
         date: '22 September 2026',
         location: 'Kota Kinabalu, Sabah',
@@ -1049,7 +1122,7 @@ export const pagesEn = {
             title: 'Ready for a Follow-up Session',
             paras: [
               '12Gig is ready to hold a follow-up session if agreed with AIM Kota Kinabalu Branch, especially to give an opportunity to Sahabat AIM who were unable to attend because of the weather.',
-              '12Gig records its highest appreciation to the management of AIM Kota Kinabalu Branch for the trust and cooperation given. Appreciation is also extended to the seven Sahabat AIM who still attended, asked questions actively, and tried the process of registering and offering services through 12Gig themselves.',
+              '12Gig records its highest appreciation to AIM Kota Kinabalu Senior Branch Manager Tuan Adzam bin Supri and the management of AIM Kota Kinabalu Branch for the trust and cooperation given. Appreciation is also extended to the seven Sahabat AIM who still attended, asked questions actively, and tried the process of registering and offering services through 12Gig themselves.',
               'The programme in Kota Kinabalu is the second session in 12Gig’s introduction series with Sahabat AIM, and it strengthens the company’s effort to approach the micro-entrepreneur community in Sabah.',
               'Thank you, AIM Kota Kinabalu, for the trust given to 12Gig.',
             ],
@@ -1112,7 +1185,7 @@ export const pagesEn = {
           {
             title: 'Appreciation to AIM Tuaran',
             paras: [
-              '12Gig records its highest appreciation to the Director of AIM Tuaran Branch and all officers involved in planning and delivering this programme.',
+              '12Gig records its highest appreciation to AIM Tuaran Branch Manager Puan Hanina Nisrin binti C.M. Nor Azmi and all officers involved in planning and delivering this programme.',
               'Special appreciation is also extended to the Deputy Director of Operations, AIM Sabah, Tuan Suharno, for his dedication and commitment in helping to realise this introduction programme.',
               'Alongside discussions on technology, services, and income opportunity, the session was also brightened by a light conversation about “karipap angin”. That story brought cheer and became one of the most heartwarming memories the 12Gig team took home.',
               'The programme in Tuaran is a first step in 12Gig’s effort to approach local communities and introduce income opportunities through a service-based gig economy.',

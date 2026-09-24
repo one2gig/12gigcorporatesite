@@ -998,6 +998,79 @@ export const pagesMs = {
     empty: 'Tiada artikel yang diterbitkan lagi. Kami akan berkongsi berita rasmi di sini apabila ia disahkan.',
     articles: [
       {
+        id: 'aim-papar-september-2026',
+        date: '23 September 2026',
+        location: 'Papar, Sabah',
+        categories: ['program', 'kerjasama', 'komuniti'],
+        title: '10 Sahabat AIM Papar Aktifkan Perkhidmatan Melalui 12Gig',
+        excerpt:
+          'Dalam program pengenalan AIM yang ketiga, 12 daripada 15 Sahabat AIM Papar membuka akaun 12Gig dan 10 mengaktifkan perkhidmatan, mencatatkan kehadiran dan pengaktifan tertinggi merentasi Tuaran, Kota Kinabalu dan Papar.',
+        image: '/news/papar.jpeg',
+        imageAlt: 'Sahabat AIM, pegawai AIM dan pasukan 12Gig selepas program pengenalan di Cawangan AIM Papar',
+        gallery: ['/news/papar1.jpeg', '/news/papar2.jpeg'],
+        galleryAlts: [
+          'Peserta, pegawai AIM dan pasukan 12Gig semasa sesi bergambar di AIM Papar',
+          'Sahabat AIM Papar mendaftar dan mengaktifkan perkhidmatan di 12Gig',
+        ],
+        intro: [
+          'PAPAR, 23 September 2026 – Seramai 10 daripada 15 Sahabat Amanah Ikhtiar Malaysia (AIM) Cawangan Papar berjaya mengaktifkan perkhidmatan melalui platform 12Gig dalam program pengenalan yang berlangsung pada Rabu, 23 September 2026.',
+          'Program bermula pada jam 10.00 pagi dan selesai pada jam 12.15 tengah hari seperti yang dijadualkan. Sesi di Papar merupakan program ketiga dalam siri pengenalan 12Gig bersama Sahabat AIM, selepas pelaksanaannya di Tuaran dan Kota Kinabalu.',
+        ],
+        sections: [
+          {
+            title: '12 peserta membuka akaun',
+            paras: [
+              'Daripada 15 peserta yang hadir, seramai 12 orang atau 80% berjaya membuka akaun 12Gig. Sepuluh peserta kemudian meneruskan proses sehingga berjaya mengaktifkan perkhidmatan yang ingin ditawarkan melalui platform.',
+              'Jumlah tersebut mewakili 66.7% daripada keseluruhan peserta yang hadir. Ia juga bermakna 10 daripada 12 peserta yang membuka akaun berjaya meneruskan proses sehingga perkhidmatan mereka diaktifkan.',
+              'Berdasarkan rekod sepanjang program di tiga cawangan, Papar mencatatkan jumlah kehadiran dan pengaktifan perkhidmatan tertinggi.',
+              'Hasil awal ini menunjukkan bahawa majoriti peserta dapat mengikuti proses pendaftaran dan penawaran perkhidmatan secara langsung dalam tempoh program. Pengaktifan tersebut menjadi langkah pertama sebelum peserta boleh bergerak ke peringkat seterusnya, iaitu mendapatkan pengguna dan tempahan pertama melalui platform.',
+            ],
+          },
+          {
+            title: 'Kesediaan peserta menggunakan platform digital',
+            paras: [
+              'Rata-rata Sahabat AIM Papar dapat mengikuti penerangan serta melaksanakan tugasan digital yang diberikan dengan baik.',
+              'Peserta memberikan perhatian sepanjang sesi, melengkapkan maklumat pendaftaran dan berusaha mengaktifkan perkhidmatan masing-masing. Ketertiban dan ketekunan yang ditunjukkan mencerminkan semangat yang terkandung dalam Ikrar Sahabat AIM.',
+              'Keupayaan peserta menyelesaikan tugasan dalam tempoh yang ditetapkan turut membantu program berlangsung secara tersusun dan mencapai hasil yang memberangsangkan.',
+            ],
+          },
+          {
+            title: 'Pengurusan AIM terlibat secara langsung',
+            paras: [
+              'Kelancaran program disokong oleh penglibatan langsung Pengurus AIM Cawangan Papar, Tuan Ramli Selig dan para pegawai yang bertugas.',
+              'Mereka membantu menyusun peserta, memberikan bantuan semasa pendaftaran serta membimbing Sahabat AIM yang memerlukan sokongan sepanjang proses membuka akaun dan mengaktifkan perkhidmatan.',
+              'Kehadiran Timbalan Pengarah Operasi AIM Sabah, Tuan Suharno, yang menyaksikan sendiri perjalanan dan hasil program turut memberikan semangat kepada para peserta, pegawai AIM dan pasukan 12Gig.',
+            ],
+          },
+          {
+            title: '“Free saiz” menceriakan sesi bergambar',
+            paras: [
+              'Program turut diserikan dengan suasana santai semasa sesi bergambar. Ketika mengajak semua yang terlibat bergambar secara “free style”, Pengurus AIM Cawangan Papar secara spontan menyebut “free saiz”.',
+              'Ungkapan tersebut mencetuskan gelak tawa dalam kalangan peserta, pegawai AIM dan pasukan 12Gig, sekali gus menjadi antara kenangan paling mencuit hati sepanjang program.',
+            ],
+          },
+          {
+            title: 'Melengkapkan siri program di tiga cawangan',
+            paras: [
+              'Program di Papar melengkapkan siri pengenalan 12Gig bersama Sahabat AIM di Tuaran, Kota Kinabalu dan Papar. Setiap lokasi memberikan pengalaman dan maklum balas lapangan yang berbeza kepada pasukan 12Gig.',
+              'Tuaran memperlihatkan sambutan mesra serta semangat kebersamaan dalam kalangan Sahabat AIM. Kota Kinabalu pula menyaksikan program diteruskan dalam kumpulan kecil selepas kehadiran terjejas akibat hujan lebat dan banjir kilat. Papar melengkapkan siri tersebut dengan jumlah kehadiran serta pengaktifan perkhidmatan tertinggi.',
+              '12Gig merakamkan setinggi-tinggi penghargaan kepada pihak pengurusan AIM Sabah, Pengurus AIM Cawangan Papar, para pegawai bertugas dan semua Sahabat AIM yang memberikan kerjasama sepanjang program berlangsung.',
+              'Terima kasih, AIM Papar, atas kepercayaan, kerjasama dan komitmen yang diberikan kepada 12Gig.',
+            ],
+          },
+        ],
+        facts: [
+          { label: 'Tarikh', value: '23 September 2026' },
+          { label: 'Masa', value: '10.00 pagi – 12.15 tengah hari' },
+          { label: 'Kehadiran', value: '15 Sahabat AIM' },
+          { label: 'Akaun dibuka', value: '12 (80%)' },
+          { label: 'Perkhidmatan diaktifkan', value: '10 (66.7%)' },
+          { label: 'Rakan Kongsi', value: 'AIM Cawangan Papar' },
+        ],
+        signoff: '12Gig',
+        tagline: "The People's Economy.",
+      },
+      {
         id: 'aim-kota-kinabalu-september-2026',
         date: '22 September 2026',
         location: 'Kota Kinabalu, Sabah',
@@ -1049,7 +1122,7 @@ export const pagesMs = {
             title: 'Bersedia untuk sesi susulan',
             paras: [
               '12Gig bersedia mengadakan sesi susulan sekiranya dipersetujui bersama pihak AIM Cawangan Kota Kinabalu, khususnya bagi memberi peluang kepada Sahabat AIM yang terhalang hadir akibat keadaan cuaca.',
-              '12Gig merakamkan setinggi-tinggi penghargaan kepada pihak pengurusan AIM Cawangan Kota Kinabalu atas kepercayaan dan kerjasama yang diberikan. Penghargaan turut ditujukan kepada tujuh orang Sahabat AIM yang tetap hadir, aktif mengemukakan soalan serta mencuba sendiri proses pendaftaran dan penawaran perkhidmatan melalui 12Gig.',
+              '12Gig merakamkan setinggi-tinggi penghargaan kepada Pengurus Cawangan Kanan AIM Cawangan Kota Kinabalu, Tuan Adzam bin Supri, serta pihak pengurusan AIM Cawangan Kota Kinabalu atas kepercayaan dan kerjasama yang diberikan. Penghargaan turut ditujukan kepada tujuh orang Sahabat AIM yang tetap hadir, aktif mengemukakan soalan serta mencuba sendiri proses pendaftaran dan penawaran perkhidmatan melalui 12Gig.',
               'Program di Kota Kinabalu menjadi sesi kedua dalam siri pengenalan 12Gig bersama Sahabat AIM dan mengukuhkan usaha syarikat mendekati komuniti usahawan mikro di Sabah.',
               'Terima kasih, AIM Kota Kinabalu, atas kepercayaan yang diberikan kepada 12Gig.',
             ],
@@ -1112,7 +1185,7 @@ export const pagesMs = {
           {
             title: 'Penghargaan kepada AIM Tuaran',
             paras: [
-              '12Gig merakamkan setinggi-tinggi penghargaan kepada Pengarah AIM Cawangan Tuaran serta semua pegawai yang terlibat dalam merancang dan menjayakan program ini.',
+              '12Gig merakamkan setinggi-tinggi penghargaan kepada Pengurus AIM Cawangan Tuaran, Puan Hanina Nisrin binti C.M. Nor Azmi, serta semua pegawai yang terlibat dalam merancang dan menjayakan program ini.',
               'Penghargaan khas turut diberikan kepada Timbalan Pengarah Operasi AIM Sabah, Tuan Suharno, atas kesungguhan dan komitmen beliau dalam membantu merealisasikan program pengenalan tersebut.',
               'Di sebalik perbincangan tentang teknologi, perkhidmatan dan peluang pendapatan, sesi ini turut diserikan dengan perbualan santai mengenai “karipap angin”. Kisah tersebut mencetuskan suasana ceria dan menjadi antara kenangan paling mencuit hati yang dibawa pulang oleh pasukan 12Gig.',
               'Program di Tuaran ini menjadi langkah permulaan kepada usaha 12Gig untuk mendekati komuniti setempat serta memperkenalkan peluang pendapatan melalui ekonomi gig berasaskan perkhidmatan.',
