@@ -34,6 +34,7 @@ export const ms: Dictionary = {
     followJourney: 'Ikuti perjalanan kami',
     announcementLabel: 'Terkini',
     announcementCta: 'Baca artikel',
+    stories: 'Cerita',
   },
   footer: {
     tagline:

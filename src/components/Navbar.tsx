@@ -11,6 +11,7 @@ import {
   Mail,
   Handshake,
   Newspaper,
+  BookOpen,
   Shield,
   FileText,
   IdCard,
@@ -37,6 +38,11 @@ const socialLinks = [
   { label: 'Marketplace', href: MARKETPLACE_URL, icon: Store },
 ] as const;
 
+const newsLinks = [
+  { titleKey: 'news' as const, href: '/news' },
+  { titleKey: 'stories' as const, href: '/stories' },
+];
+
 const whatWeDoLinks = [
   { titleKey: 'whatWeDo' as const, href: '/what-we-do' },
   { titleKey: 'howItWorks' as const, href: '/how-it-works' },
@@ -56,6 +62,7 @@ const mobileLinksBase = [
   { titleKey: 'impact' as const, href: '/impact', icon: Globe },
   { titleKey: 'partnerships' as const, href: '/partnerships', icon: Handshake },
   { titleKey: 'news' as const, href: '/news', icon: Newspaper },
+  { titleKey: 'stories' as const, href: '/stories', icon: BookOpen },
   { titleKey: 'faq' as const, href: '/faq', icon: HelpCircle },
   { titleKey: 'contact' as const, href: '/contact', icon: Mail },
   { titleKey: 'privacy' as const, href: '/privacy', icon: Shield },
@@ -64,11 +71,13 @@ const mobileLinksBase = [
 
 export function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false);
+  const [newsOpen, setNewsOpen] = React.useState(false);
   const [whatOpen, setWhatOpen] = React.useState(false);
   const [aboutOpen, setAboutOpen] = React.useState(false);
   const { t, locale } = useI18n();
   const location = useLocation();
   const whatActive = whatWeDoLinks.some((link) => location.pathname === link.href);
+  const newsActive = newsLinks.some((link) => location.pathname === link.href);
   const profileHref = companyProfilePath(locale);
   const aboutLinks = [
     { titleKey: 'about' as const, href: '/about' },
@@ -193,6 +202,45 @@ export function Navbar() {
               >
                 {t.nav.partnerships}
               </NavLink>
+
+              <div
+                className="relative"
+                onMouseEnter={() => setNewsOpen(true)}
+                onMouseLeave={() => setNewsOpen(false)}
+              >
+                <button
+                  type="button"
+                  className={cn(
+                    'inline-flex items-center gap-1 whitespace-nowrap text-sm font-medium transition-colors hover:text-primary',
+                    newsActive || newsOpen ? 'text-primary' : 'text-muted-foreground'
+                  )}
+                  aria-expanded={newsOpen}
+                >
+                  {t.nav.news}
+                  <ChevronDown className={cn('h-3.5 w-3.5 transition-transform', newsOpen && 'rotate-180')} />
+                </button>
+                {newsOpen && (
+                  <div className="absolute top-full left-0 z-50 pt-2">
+                    <div className="min-w-[240px] rounded-xl border bg-popover p-2 shadow-lg">
+                      {newsLinks.map((link) => (
+                        <Link
+                          key={link.href}
+                          to={link.href}
+                          className={cn(
+                            'block rounded-lg px-3 py-2 text-sm transition-colors hover:bg-muted',
+                            location.pathname === link.href
+                              ? 'font-semibold text-primary'
+                              : 'text-muted-foreground'
+                          )}
+                        >
+                          {t.nav[link.titleKey]}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+
               <NavLink
                 to="/contact"
                 className={({ isActive }) =>

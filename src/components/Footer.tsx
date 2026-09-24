@@ -59,6 +59,7 @@ export function Footer() {
               <li><NavLink to="/impact" className={linkClass}>{t.nav.impact}</NavLink></li>
               <li><NavLink to="/partnerships" className={linkClass}>{t.nav.partnerships}</NavLink></li>
               <li><NavLink to="/news" className={linkClass}>{t.nav.news}</NavLink></li>
+              <li><NavLink to="/stories" className={linkClass}>{t.nav.stories}</NavLink></li>
               <li><NavLink to="/contact" className={linkClass}>{t.nav.contact}</NavLink></li>
             </ul>
           </div>

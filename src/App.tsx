@@ -19,6 +19,7 @@ import ForUsers from './pages/ForUsers';
 import ForOrganisasi from './pages/ForOrganisasi';
 import Partnerships from './pages/Partnerships';
 import News from './pages/News';
+import Story from './pages/Story';
 import Beta from './pages/Beta';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
@@ -76,6 +77,7 @@ function AppRoutes() {
           <Route path="/impact" element={<Impact />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/news" element={<News />} />
+          <Route path="/stories" element={<Story />} />
           <Route path="/beta" element={<Beta />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/privacy" element={<Privacy />} />

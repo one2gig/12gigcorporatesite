@@ -32,6 +32,7 @@ export const en = {
     followJourney: 'Follow our journey',
     announcementLabel: 'Latest',
     announcementCta: 'Read the article',
+    stories: 'Stories',
   },
   footer: {
     tagline:

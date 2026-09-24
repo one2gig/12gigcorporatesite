@@ -124,3 +124,7 @@
 .announcement-track:focus-visible .announcement-slide {
   animation-play-state: paused;
 }
+
+.story-serif {
+  font-family: Georgia, 'Palatino Linotype', Palatino, 'Times New Roman', serif;
+}
