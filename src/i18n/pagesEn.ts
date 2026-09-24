@@ -1294,7 +1294,7 @@ export const pagesEn = {
     opening: [
       'Tuan Suharno Ali had already begun packing away his banner.',
       'The briefing that was supposed to take place at a community hall in Keningau could not continue as planned.',
-      'It was general election season. The presence of outsiders with a banner caused a misunderstanding among the people who had gathered. Some thought a new political party had come to campaign.',
+      'It was the 2024 general election season. The presence of outsiders with a banner caused a misunderstanding among the people who had gathered. Some thought a new political party had come to campaign.',
       'Some were angry.',
       'Some did not want to listen.',
       'In fact, Tuan Suharno had not come with a political story.',

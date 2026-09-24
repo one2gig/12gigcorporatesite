@@ -1294,7 +1294,7 @@ export const pagesMs = {
     opening: [
       'Tuan Suharno Ali sudah mula mengemas sepanduknya.',
       'Penerangan yang sepatutnya berlangsung di sebuah balai raya di Keningau tidak dapat diteruskan seperti yang dirancang.',
-      'Ketika itu musim pilihan raya umum. Kehadiran orang luar bersama sepanduk menimbulkan salah faham dalam kalangan penduduk yang berkumpul. Ada yang menyangka sebuah parti politik baharu datang untuk berkempen.',
+      'Ketika itu musim pilihan raya umum (2024). Kehadiran orang luar bersama sepanduk menimbulkan salah faham dalam kalangan penduduk yang berkumpul. Ada yang menyangka sebuah parti politik baharu datang untuk berkempen.',
       'Ada yang marah.',
       'Ada yang tidak mahu mendengar.',
       'Padahal Tuan Suharno bukan datang membawa cerita politik.',
