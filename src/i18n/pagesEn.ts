@@ -998,6 +998,37 @@ export const pagesEn = {
     empty: 'No articles have been published yet. We will share official news here when it is confirmed.',
     articles: [
       {
+        id: 'google-play-review-september-2026',
+        date: '25 September 2026',
+        location: 'Kota Kinabalu, Sabah',
+        categories: ['platform', 'korporat'],
+        title: '12Gig App Enters Final Google Play Review Ahead of Release',
+        excerpt:
+          'The 12Gig mobile application is now in the final review stage for release on the Google Play Store.',
+        intro: [
+          'KOTA KINABALU, 25 September 2026 – 12Gig Sdn. Bhd. is pleased to announce that the 12Gig mobile application is now in the final review stage for its planned release on the Google Play Store.',
+          'This follows the closed testing phase completed as part of the Google Play release process. The application is now under final review before it can be made available to a wider audience.',
+          '12Gig will share a further update when the application is approved and ready for public download.',
+        ],
+        sections: [
+          {
+            title: 'What This Means',
+            paras: [
+              'Final review is the last stage before the 12Gig mobile application can be published on Google Play.',
+              'Once the review is complete and the application is approved, users will be able to download 12Gig from the Google Play Store.',
+              '12Gig records its thanks to all closed testers, Giggers, Users, partners and supporters who helped prepare the application for this stage.',
+            ],
+          },
+        ],
+        facts: [
+          { label: 'Platform', value: '12Gig Mobile Application' },
+          { label: 'Store', value: 'Google Play' },
+          { label: 'Stage', value: 'Final review' },
+        ],
+        signoff: '12Gig',
+        tagline: "The People's Economy.",
+      },
+      {
         id: 'aim-papar-september-2026',
         date: '23 September 2026',
         location: 'Papar, Sabah',
@@ -1294,7 +1325,7 @@ export const pagesEn = {
     opening: [
       'Tuan Suharno Ali had already begun packing away his banner.',
       'The briefing that was supposed to take place at a community hall in Keningau could not continue as planned.',
-      'It was the 2024 general election season. The presence of outsiders with a banner caused a misunderstanding among the people who had gathered. Some thought a new political party had come to campaign.',
+      'It was the 2004 general election season. The presence of outsiders with a banner caused a misunderstanding among the people who had gathered. Some thought a new political party had come to campaign.',
       'Some were angry.',
       'Some did not want to listen.',
       'In fact, Tuan Suharno had not come with a political story.',
@@ -1446,12 +1477,16 @@ export const pagesEn = {
           'We came to run a programme with Sahabat AIM.',
           'This story appeared later, when we sat for lunch together.',
           'From one story came another.',
-          'Keningau.',
-          'The community hall.',
-          'The Apin-Apin bus stop.',
-          'Seven months without an office or staff.',
-          'Sleeping in the car.',
-          'A small boat in Sarawak.',
+        ],
+        list: [
+          'Keningau',
+          'The community hall',
+          'The Apin-Apin bus stop',
+          'Seven months without an office or staff',
+          'Sleeping in the car',
+          'A small boat in Sarawak',
+        ],
+        afterList: [
           'Perhaps for Tuan Suharno, all of that is only part of the duties he once carried out.',
           'But for us who heard it, an experience like this is too valuable to be left as only a story at the lunch table.',
           'Because when an organisation grows and a service is finally available to the community, we easily see the end result.',

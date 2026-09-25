@@ -12,7 +12,7 @@ const IMAGES = {
 
 function PullQuote({ children }: { children: React.ReactNode }) {
   return (
-    <blockquote className="story-serif my-12 border-l-2 border-primary pl-6 text-2xl leading-snug text-foreground sm:pl-8 sm:text-3xl">
+    <blockquote className="story-serif my-8 border-l-2 border-primary pl-6 text-2xl leading-snug text-foreground sm:pl-8 sm:text-3xl">
       {children}
     </blockquote>
   );
@@ -28,7 +28,7 @@ function StoryImage({
   caption: string;
 }) {
   return (
-    <figure className="my-12 overflow-hidden rounded-[1.75rem] border bg-muted/20">
+    <figure className="my-8 overflow-hidden rounded-[1.75rem] border bg-muted/20">
       <img src={src} alt={alt} className="h-auto w-full object-cover" />
       <figcaption className="px-5 py-4 text-sm leading-relaxed text-muted-foreground">{caption}</figcaption>
     </figure>
@@ -66,7 +66,7 @@ export default function Story() {
         </div>
       </header>
 
-      <section className="bg-background py-16 sm:py-20">
+      <section className="bg-background py-12 sm:py-14">
         <div className="container mx-auto grid max-w-5xl items-start gap-10 px-4 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-14">
           <figure className="lg:sticky lg:top-36">
             <div className="overflow-hidden rounded-[1.75rem] border bg-muted/20 shadow-sm">
@@ -84,7 +84,7 @@ export default function Story() {
 
           <div className="max-w-2xl">
             {s.opening.map((para) => (
-              <p key={para} className="mb-5 text-lg leading-[1.85] text-foreground/90 last:mb-0">
+              <p key={para} className="mb-4 text-lg leading-[1.75] text-foreground/90 last:mb-0">
                 {para}
               </p>
             ))}
@@ -92,16 +92,30 @@ export default function Story() {
         </div>
       </section>
 
-      <section className="border-t bg-muted/20 py-16 sm:py-20">
+      <section className="border-t bg-muted/20 py-12 sm:py-14">
         <div className="container mx-auto max-w-2xl px-4">
           {s.chapters.map((chapter) => (
-            <section key={chapter.title} className="mb-16 last:mb-0">
-              <h2 className="story-serif mb-6 text-3xl leading-snug sm:text-4xl">{chapter.title}</h2>
+            <section key={chapter.title} className="mb-10 last:mb-0">
+              <h2 className="story-serif mb-4 text-3xl leading-snug sm:text-4xl">{chapter.title}</h2>
               {chapter.paras.map((para) => (
-                <p key={para} className="mb-5 text-lg leading-[1.85] text-foreground/90 last:mb-0">
+                <p key={para} className="mb-4 text-lg leading-[1.75] text-foreground/90">
                   {para}
                 </p>
               ))}
+              {'list' in chapter && chapter.list ? (
+                <ul className="mb-4 list-disc space-y-1.5 pl-6 text-lg leading-[1.75] text-foreground/90">
+                  {chapter.list.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              ) : null}
+              {'afterList' in chapter && chapter.afterList
+                ? chapter.afterList.map((para) => (
+                    <p key={para} className="mb-4 text-lg leading-[1.75] text-foreground/90">
+                      {para}
+                    </p>
+                  ))
+                : null}
               {chapter.quote ? <PullQuote>{chapter.quote}</PullQuote> : null}
               {chapter.image === 'team' ? (
                 <StoryImage src={IMAGES.team} alt={s.teamAlt} caption={s.teamCaption} />
@@ -111,20 +125,18 @@ export default function Story() {
               ) : null}
             </section>
           ))}
+
+          <div className="mt-8">
+            {s.thanks.map((para) => (
+              <p key={para} className="mb-4 text-lg leading-[1.75] text-foreground/90 last:mb-0">
+                {para}
+              </p>
+            ))}
+          </div>
         </div>
       </section>
 
-      <section className="bg-background py-16 sm:py-20">
-        <div className="container mx-auto max-w-2xl space-y-6 px-4">
-          {s.thanks.map((para) => (
-            <p key={para} className="text-lg leading-[1.85] text-foreground/90">
-              {para}
-            </p>
-          ))}
-        </div>
-      </section>
-
-      <section className="bg-foreground py-20 text-background sm:py-24">
+      <section className="bg-foreground py-16 text-background sm:py-20">
         <div className="container mx-auto max-w-3xl space-y-8 px-4 text-center">
           <p className="story-serif text-3xl leading-snug sm:text-4xl">{s.finalQuote}</p>
           <p className="text-white/65">{s.finalLine}</p>

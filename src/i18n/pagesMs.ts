@@ -998,6 +998,37 @@ export const pagesMs = {
     empty: 'Tiada artikel yang diterbitkan lagi. Kami akan berkongsi berita rasmi di sini apabila ia disahkan.',
     articles: [
       {
+        id: 'google-play-review-september-2026',
+        date: '25 September 2026',
+        location: 'Kota Kinabalu, Sabah',
+        categories: ['platform', 'korporat'],
+        title: 'Aplikasi 12Gig Memasuki Peringkat Semakan Akhir Google Play Sebelum Dilancarkan',
+        excerpt:
+          'Aplikasi mudah alih 12Gig kini berada di peringkat semakan akhir untuk pelancaran di Google Play Store.',
+        intro: [
+          'KOTA KINABALU, 25 September 2026 – 12Gig Sdn. Bhd. dengan sukacitanya mengumumkan bahawa aplikasi mudah alih 12Gig kini berada di peringkat semakan akhir untuk pelancaran yang dirancang di Google Play Store.',
+          'Ini menyusuli fasa ujian tertutup yang telah diselesaikan sebagai sebahagian daripada proses pelancaran Google Play. Aplikasi ini kini dalam semakan akhir sebelum ia boleh disediakan kepada khalayak yang lebih luas.',
+          '12Gig akan berkongsi kemas kini lanjut apabila aplikasi diluluskan dan sedia untuk dimuat turun oleh orang ramai.',
+        ],
+        sections: [
+          {
+            title: 'Apa Maksudnya',
+            paras: [
+              'Semakan akhir ialah peringkat terakhir sebelum aplikasi mudah alih 12Gig boleh diterbitkan di Google Play.',
+              'Setelah semakan selesai dan aplikasi diluluskan, pengguna akan dapat memuat turun 12Gig daripada Google Play Store.',
+              '12Gig merakamkan terima kasih kepada semua penguji tertutup, Gigger, Pengguna, rakan kongsi dan penyokong yang membantu menyediakan aplikasi untuk peringkat ini.',
+            ],
+          },
+        ],
+        facts: [
+          { label: 'Platform', value: 'Aplikasi Mudah Alih 12Gig' },
+          { label: 'Stor', value: 'Google Play' },
+          { label: 'Peringkat', value: 'Semakan akhir' },
+        ],
+        signoff: '12Gig',
+        tagline: "The People's Economy.",
+      },
+      {
         id: 'aim-papar-september-2026',
         date: '23 September 2026',
         location: 'Papar, Sabah',
@@ -1294,7 +1325,7 @@ export const pagesMs = {
     opening: [
       'Tuan Suharno Ali sudah mula mengemas sepanduknya.',
       'Penerangan yang sepatutnya berlangsung di sebuah balai raya di Keningau tidak dapat diteruskan seperti yang dirancang.',
-      'Ketika itu musim pilihan raya umum (2024). Kehadiran orang luar bersama sepanduk menimbulkan salah faham dalam kalangan penduduk yang berkumpul. Ada yang menyangka sebuah parti politik baharu datang untuk berkempen.',
+      'Ketika itu musim pilihan raya umum (2004). Kehadiran orang luar bersama sepanduk menimbulkan salah faham dalam kalangan penduduk yang berkumpul. Ada yang menyangka sebuah parti politik baharu datang untuk berkempen.',
       'Ada yang marah.',
       'Ada yang tidak mahu mendengar.',
       'Padahal Tuan Suharno bukan datang membawa cerita politik.',
@@ -1446,12 +1477,16 @@ export const pagesMs = {
           'Kami datang untuk menjalankan program bersama Sahabat AIM.',
           'Cerita ini muncul kemudian, ketika kami duduk makan tengah hari bersama.',
           'Daripada satu cerita datang cerita yang lain.',
-          'Keningau.',
-          'Balai raya.',
-          'Perhentian bas Apin-Apin.',
-          'Tujuh bulan tanpa pejabat dan staf.',
-          'Tidur di dalam kereta.',
-          'Perahu kecil di Sarawak.',
+        ],
+        list: [
+          'Keningau',
+          'Balai raya',
+          'Perhentian bas Apin-Apin',
+          'Tujuh bulan tanpa pejabat dan staf',
+          'Tidur di dalam kereta',
+          'Perahu kecil di Sarawak',
+        ],
+        afterList: [
           'Mungkin bagi Tuan Suharno, semua itu hanyalah sebahagian daripada tugas yang pernah beliau jalankan.',
           'Tetapi bagi kami yang mendengarnya, pengalaman seperti ini terlalu berharga untuk dibiarkan berlalu sebagai sekadar cerita di meja makan.',
           'Kerana apabila sebuah organisasi berkembang dan sesuatu perkhidmatan akhirnya tersedia kepada masyarakat, kita mudah melihat hasil akhirnya.',
