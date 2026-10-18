@@ -1309,17 +1309,138 @@ export const pagesMs = {
     ctaLink: 'Hubungi Pasukan Media',
   },
   stories: {
-    badge: 'Catatan',
+    badge: 'Cerita',
+    title: 'Cerita',
+    intro: 'Catatan tentang mereka yang membina kemahiran, pengalaman dan pendapatan melalui 12Gig.',
+    readCta: 'Baca cerita',
+    items: [
+    {
+    slug: 'nur-maisarah',
+    series: 'Cerita 12Gig',
+    title: 'Dari Bilik Kuliah ke Kerjaya: Bagaimana Nur Maisarah Membina Masa Depannya Melalui 12Gig',
+    dek: 'Ikuti perjalanan seorang pelajar North Borneo University College yang menukar pengetahuan IT kepada peluang yang bermakna, membantu orang lain belajar sambil membina pengalaman kerja yang berharga melalui 12Gig.',
+    date: '18 Oktober 2026',
+    place: 'Kota Kinabalu, Sabah',
+    portraitSrc: '/stories/maisarah.jpeg',
+    portraitCaption: 'Nur Maisarah Syanie binti Mohammad Ali',
+    portraitRole: 'Tutor IT di 12Gig · Foundation in Computer Studies, North Borneo University College',
+    portraitAlt: 'Potret Nur Maisarah Syanie binti Mohammad Ali',
+    teamSrc: '',
+    teamCaption: '',
+    teamAlt: '',
+    sessionSrc: '',
+    sessionCaption: '',
+    sessionAlt: '',
+    opening: [
+      'Menyeimbangkan pengajian dan kerja bukanlah mudah, tetapi bagi Nur Maisarah Syanie binti Mohammad Ali, ia adalah peluang untuk belajar, berkembang, dan bersedia untuk masa depan.',
+      'Kini mengikuti Foundation in Computer Studies di North Borneo University College, Maisarah telah mengambil langkah pertamanya dalam ekonomi gig sebagai tutor IT. Melalui 12Gig, beliau menukar pengetahuannya kepada perkhidmatan yang membantu rakan pelajar mengukuhkan kemahiran IT mereka, sambil memperoleh pengalaman profesional yang berharga untuk dirinya sendiri.',
+      'Dengan 18 pelajar menyertai kelas tuisyennya, perjalanannya menunjukkan bagaimana anak muda boleh mula membina kerjaya walaupun belum menamatkan pengajian.',
+    ],
+    chapters: [
+      {
+        title: 'Dari Pengalaman Perniagaan ke Permulaan Baharu',
+        paras: [
+          'Sebelum menjadi gigger, Maisarah bekerja sebagai Pengurus Jualan, di mana beliau membina kemahiran penting dalam khidmat pelanggan, komunikasi, dan mengurus pelbagai jenis orang.',
+          'Walaupun pengalamannya sebelum ini lebih tertumpu pada perniagaan, beliau mahu meneroka peluang baharu yang membolehkannya menggunakan kemahiran sedia ada sambil meneruskan pendidikan.',
+          'Bagi Maisarah, kerja gig menawarkan kelonggaran untuk memperoleh pengalaman dunia sebenar tanpa menangguhkan pengajiannya.',
+          'Daripada menunggu sehingga graduasi untuk mula membina kerjaya, beliau mengambil inisiatif dan mula menawarkan perkhidmatan berdasarkan apa yang sudah beliau ketahui.',
+        ],
+      },
+      {
+        title: 'Menemui 12Gig: Platform untuk Pengalaman Sebenar',
+        paras: [
+          'Pengenalan Maisarah kepada 12Gig datang melalui pensyarah IT beliau, Profesor Madya Disment Edward, yang memperkenalkan platform ini kepada pelajarnya.',
+          'Ingin tahu tentang peluang yang boleh ditawarkan, beliau memutuskan untuk meneroka bagaimana 12Gig boleh menyokong perkembangannya sebagai pelajar dan bakal profesional.',
+          'Apa yang paling menarik minatnya ialah peluang untuk membina rekod pengalaman kerja yang boleh dipercayai.',
+        ],
+        quote:
+          'Apabila saya memasukkan pengalaman gig dalam resume, bakal majikan atau pelanggan boleh melawat profil 12Gig saya dan melihat bahawa ia benar-benar berlaku, bukan sekadar sesuatu yang saya dakwa sendiri.',
+        afterList: [
+          'Baginya, 12Gig lebih daripada tempat untuk menawarkan perkhidmatan. Ia adalah peluang untuk membina profil profesional yang mencerminkan pengalaman, usaha, dan kemahiran yang telah beliau kembangkan.',
+        ],
+      },
+      {
+        title: 'Belajar Melalui Cabaran dan Mengambil Inisiatif',
+        paras: [
+          'Seperti ramai gigger kali pertama, Maisarah menghadapi cabaran apabila mula menggunakan platform.',
+          'Pada gig pertamanya, beliau mengalami masalah teknikal yang menghalangnya daripada menghantar mesej kepada pelanggan. Namun, selepas melaporkan masalah itu, pasukan sokongan 12Gig menyelesaikannya pada hari berikutnya.',
+          'Respons yang pantas meyakinkan beliau dan memberinya keyakinan yang lebih besar untuk menggunakan platform.',
+          'Satu lagi cabaran muncul apabila sebahagian pelanggannya tidak biasa dengan proses tempahan perkhidmatan.',
+          'Daripada membiarkan perkara ini menjadi halangan, Maisarah mengambil inisiatif untuk menghasilkan video tutorial langkah demi langkah menggunakan rakaman skrin. Video ini membimbing pelanggannya melalui proses tempahan, memudahkan mereka mengakses perkhidmatan tuisyen beliau.',
+          'Pengalaman ini menunjukkan kemahiran menyelesaikan masalah dan kesediaan beliau untuk melakukan lebih bagi menyokong pelanggannya.',
+        ],
+      },
+      {
+        title: 'Menukar Pengetahuan IT kepada Impak yang Bermakna',
+        paras: [
+          'Antara pengalamannya sebagai gigger, Maisarah menganggap perkhidmatan tuisyen IT beliau sebagai pencapaian yang paling diingati.',
+          'Melalui kelasnya, beliau telah membantu 18 pelajar mengembangkan kemahiran IT mereka sambil mengukuhkan kebolehannya sendiri dalam pengajaran, komunikasi, dan pengurusan perkhidmatan.',
+          'Dedikasinya juga tercermin dalam kemajuannya di 12Gig, apabila beliau maju melepasi tahap Amethyst.',
+          'Bagi Maisarah, kemajuan ini lebih daripada pencapaian di platform. Ia mencerminkan masa dan usaha yang beliau laburkan untuk memperbaiki diri dan menyokong orang lain.',
+        ],
+        quote: 'Pencapaian yang paling saya banggakan ialah membina perkhidmatan tuisyen IT saya sendiri sambil masih belajar.',
+        afterList: [
+          'Dapat membantu orang lain belajar sambil memperoleh pengalaman profesional telah memberinya rasa pencapaian dan motivasi untuk terus berkembang.',
+        ],
+      },
+      {
+        title: 'Membina Keyakinan, Satu Gig pada Satu Masa',
+        paras: [
+          'Sejak menyertai 12Gig, Maisarah menjadi lebih yakin mengurus perkhidmatannya, berkomunikasi dengan pelanggan, dan memikul tanggungjawab terhadap kerjanya sendiri.',
+          'Pengalamannya membolehkan beliau menggunakan kemahiran daripada latar belakang perniagaan sambil mengembangkan kebolehan baharu berkaitan tuisyen IT dan penyampaian perkhidmatan secara bebas.',
+          'Lebih penting lagi, beliau sedang membina portfolio profesional sambil masih meneruskan pendidikan.',
+          'Bagi pelajar seperti Maisarah, kerja gig boleh memberi peluang untuk memperoleh pengalaman praktikal, menemui kekuatan diri, dan membina keyakinan sebelum memasuki tenaga kerja sepenuh masa.',
+          'Perjalanannya mengingatkan bahawa pembangunan kerjaya tidak semestinya bermula hanya selepas graduasi.',
+        ],
+      },
+      {
+        title: 'Nasihat untuk Bakal Gigger: Mulakan dengan Apa yang Anda Tahu',
+        paras: [
+          'Bagi mereka yang mempertimbangkan langkah pertama ke dalam kerja gig, Maisarah percaya sikap yang betul dan kesediaan untuk belajar lebih penting daripada menjadi pakar dari awal.',
+        ],
+        quote:
+          'Mulakan dengan kemahiran yang sudah anda ada dan jangan takut untuk mencuba. Anda tidak perlu menjadi pakar dari awal. Konsisten, berkomunikasi dengan baik dengan pelanggan, dan sentiasa bersedia untuk belajar dan memperbaiki diri.',
+        afterList: [
+          'Beliau juga percaya bahawa memberikan perkhidmatan yang baik dan mengekalkan sikap positif adalah penting untuk membina kepercayaan pelanggan dan berkembang dari semasa ke semasa.',
+          'Nasihatnya mudah: mulakan dengan kecil, kekal konsisten, dan anggap setiap peluang sebagai ruang untuk memperbaiki diri.',
+        ],
+      },
+      {
+        title: 'Memandang ke Hadapan: Impian yang Lebih Besar dan Peluang Baharu',
+        paras: [
+          'Maisarah berharap dapat terus mengembangkan perkhidmatan tuisyen IT beliau sambil membangunkan kemahiran teknikal dan profesionalnya.',
+          'Beliau juga berhasrat memperoleh lebih banyak pengalaman kerja melalui peluang gig dan membina portfolio yang kukuh untuk menyokong kerjaya masa depannya.',
+          'Sambil meneruskan pengajian, beliau menantikan cabaran yang lebih besar dan meneroka kemungkinan baharu.',
+          'Perjalanannya bersama 12Gig masih di peringkat awal, tetapi beliau telah menunjukkan bagaimana inisiatif, kebolehsuaian, dan keazaman boleh menukar kemahiran sedia ada kepada pengalaman yang bermakna.',
+          'Daripada membantu 18 pelajar menambah baik pengetahuan IT mereka hingga membina profil profesionalnya sendiri, Maisarah membuktikan bahawa setiap gig boleh menjadi langkah ke arah masa depan yang lebih besar.',
+          'Bagi bakal gigger yang belum pasti di mana hendak bermula, ceritanya menawarkan mesej yang mudah: anda tidak perlu menunggu peluang yang sempurna untuk mula membina masa depan anda.',
+          'Kadangkala, yang diperlukan hanyalah keberanian untuk bermula.',
+        ],
+      },
+    ],
+    thanks: [],
+    finalQuote: 'Kadangkala, yang diperlukan hanyalah keberanian untuk bermula.',
+    finalLine: 'Anda tidak perlu menunggu peluang yang sempurna untuk mula membina masa depan anda.',
+    relatedHref: '/for-giggers',
+    relatedNews: 'Lihat cara gigger bermula',
+    moreHref: '/stories',
+    moreNews: 'Semua cerita',
+    },
+    {
+    slug: 'suharno-keningau',
     series: 'Catatan 12Gig',
     title: 'Ketika Sepanduk Dikemas, Cerita Keningau Baru Bermula',
     dek: 'Catatan 12Gig tentang Tuan Suharno Ali — sebuah kisah tentang khidmat, ketabahan dan keberanian untuk mencuba sekali lagi.',
     date: '23 September 2026',
     place: 'Papar, Sabah',
+    portraitSrc: '/stories/suharno-ali.png',
     portraitCaption: 'Tuan Suharno Ali',
     portraitRole: 'Timbalan Pengarah Operasi AIM Sabah',
     portraitAlt: 'Potret Tuan Suharno Ali',
+    teamSrc: '/stories/suharno-papar-team.png',
     teamCaption: 'Tuan Suharno Ali bersama Pengurus Cawangan AIM Papar, pasukan 12Gig dan beberapa Sahabat AIM Papar selepas program di Papar.',
     teamAlt: 'Tuan Suharno Ali bersama Pengurus Cawangan AIM Papar, pasukan 12Gig dan beberapa Sahabat AIM Papar',
+    sessionSrc: '/stories/suharno-papar-session.png',
     sessionCaption: 'Semasa program pengenalan 12Gig bersama Sahabat AIM di Tuaran.',
     sessionAlt: 'Peserta dan pegawai semasa program pengenalan 12Gig bersama Sahabat AIM Tuaran',
     opening: [
@@ -1511,8 +1632,12 @@ export const pagesMs = {
     finalQuote:
       'Kadangkala, sebuah cerita tidak berakhir ketika sepanduk dikemas. Kadangkala, di situlah ia baru bermula.',
     finalLine: 'Lihat semula. Dengar. Perbaiki apa yang perlu. Dan jika masih ada peluang, cuba sekali lagi.',
+    relatedHref: '/news#aim-papar-september-2026',
     relatedNews: 'Baca laporan program AIM Papar',
+    moreHref: '/news',
     moreNews: 'Berita 12Gig yang lain',
+    },
+    ],
   },
   faq: {
     badge: 'Soalan Lazim',

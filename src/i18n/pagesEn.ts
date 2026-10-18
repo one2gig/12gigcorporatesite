@@ -1310,16 +1310,137 @@ export const pagesEn = {
   },
   stories: {
     badge: 'Stories',
+    title: 'Stories',
+    intro: 'Notes on people who are building skill, experience, and income through 12Gig.',
+    readCta: 'Read the story',
+    items: [
+    {
+    slug: 'nur-maisarah',
+    series: 'A 12Gig Story',
+    title: 'From Classroom to Career: How Nur Maisarah Is Building Her Future Through 12Gig',
+    dek: 'Discover how a student from North Borneo University College is turning her IT knowledge into meaningful opportunities, helping others learn while building valuable work experience through 12Gig.',
+    date: '18 October 2026',
+    place: 'Kota Kinabalu, Sabah',
+    portraitSrc: '/stories/maisarah.jpeg',
+    portraitCaption: 'Nur Maisarah Syanie binti Mohammad Ali',
+    portraitRole: 'IT tutor on 12Gig · Foundation in Computer Studies, North Borneo University College',
+    portraitAlt: 'Portrait of Nur Maisarah Syanie binti Mohammad Ali',
+    teamSrc: '',
+    teamCaption: '',
+    teamAlt: '',
+    sessionSrc: '',
+    sessionCaption: '',
+    sessionAlt: '',
+    opening: [
+      'Balancing studies and work is no easy task, but for Nur Maisarah Syanie binti Mohammad Ali, it is an opportunity to learn, grow, and prepare for the future.',
+      'Currently pursuing a Foundation in Computer Studies at North Borneo University College, Maisarah has taken her first steps into the gig economy as an IT tutor. Through 12Gig, she has transformed her knowledge into a service that helps fellow learners strengthen their IT skills, while gaining valuable professional experience of her own.',
+      'With 18 students joining her tutoring classes, her journey shows how young people can start building their careers even before completing their studies.',
+    ],
+    chapters: [
+      {
+        title: 'From Business Experience to a New Beginning',
+        paras: [
+          'Before becoming a gigger, Maisarah worked as a Sales Manager, where she developed essential skills in customer service, communication, and managing different types of people.',
+          'Although her previous experience was mainly in business, she wanted to explore new opportunities that would allow her to apply her existing skills while continuing her education.',
+          'For Maisarah, gig work offered the flexibility to gain real-world experience without putting her studies on hold.',
+          'Rather than waiting until graduation to begin building her career, she decided to take the initiative and start offering services based on what she already knew.',
+        ],
+      },
+      {
+        title: 'Discovering 12Gig: A Platform for Real Experience',
+        paras: [
+          'Maisarah’s introduction to 12Gig came through her IT lecturer, Associate Professor Madya Disment Edward, who introduced the platform to his students.',
+          'Curious about the opportunities it could offer, she decided to explore how 12Gig could support her development as a student and an aspiring professional.',
+          'What attracted her most was the opportunity to build a credible record of her work experience.',
+        ],
+        quote:
+          'When I include my gig experience in my resume, potential employers or clients can visit my 12Gig profile and see that it is real, not just something I claimed on my own.',
+        afterList: [
+          'For her, 12Gig is more than just a place to offer services. It is an opportunity to build a professional profile that reflects the experience, effort, and skills she has developed.',
+        ],
+      },
+      {
+        title: 'Learning Through Challenges and Taking Initiative',
+        paras: [
+          'Like many first-time giggers, Maisarah encountered challenges when she began using the platform.',
+          'During her first gig, she experienced a technical issue that prevented her from sending messages to a customer. However, after reporting the problem, the 12Gig support team resolved it by the following day.',
+          'The quick response reassured her and gave her greater confidence in using the platform.',
+          'Another challenge came when some of her customers were unfamiliar with the service booking process.',
+          'Instead of allowing this to become a barrier, Maisarah took the initiative to create step-by-step tutorial videos using screen recordings. These videos guided her customers through the booking process, making it easier for them to access her tutoring services.',
+          'This experience demonstrated her problem-solving skills and willingness to go the extra mile to support her customers.',
+        ],
+      },
+      {
+        title: 'Turning IT Knowledge into Meaningful Impact',
+        paras: [
+          'Among her experiences as a gigger, Maisarah considers her IT tutoring service her most memorable achievement.',
+          'Through her classes, she has helped 18 students develop their IT skills while strengthening her own abilities in teaching, communication, and service management.',
+          'Her dedication has also been reflected in her progress on 12Gig, where she advanced beyond the Amethyst level.',
+          'For Maisarah, this progress represents more than a platform milestone. It reflects the time and effort she has invested in improving herself and supporting others.',
+        ],
+        quote: 'My proudest achievement is building my own IT tutoring service while still studying.',
+        afterList: [
+          'Being able to help others learn while gaining professional experience has given her a sense of accomplishment and motivated her to continue growing.',
+        ],
+      },
+      {
+        title: 'Building Confidence, One Gig at a Time',
+        paras: [
+          'Since joining 12Gig, Maisarah has become more confident in managing her services, communicating with customers, and taking responsibility for her own work.',
+          'Her experiences have allowed her to apply skills gained from her business background while developing new abilities related to IT tutoring and independent service delivery.',
+          'More importantly, she is building a professional portfolio while still pursuing her education.',
+          'For students like Maisarah, gig work can provide an opportunity to gain practical experience, discover personal strengths, and develop confidence before entering the workforce full-time.',
+          'Her journey is a reminder that career development does not have to begin only after graduation.',
+        ],
+      },
+      {
+        title: 'Advice for Aspiring Giggers: Start with What You Know',
+        paras: [
+          'For those considering their first step into gig work, Maisarah believes that having the right attitude and a willingness to learn are more important than being an expert from the beginning.',
+        ],
+        quote:
+          'Start with the skills you already have and don’t be afraid to try. You don’t need to be an expert from the beginning. Be consistent, communicate well with your customers, and always be willing to learn and improve.',
+        afterList: [
+          'She also believes that delivering good service and maintaining a positive attitude are essential for building customer trust and growing over time.',
+          'Her advice is simple: start small, stay consistent, and treat every opportunity as a chance to improve.',
+        ],
+      },
+      {
+        title: 'Looking Ahead: Bigger Dreams and New Opportunities',
+        paras: [
+          'Maisarah hopes to continue expanding her IT tutoring service while developing her technical and professional skills.',
+          'She also aims to gain more work experience through gig opportunities and build a strong portfolio that will support her future career.',
+          'As she continues her studies, she looks forward to taking on greater challenges and exploring new possibilities.',
+          'Her journey with 12Gig is still in its early stages, but she has already demonstrated how initiative, adaptability, and determination can turn existing skills into meaningful experiences.',
+          'From helping 18 students improve their IT knowledge to building her own professional profile, Maisarah is proving that every gig can be a step towards a bigger future.',
+          'For aspiring giggers who are unsure where to begin, her story offers a simple message: you don’t need to wait for the perfect opportunity to start building your future.',
+          'Sometimes, all it takes is the courage to begin.',
+        ],
+      },
+    ],
+    thanks: [],
+    finalQuote: 'Sometimes, all it takes is the courage to begin.',
+    finalLine: 'You don’t need to wait for the perfect opportunity to start building your future.',
+    relatedHref: '/for-giggers',
+    relatedNews: 'See how giggers get started',
+    moreHref: '/stories',
+    moreNews: 'All stories',
+    },
+    {
+    slug: 'suharno-keningau',
     series: 'A 12Gig Note',
     title: 'As the Banner Was Packed Away, the Keningau Story Was Only Beginning',
     dek: 'A 12Gig note on Tuan Suharno Ali — a story about service, endurance, and the courage to try once more.',
     date: '23 September 2026',
     place: 'Papar, Sabah',
+    portraitSrc: '/stories/suharno-ali.png',
     portraitCaption: 'Tuan Suharno Ali',
     portraitRole: 'Deputy Director of Operations, AIM Sabah',
     portraitAlt: 'Portrait of Tuan Suharno Ali',
+    teamSrc: '/stories/suharno-papar-team.png',
     teamCaption: 'Tuan Suharno Ali with the AIM Papar Branch Manager, the 12Gig team, and several Sahabat AIM Papar after the programme in Papar.',
     teamAlt: 'Tuan Suharno Ali with the AIM Papar Branch Manager, the 12Gig team, and several Sahabat AIM Papar',
+    sessionSrc: '/stories/suharno-papar-session.png',
     sessionCaption: 'During the 12Gig introduction programme with Sahabat AIM in Tuaran.',
     sessionAlt: 'Participants and officers during the 12Gig introduction programme with Sahabat AIM Tuaran',
     opening: [
@@ -1511,8 +1632,12 @@ export const pagesEn = {
     finalQuote:
       'Sometimes a story does not end when the banner is packed away. Sometimes, that is where it begins.',
     finalLine: 'Look again. Listen. Improve what needs improving. And if there is still a chance, try once more.',
+    relatedHref: '/news#aim-papar-september-2026',
     relatedNews: 'Read the AIM Papar programme report',
+    moreHref: '/news',
     moreNews: 'More 12Gig news',
+    },
+    ],
   },
   faq: {
     badge: 'FAQ',

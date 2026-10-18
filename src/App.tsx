@@ -78,6 +78,7 @@ function AppRoutes() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/news" element={<News />} />
           <Route path="/stories" element={<Story />} />
+          <Route path="/stories/:slug" element={<Story />} />
           <Route path="/beta" element={<Beta />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/privacy" element={<Privacy />} />
